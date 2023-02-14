@@ -22,12 +22,14 @@ public class User implements Domain {
     private Integer id;
     private String firstName;
     private String lastName;
+    @Builder.Default
     @Enumerated(EnumType.STRING)
-    private UserRole role;
+    private UserRole role = UserRole.USER;
     private String phone;
     private String username;
+    @Builder.Default
     @Enumerated(EnumType.STRING)
-    private Status status;
+    private Status status = Status.NO_ACTIVE;
     private Short spamCount;
     private String address;
     private String passport;

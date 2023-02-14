@@ -15,11 +15,11 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
-public class Disease {
+public class Disease implements Domain{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Short id;
     private String name;
-    private Integer specialization_id;
+    private Integer specializationId;
     private String description;
 }

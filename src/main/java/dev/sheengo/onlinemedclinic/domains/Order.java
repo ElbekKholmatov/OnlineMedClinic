@@ -22,8 +22,9 @@ public class Order implements Domain {
     private Integer doctorId;
     private LocalDateTime visitTime;
     private String description;
+    @Builder.Default
     @Enumerated(EnumType.STRING)
-    private Status status;
+    private Status status = Status.NO_ACTION;
 
     public enum Status{
         NO_ACTION, ORDERED, IN_TREATMENT
