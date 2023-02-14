@@ -10,18 +10,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="868efec0-8191-4b1d-8e00-fd842d8438fb" name="Changes" comment="Service abstract class added">
-      <change afterPath="$PROJECT_DIR$/src/main/java/dev/sheengo/onlinemedclinic/dao/UserDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/dev/sheengo/onlinemedclinic/controller/HomeServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/sheengo/onlinemedclinic/controller/HomeServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/dev/sheengo/onlinemedclinic/domains/Disease.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/sheengo/onlinemedclinic/domains/Disease.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dev/sheengo/onlinemedclinic/domains/Doctor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/sheengo/onlinemedclinic/domains/Doctor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/dev/sheengo/onlinemedclinic/domains/DoctorSchedule.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/sheengo/onlinemedclinic/domains/DoctorSchedule.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/dev/sheengo/onlinemedclinic/domains/Document.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/sheengo/onlinemedclinic/domains/Document.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/dev/sheengo/onlinemedclinic/domains/History.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/sheengo/onlinemedclinic/domains/History.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/dev/sheengo/onlinemedclinic/domains/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/sheengo/onlinemedclinic/domains/Order.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/dev/sheengo/onlinemedclinic/domains/Specialization.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/sheengo/onlinemedclinic/domains/Specialization.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/dev/sheengo/onlinemedclinic/domains/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/sheengo/onlinemedclinic/domains/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dev/sheengo/onlinemedclinic/filters/HomeFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/sheengo/onlinemedclinic/filters/HomeFilter.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,20 +27,25 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Jsp File" />
         <option value="Interface" />
         <option value="Class" />
+        <option value="Jsp File" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;
   }
-}]]></component>
+}</component>
   <component name="GithubPullRequestsUISettings">
     <option name="selectedUrlAndAccountId">
       <UrlAndAccount>
@@ -80,7 +81,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/home/asror/Desktop/Java Backend/projects/OnlineMedClinic/src/main/java/dev/sheengo/onlinemedclinic/entity",
+    "last_opened_file_path": "/home/asror/Desktop/Java Backend/projects/OnlineMedClinic/src/main/java/dev/sheengo/onlinemedclinic/filters",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -94,11 +95,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/java/dev/sheengo/onlinemedclinic/filters" />
+      <recent name="$PROJECT_DIR$/src/main/webapp/views/auth" />
+      <recent name="$PROJECT_DIR$/src/main/webapp/resources/css" />
       <recent name="$PROJECT_DIR$/src/main/java/dev/sheengo/onlinemedclinic/entity" />
       <recent name="$PROJECT_DIR$/src/main/webapp/views/userPages" />
-      <recent name="$PROJECT_DIR$/src/main/webapp/views/DoctorPages" />
-      <recent name="$PROJECT_DIR$/src/main/webapp/views/auth" />
-      <recent name="$PROJECT_DIR$/src/main/webapp/views/adminPages" />
     </key>
   </component>
   <component name="RunManager">
@@ -245,7 +246,35 @@
       <option name="project" value="LOCAL" />
       <updated>1676366213295</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="exceptions added">
+      <created>1676376039112</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1676376039112</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Thread safe class added">
+      <created>1676377374770</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1676377374770</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Thread safe class added">
+      <created>1676377865417</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1676377865417</updated>
+    </task>
+    <task id="LOCAL-00010" summary="getInstance()">
+      <created>1676377981729</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1676377981729</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -268,6 +297,9 @@
     <MESSAGE value="Domains added" />
     <MESSAGE value="Domains update" />
     <MESSAGE value="Service abstract class added" />
-    <option name="LAST_COMMIT_MESSAGE" value="Service abstract class added" />
+    <MESSAGE value="exceptions added" />
+    <MESSAGE value="Thread safe class added" />
+    <MESSAGE value="getInstance()" />
+    <option name="LAST_COMMIT_MESSAGE" value="getInstance()" />
   </component>
 </project>

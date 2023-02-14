@@ -3,7 +3,7 @@ package dev.sheengo.onlinemedclinic.dao;
 import dev.sheengo.onlinemedclinic.domains.User;
 import jakarta.persistence.EntityManager;
 
-public class UserDAO extends DAO<User> {
+public class UserDAO extends DAO<User, UserDAO> {
     private static final UserDAO dao = new UserDAO();
     @Override
     public User save(User user) {
@@ -29,7 +29,7 @@ public class UserDAO extends DAO<User> {
         return null;
     }
 
-    public static UserDAO getInstance(){
+    public static UserDAO getInstance() {
         return dao;
     }
 }

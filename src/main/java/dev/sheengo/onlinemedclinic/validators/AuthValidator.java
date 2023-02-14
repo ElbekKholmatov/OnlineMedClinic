@@ -1,5 +1,6 @@
 package dev.sheengo.onlinemedclinic.validators;
 
+import dev.sheengo.onlinemedclinic.dao.UserDAO;
 import dev.sheengo.onlinemedclinic.exceptions.AuthException;
 import jakarta.servlet.http.HttpServletRequest;
 
