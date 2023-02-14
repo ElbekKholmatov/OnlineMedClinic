@@ -4,7 +4,7 @@ import dev.sheengo.onlinemedclinic.domains.Domain;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.Persistence;
 
-public abstract class DAO<T extends Domain, D extends DAO> {
+public abstract class DAO<T extends Domain> {
     private static final EntityManager entityManager = Persistence
             .createEntityManagerFactory("persistence_unit").createEntityManager();
     abstract public T save(T t);

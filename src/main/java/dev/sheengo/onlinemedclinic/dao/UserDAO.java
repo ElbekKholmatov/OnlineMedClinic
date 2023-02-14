@@ -3,7 +3,7 @@ package dev.sheengo.onlinemedclinic.dao;
 import dev.sheengo.onlinemedclinic.domains.User;
 import jakarta.persistence.EntityManager;
 
-public class UserDAO extends DAO<User, UserDAO> {
+public class UserDAO extends DAO<User> {
     private static final UserDAO dao = new UserDAO();
     @Override
     public User save(User user) {
