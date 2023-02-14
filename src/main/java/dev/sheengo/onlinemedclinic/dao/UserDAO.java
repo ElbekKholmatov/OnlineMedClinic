@@ -4,6 +4,7 @@ import dev.sheengo.onlinemedclinic.domains.User;
 import jakarta.persistence.EntityManager;
 
 public class UserDAO extends DAO<User> {
+    private static final UserDAO dao = new UserDAO();
     @Override
     public User save(User user) {
         EntityManager entityManager = getEntityManager();
@@ -26,5 +27,9 @@ public class UserDAO extends DAO<User> {
     @Override
     public User get(Integer id) {
         return null;
+    }
+
+    public static UserDAO getInstance(){
+        return dao;
     }
 }
