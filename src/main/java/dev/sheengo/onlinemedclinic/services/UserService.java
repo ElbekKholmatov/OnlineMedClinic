@@ -6,7 +6,7 @@ import jakarta.servlet.http.HttpServletResponse;
 
 public class UserService extends Service<User>{
     @Override
-    public HttpServletResponse service(HttpServletRequest request) {
+    public HttpServletRequest service(HttpServletRequest request) {
         return null;
     }
 

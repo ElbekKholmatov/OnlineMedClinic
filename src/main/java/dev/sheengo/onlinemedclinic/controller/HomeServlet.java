@@ -21,6 +21,7 @@ public class HomeServlet extends HttpServlet {
                         .username("dwd")
                         .address("dw")
                         .passport("dwd")
+                        .password("ced")
                         .birthdate(LocalDateTime.now())
                 .build());
     }

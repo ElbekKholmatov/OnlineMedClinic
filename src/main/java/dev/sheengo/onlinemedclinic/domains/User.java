@@ -32,6 +32,8 @@ public class User implements Domain {
     @Column(nullable = false)
     // unique
     private String username;
+    @Column(nullable = false)
+    private String password;
     @Builder.Default
     @Enumerated(EnumType.STRING)
     private Status status = Status.ACTIVE;
