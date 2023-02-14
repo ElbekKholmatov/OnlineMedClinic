@@ -19,6 +19,7 @@ public class HomeServlet extends HttpServlet {
                         .lastName("dwd")
                         .phone("ded")
                         .username("dwd")
+                        .password("fef")
                         .address("dw")
                         .passport("dwd")
                         .birthdate(LocalDateTime.now())

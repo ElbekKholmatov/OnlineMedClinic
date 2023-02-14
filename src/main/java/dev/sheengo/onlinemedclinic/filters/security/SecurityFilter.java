@@ -20,17 +20,14 @@ public class SecurityFilter implements Filter {
 
     private static final List<String> WHITE_LIST = List.of(
             "/",
-            "/showBooks",
             "/home",
             "/signUp",
+            "/logIn",
             "/resources/.+",
             "/download"
     );
     private static final List<String> ADMIN_PAGE_LIST = List.of(
-            "/adminPage",
-            "/book/add",
-            "/delete",
-            "/update"
+            "/user/MainPage"
     );
 
     private static final Predicate<String> isSecure = (uri) -> {
@@ -74,7 +71,7 @@ public class SecurityFilter implements Filter {
                                 if (request.getSession().getAttribute("role").toString().equals("Admin"))
                                     chain.doFilter(request, response);
                                 else
-                                    request.getRequestDispatcher("/auth/error.jsp").forward(request, response);
+                                    request.getRequestDispatcher("/views/errorPages/error.jsp").forward(request, response);
                             } else
                                 chain.doFilter(request, response);
                         } catch (IOException | ServletException e) {
@@ -82,8 +79,7 @@ public class SecurityFilter implements Filter {
                         }
                     }), () -> {
                         try {
-                            System.out.println(requestURI);
-                            response.sendRedirect("/home?next=" + requestURI);
+                            response.sendRedirect("/home");
                         } catch (IOException e) {
                             throw new RuntimeException(e);
                         }

@@ -11,13 +11,10 @@
   <component name="ChangeListManager">
     <list default="true" id="868efec0-8191-4b1d-8e00-fd842d8438fb" name="Changes" comment="Service abstract class added">
       <change beforePath="$PROJECT_DIR$/src/main/java/dev/sheengo/onlinemedclinic/controller/HomeServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/sheengo/onlinemedclinic/controller/HomeServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dev/sheengo/onlinemedclinic/domains/Disease.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/sheengo/onlinemedclinic/domains/Disease.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dev/sheengo/onlinemedclinic/domains/DoctorSchedule.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/sheengo/onlinemedclinic/domains/DoctorSchedule.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dev/sheengo/onlinemedclinic/domains/Document.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/sheengo/onlinemedclinic/domains/Document.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dev/sheengo/onlinemedclinic/domains/History.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/sheengo/onlinemedclinic/domains/History.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dev/sheengo/onlinemedclinic/domains/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/sheengo/onlinemedclinic/domains/Order.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dev/sheengo/onlinemedclinic/domains/Specialization.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/sheengo/onlinemedclinic/domains/Specialization.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/dev/sheengo/onlinemedclinic/domains/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/sheengo/onlinemedclinic/domains/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/sheengo/onlinemedclinic/services/Service.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/sheengo/onlinemedclinic/services/Service.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/sheengo/onlinemedclinic/services/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/sheengo/onlinemedclinic/services/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/sheengo/onlinemedclinic/validators/AuthValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/sheengo/onlinemedclinic/validators/AuthValidator.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,6 +51,9 @@
       </UrlAndAccount>
     </option>
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/main/java/dev/sheengo/onlinemedclinic/domains/User.java" root0="FORCE_HIGHLIGHTING" />
+  </component>
   <component name="LogFilters">
     <option name="FILTER_ERRORS" value="false" />
     <option name="FILTER_WARNINGS" value="false" />
@@ -76,23 +76,23 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/home/asror/Desktop/Java Backend/projects/OnlineMedClinic/src/main/java/dev/sheengo/onlinemedclinic/filters",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/asror/Desktop/Java Backend/projects/OnlineMedClinic/src/main/java/dev/sheengo/onlinemedclinic/filters&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/java/dev/sheengo/onlinemedclinic/filters" />
