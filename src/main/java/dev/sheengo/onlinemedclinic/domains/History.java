@@ -5,10 +5,11 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.hibernate.annotations.CreationTimestamp;
 
 import java.time.LocalDateTime;
 
-@jakarta.persistence.Entity
+@Entity
 @Table(name = "history")
 @Builder
 @AllArgsConstructor
@@ -18,12 +19,15 @@ public class History implements Domain {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
+    @CreationTimestamp
+    @Column(nullable = true, columnDefinition = "timestamp not null default current_timestamp")
     private LocalDateTime createdAt;
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.ALL)
     private User userId;
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.ALL)
     private Doctor doctorId;
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.ALL)
     private Specialization specializationId;
+    @Column(nullable = false)
     private String description;
 }

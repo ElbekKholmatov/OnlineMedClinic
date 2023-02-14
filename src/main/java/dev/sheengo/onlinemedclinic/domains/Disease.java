@@ -1,15 +1,12 @@
 package dev.sheengo.onlinemedclinic.domains;
 
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-@jakarta.persistence.Entity
+@Entity
 @Table(name = "disease")
 @Builder
 @AllArgsConstructor
@@ -17,9 +14,11 @@ import lombok.NoArgsConstructor;
 @Data
 public class Disease implements Domain{
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(columnDefinition = "smallserial")
     private Short id;
+    @Column(nullable = false)
     private String name;
-    private Integer specializationId;
+    @ManyToOne(cascade = CascadeType.ALL)
+    private Specialization specializationId;
     private String description;
 }

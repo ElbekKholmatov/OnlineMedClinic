@@ -1,15 +1,12 @@
 package dev.sheengo.onlinemedclinic.domains;
 
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-@jakarta.persistence.Entity
+@Entity
 @Table(name = "document")
 @Builder
 @AllArgsConstructor
@@ -19,11 +16,18 @@ public class Document implements Domain{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
+    @Column(nullable = false)
     private String generatedFileName;
+    @Column(nullable = false)
     private String originalFileName;
+    @Column(nullable = false)
     private String mimeType;
+    @Column(nullable = false)
     private String filePath;
+    @Column(nullable = false)
     private Integer fileSize;
-    private Integer deletedByUser ;
+    @Column(nullable = false)
+    private Integer deletedByUser;
+    @Column(nullable = false)
     private String extension;
 }

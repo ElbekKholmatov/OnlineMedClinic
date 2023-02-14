@@ -5,7 +5,7 @@ import jakarta.servlet.annotation.*;
 
 import java.io.IOException;
 
-@WebFilter(filterName = "HomeFilter")
+//@WebFilter(filterName = "HomeFilter")
 public class HomeFilter implements Filter {
     public void init(FilterConfig config) throws ServletException {
     }

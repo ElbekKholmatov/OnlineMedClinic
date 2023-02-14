@@ -6,7 +6,7 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-@jakarta.persistence.Entity
+@Entity
 @Table(name = "doctor")
 @Builder
 @AllArgsConstructor
@@ -16,10 +16,11 @@ public class Doctor implements Domain {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
-    @OneToOne
+    @OneToOne(cascade = CascadeType.ALL)
     private User userId;
-    @OneToOne
+    @OneToOne(cascade = CascadeType.ALL)
     private Specialization specializationId;
     private String info;
+    @Column(nullable = true, columnDefinition = "numeric(15, 2) default 0")
     private Double rating;
 }

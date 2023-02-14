@@ -5,10 +5,11 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.hibernate.annotations.CreationTimestamp;
 
 import java.time.LocalDateTime;
 
-@jakarta.persistence.Entity
+@Entity
 @Table(name = "doctor_schedule")
 @Builder
 @AllArgsConstructor
@@ -18,7 +19,9 @@ public class DoctorSchedule implements Domain {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.ALL)
     private Doctor doctorId;
+    @CreationTimestamp
+    @Column(nullable = true, columnDefinition = "timestamp default current_timestamp")
     private LocalDateTime workTime;
 }

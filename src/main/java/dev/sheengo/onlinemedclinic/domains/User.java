@@ -5,6 +5,7 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.hibernate.annotations.CreationTimestamp;
 
 import java.time.LocalDateTime;
 
@@ -19,25 +20,40 @@ public class User implements Domain {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
+    @Column(nullable = false)
     private String firstName;
+    @Column(nullable = false)
     private String lastName;
     @Builder.Default
     @Enumerated(EnumType.STRING)
     private UserRole role = UserRole.USER;
+    @Column(nullable = false)
     private String phone;
+    @Column(nullable = false)
+    // unique
     private String username;
     @Builder.Default
     @Enumerated(EnumType.STRING)
-    private Status status = Status.NO_ACTIVE;
+    private Status status = Status.ACTIVE;
+    @Column(nullable = true, columnDefinition = "smallint default 0")
     private Short spamCount;
+    @Column(nullable = false)
     private String address;
+    @Column(nullable = false)
     private String passport;
+
+    @Column(nullable = true, columnDefinition = "bool default false")
     private Boolean isDeleted;
 
+    @CreationTimestamp
+    @Column(nullable = true, columnDefinition = "timestamp default current_timestamp")
     private LocalDateTime createdAt;
+    @CreationTimestamp
+    @Column(nullable = true, columnDefinition = "timestamp default current_timestamp")
     private LocalDateTime updatedAt;
-    @OneToOne
+    @OneToOne(cascade = CascadeType.ALL)
     private Document pictureId;
+    @Column(nullable = false)
     private LocalDateTime birthdate;
 
     public enum UserRole{
