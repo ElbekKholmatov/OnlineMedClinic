@@ -14,8 +14,6 @@ import lombok.NoArgsConstructor;
 @Data
 public class Doctor implements Domain {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
     @OneToOne(cascade = CascadeType.ALL)
     private User userId;
     @OneToOne(cascade = CascadeType.ALL)
