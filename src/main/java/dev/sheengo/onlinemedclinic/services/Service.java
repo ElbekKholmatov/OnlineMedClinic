@@ -7,8 +7,9 @@ import jakarta.servlet.http.HttpServletResponse;
 public abstract class Service<T extends Domain> {
     public abstract HttpServletRequest service(HttpServletRequest request);
 
-    abstract T save(T t);
-    abstract boolean update(T t);
-    abstract boolean delete(Integer id);
-    abstract T get(Integer id);
+    public abstract HttpServletRequest save(HttpServletRequest request);
+    public abstract HttpServletRequest update(HttpServletRequest request);
+    public abstract HttpServletRequest delete(HttpServletRequest request);
+    public abstract HttpServletRequest get(HttpServletRequest request);
+    public abstract T get(Integer id);
 }

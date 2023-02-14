@@ -11,22 +11,27 @@ public class UserService extends Service<User>{
     }
 
     @Override
-    User save(User user) {
+    public HttpServletRequest save(HttpServletRequest request) {
         return null;
     }
 
     @Override
-    boolean update(User user) {
-        return false;
+    public HttpServletRequest update(HttpServletRequest request) {
+        return null;
     }
 
     @Override
-    boolean delete(Integer id) {
-        return false;
+    public HttpServletRequest delete(HttpServletRequest request) {
+        return null;
     }
 
     @Override
-    User get(Integer id) {
+    public HttpServletRequest get(HttpServletRequest request) {
+        return null;
+    }
+
+    @Override
+    public User get(Integer id) {
         return null;
     }
 }
