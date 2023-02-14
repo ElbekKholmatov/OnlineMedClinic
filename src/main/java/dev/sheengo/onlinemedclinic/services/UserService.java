@@ -1,12 +1,7 @@
 package dev.sheengo.onlinemedclinic.services;
 
 import dev.sheengo.onlinemedclinic.domains.User;
-import jakarta.servlet.RequestDispatcher;
-import jakarta.servlet.http.Cookie;
 import jakarta.servlet.http.HttpServletRequest;
-import jakarta.servlet.http.HttpSession;
-
-import java.util.Objects;
 
 public class UserService extends Service<User>{
     private static final ThreadLocal<UserService> instance = ThreadLocal.withInitial(UserService::new);
@@ -59,7 +54,6 @@ public class UserService extends Service<User>{
         return null;
     }
 
-    @Override
     User save(User user) {
 //        String firstName = request.getParameter("firstName");
 //        String lastName = request.getParameter("lastName");
@@ -79,17 +73,27 @@ public class UserService extends Service<User>{
     }
 
     @Override
-    boolean update(User user) {
-        return false;
+    public HttpServletRequest save(HttpServletRequest request) {
+        return null;
     }
 
     @Override
-    boolean delete(Integer id) {
-        return false;
+    public HttpServletRequest update(HttpServletRequest request) {
+        return null;
     }
 
     @Override
-    User get(Integer id) {
+    public HttpServletRequest delete(HttpServletRequest request) {
+        return null;
+    }
+
+    @Override
+    public HttpServletRequest get(HttpServletRequest request) {
+        return null;
+    }
+
+    @Override
+    public User get(Integer id) {
         return null;
     }
 }
