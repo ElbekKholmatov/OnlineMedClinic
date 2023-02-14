@@ -15,7 +15,7 @@ import lombok.NoArgsConstructor;
 public class Doctor implements Domain {
     @Id
     @OneToOne(cascade = CascadeType.ALL)
-    private User userId;
+    private User user;
     @OneToOne(cascade = CascadeType.ALL)
     private Specialization specializationId;
     private String info;
