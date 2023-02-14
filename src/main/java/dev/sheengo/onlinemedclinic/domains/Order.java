@@ -18,8 +18,10 @@ public class Order implements Domain {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
-    private Integer userId;
-    private Integer doctorId;
+    @ManyToOne
+    private User userId;
+    @ManyToOne
+    private Doctor doctorId;
     private LocalDateTime visitTime;
     private String description;
     @Builder.Default

@@ -1,9 +1,6 @@
 package dev.sheengo.onlinemedclinic.domains;
 
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -21,6 +18,7 @@ public class DoctorSchedule implements Domain {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
-    private Integer doctorId;
+    @ManyToOne
+    private Doctor doctorId;
     private LocalDateTime workTime;
 }

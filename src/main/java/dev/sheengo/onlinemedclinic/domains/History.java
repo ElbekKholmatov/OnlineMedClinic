@@ -1,9 +1,6 @@
 package dev.sheengo.onlinemedclinic.domains;
 
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -22,8 +19,11 @@ public class History implements Domain {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     private LocalDateTime createdAt;
-    private Integer userId;
-    private Integer doctorId;
-    private Integer specializationId;
+    @ManyToOne
+    private User userId;
+    @ManyToOne
+    private Doctor doctorId;
+    @ManyToOne
+    private Specialization specializationId;
     private String description;
 }

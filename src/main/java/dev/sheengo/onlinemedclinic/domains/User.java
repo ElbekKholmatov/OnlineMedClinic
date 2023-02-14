@@ -1,7 +1,6 @@
 package dev.sheengo.onlinemedclinic.domains;
 
 import jakarta.persistence.*;
-import jakarta.persistence.Entity;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -34,9 +33,11 @@ public class User implements Domain {
     private String address;
     private String passport;
     private Boolean isDeleted;
+
     private LocalDateTime createdAt;
     private LocalDateTime updatedAt;
-    private Integer pictureId;
+    @OneToOne
+    private Document pictureId;
     private LocalDateTime birthdate;
 
     public enum UserRole{

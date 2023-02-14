@@ -16,8 +16,10 @@ public class Doctor implements Domain {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
-    private Integer userId;
-    private Integer specializationId;
+    @OneToOne
+    private User userId;
+    @OneToOne
+    private Specialization specializationId;
     private String info;
     private Double rating;
 }
