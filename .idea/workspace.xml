@@ -9,13 +9,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="868efec0-8191-4b1d-8e00-fd842d8438fb" name="Changes" comment="Service abstract class added">
-      <change afterPath="$PROJECT_DIR$/src/main/java/dev/sheengo/onlinemedclinic/configs/ThreadSafeCollections.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/images/404.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/errors/error.jsp" afterDir="false" />
+    <list default="true" id="868efec0-8191-4b1d-8e00-fd842d8438fb" name="Changes" comment="fixed">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dev/sheengo/onlinemedclinic/controller/HomeServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/sheengo/onlinemedclinic/controller/HomeServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dev/sheengo/onlinemedclinic/services/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/sheengo/onlinemedclinic/services/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/sheengo/onlinemedclinic/filters/security/SecurityFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/sheengo/onlinemedclinic/filters/security/SecurityFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/errors/error.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/errors/error.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -351,7 +349,14 @@
       <option name="project" value="LOCAL" />
       <updated>1676377981729</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="fixed">
+      <created>1676383556171</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1676383556171</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -377,6 +382,7 @@
     <MESSAGE value="exceptions added" />
     <MESSAGE value="Thread safe class added" />
     <MESSAGE value="getInstance()" />
-    <option name="LAST_COMMIT_MESSAGE" value="getInstance()" />
+    <MESSAGE value="fixed" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed" />
   </component>
 </project>

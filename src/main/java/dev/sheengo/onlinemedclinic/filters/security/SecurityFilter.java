@@ -1,6 +1,7 @@
 package dev.sheengo.onlinemedclinic.filters.security;
 
 
+import dev.sheengo.onlinemedclinic.configs.ThreadSafeCollections;
 import jakarta.servlet.*;
 import jakarta.servlet.annotation.WebFilter;
 import jakarta.servlet.http.Cookie;
@@ -55,15 +56,12 @@ public class SecurityFilter implements Filter {
             Cookie[] cookies = Objects.requireNonNullElse(request.getCookies(), new Cookie[]{});
             Arrays.stream(cookies)
                     .peek(cookie -> {
-                        if (cookie.getName().equals("firstName")) {
-                            request.getSession().setAttribute("firstName", cookie.getValue());
-                        } else if (cookie.getName().equals("id")) {
+                        if (cookie.getName().equals("id")) {
                             request.getSession().setAttribute("id", cookie.getValue());
-                        } else if (cookie.getName().equals("role")) {
-                            request.getSession().setAttribute("role", cookie.getValue());
                         }
                     })
-                    .filter(cookie -> cookie.getName().equals("role"))
+                    .filter(cookie -> cookie.getName().equals("id") &&
+                            ThreadSafeCollections.id.contains(Integer.parseInt(cookie.getValue())))
                     .findFirst()
                     .ifPresentOrElse((cookie -> {
                         try {

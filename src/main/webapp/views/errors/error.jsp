@@ -6,6 +6,6 @@
     <title>Title</title>
 </head>
 <body>
-<img src="../../resources/images/404.jpg">
+<img src="/resources/images/404.jpg">
 </body>
 </html>

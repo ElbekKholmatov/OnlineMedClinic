@@ -4,6 +4,6 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-public class ThreadSafeCollections {
+public interface ThreadSafeCollections {
     List<Integer> id = Collections.synchronizedList(new ArrayList<>());
 }
