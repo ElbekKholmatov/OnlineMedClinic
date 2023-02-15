@@ -5,6 +5,10 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
 public class UserService extends Service<User>{
+    private static final ThreadLocal<UserService> instance = ThreadLocal.withInitial(UserService::new);
+    public static UserService getInstance(){
+        return instance.get();
+    }
     @Override
     public HttpServletResponse service(HttpServletRequest request) {
         return null;

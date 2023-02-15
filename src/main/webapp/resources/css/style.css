@@ -69,14 +69,18 @@ h6,
 }
 
 #spinner {
+    animation: 1.5s linear infinite spinner;
+    animation-play-state: inherit;
     opacity: 0;
     visibility: hidden;
-    transition: opacity .5s ease-out, visibility 0s linear .5s;
+    transition: opacity 0.5s ease-out, visibility 0s linear .5s;
     z-index: 99999;
 }
 
 #spinner.show {
-    transition: opacity .5s ease-out, visibility 0s linear 0s;
+    animation: 1.5s linear infinite spinner;
+    animation-play-state: inherit;
+    transition: opacity 0.5s ease-out, visibility 0s linear 0s;
     visibility: visible;
     opacity: 1;
 }
@@ -190,12 +194,12 @@ h6,
 }
 
 .hero-header {
-    background: linear-gradient(rgba(9, 30, 62, .85), rgba(9, 30, 62, .85)), url(../img/carousel-1.jpg) center center no-repeat;
+    background: linear-gradient(rgba(9, 30, 62, .85), rgba(9, 30, 62, .85)), url(/resources/img/carousel-1.jpg) center center no-repeat;
     background-size: cover;
 }
 
 .bg-appointment {
-    background: linear-gradient(rgba(9, 30, 62, .85), rgba(9, 30, 62, .85)), url(../img/carousel-1.jpg) center center no-repeat;
+    background: linear-gradient(rgba(9, 30, 62, .85), rgba(9, 30, 62, .85)), url(/resources/img/carousel-1.jpg) center center no-repeat;
     background-size: cover;
 }
 
@@ -235,7 +239,7 @@ h6,
 }
 
 .bg-offer {
-    background:url(../img/carousel-1.jpg) center center no-repeat;
+    background:url(/resources/img/carousel-1.jpg) center center no-repeat;
     background-size: cover;
 }
 
@@ -280,7 +284,7 @@ h6,
 }
 
 .bg-testimonial {
-    background: url(../img/carousel-2.jpg) center center no-repeat;
+    background: url(/resources/img/carousel-2.jpg) center center no-repeat;
     background-size: cover;
 }
 
@@ -319,7 +323,7 @@ h6,
     background: var(--secondary);
 }
 
-.testimonial-carousel .owl-item img {
-    width: 120px;
-    height: 120px;
-}
+/*.testimonial-carousel .owl-item img {*/
+/*    width: 120px !important;*/
+/*    height: 120px;*/
+/*}*/

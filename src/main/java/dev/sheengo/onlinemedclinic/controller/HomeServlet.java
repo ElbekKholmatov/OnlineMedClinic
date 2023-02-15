@@ -9,24 +9,29 @@ import jakarta.servlet.annotation.*;
 import java.io.IOException;
 import java.time.LocalDateTime;
 
-@WebServlet(name = "HomeServlet", value = "/")
+@WebServlet(name = "HomeServlet", value = "")
 public class HomeServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        UserDAO userDAO = new UserDAO();
-        userDAO.save(User.builder()
-                        .firstName("Asror")
-                        .lastName("dwd")
-                        .phone("ded")
-                        .username("dwd")
-                        .address("dw")
-                        .passport("dwd")
-                        .birthdate(LocalDateTime.now())
-                .build());
+        RequestDispatcher requestDispatcher = request.getRequestDispatcher("/views/Home.jsp");
+        requestDispatcher.forward(request, response);
+//
+//
+//        UserDAO userDAO = new UserDAO();
+//        userDAO.save(User.builder()
+//                        .firstName("Asror")
+//                        .lastName("dwd")
+//                        .phone("ded")
+//                        .username("dwd")
+//                        .address("dw")
+//                        .passport("dwd")
+//                        .birthdate(LocalDateTime.now())
+//                .build());
     }
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        response.sendError(405, "Method Not Supported");
 
     }
 }
