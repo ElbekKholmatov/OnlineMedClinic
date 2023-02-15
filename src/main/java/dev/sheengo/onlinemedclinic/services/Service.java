@@ -2,7 +2,6 @@ package dev.sheengo.onlinemedclinic.services;
 
 import dev.sheengo.onlinemedclinic.domains.Domain;
 import jakarta.servlet.http.HttpServletRequest;
-import jakarta.servlet.http.HttpServletResponse;
 
 public abstract class Service<T extends Domain> {
     public abstract HttpServletRequest service(HttpServletRequest request);
