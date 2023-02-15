@@ -7,6 +7,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.hibernate.annotations.CreationTimestamp;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 
@@ -55,8 +56,7 @@ public class User implements Domain {
     private LocalDateTime updatedAt;
     @OneToOne(cascade = CascadeType.ALL)
     private Document pictureId;
-    @Column(nullable = false)
-    private LocalDateTime birthdate;
+    private LocalDate birthdate;
 
     public enum UserRole{
         USER, DOCTOR, ADMIN, SUPER_ADMIN
