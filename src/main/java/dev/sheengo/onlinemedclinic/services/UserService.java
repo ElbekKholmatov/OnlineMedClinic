@@ -6,32 +6,32 @@ import jakarta.servlet.http.HttpServletResponse;
 
 public class UserService extends Service<User>{
     @Override
-    public HttpServletRequest service(HttpServletRequest request) {
+    public Response<User> service(HttpServletRequest request) {
         return null;
     }
 
     @Override
-    public HttpServletRequest save(HttpServletRequest request) {
+    public Response<User> save(HttpServletRequest request) {
         return null;
     }
 
     @Override
-    public HttpServletRequest update(HttpServletRequest request) {
+    public Response<User> update(HttpServletRequest request) {
         return null;
     }
 
     @Override
-    public HttpServletRequest delete(HttpServletRequest request) {
+    public Response<User> delete(HttpServletRequest request) {
         return null;
     }
 
     @Override
-    public HttpServletRequest get(HttpServletRequest request) {
+    public Response<User> get(HttpServletRequest request) {
         return null;
     }
 
     @Override
-    public User get(Integer id) {
+    public Response<User> get(Integer id) {
         return null;
     }
 }

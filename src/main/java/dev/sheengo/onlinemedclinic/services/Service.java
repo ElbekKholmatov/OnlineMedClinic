@@ -4,11 +4,11 @@ import dev.sheengo.onlinemedclinic.domains.Domain;
 import jakarta.servlet.http.HttpServletRequest;
 
 public abstract class Service<T extends Domain> {
-    public abstract HttpServletRequest service(HttpServletRequest request);
+    public abstract Response<T> service(HttpServletRequest request);
 
-    public abstract HttpServletRequest save(HttpServletRequest request);
-    public abstract HttpServletRequest update(HttpServletRequest request);
-    public abstract HttpServletRequest delete(HttpServletRequest request);
-    public abstract HttpServletRequest get(HttpServletRequest request);
-    public abstract T get(Integer id);
+    public abstract Response<T> save(HttpServletRequest request);
+    public abstract Response<T> update(HttpServletRequest request);
+    public abstract Response<T> delete(HttpServletRequest request);
+    public abstract Response<T> get(HttpServletRequest request);
+    public abstract Response<T> get(Integer id);
 }

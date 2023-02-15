@@ -7,6 +7,7 @@ import jakarta.servlet.http.*;
 import jakarta.servlet.annotation.*;
 
 import java.io.IOException;
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 @WebServlet(name = "HomeServlet", value = "/")
@@ -22,7 +23,7 @@ public class HomeServlet extends HttpServlet {
                         .address("dw")
                         .passport("dwd")
                         .password("ced")
-                        .birthdate(LocalDateTime.now())
+                        .birthdate(LocalDate.now())
                 .build());
     }
 
