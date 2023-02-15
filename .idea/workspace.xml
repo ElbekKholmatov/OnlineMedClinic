@@ -10,8 +10,148 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="868efec0-8191-4b1d-8e00-fd842d8438fb" name="Changes" comment="All error fixed">
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/fragments/css.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/fragments/js.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/css/bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/css/main.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/css/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/images/about.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/images/after.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/images/before.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/images/carousel-1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/images/carousel-2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/images/price-1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/images/price-2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/images/price-3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/images/service-1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/images/service-2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/images/service-3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/images/service-4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/images/team-1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/images/team-2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/images/team-3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/images/team-4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/images/team-5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/images/testimonial-1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/images/testimonial-2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/bootstrap.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/main.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/popper.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/script.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/lib/animate/animate.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/lib/animate/animate.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/lib/easing/easing.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/lib/easing/easing.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/lib/owlcarousel/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/lib/owlcarousel/assets/ajax-loader.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/lib/owlcarousel/assets/owl.carousel.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/lib/owlcarousel/assets/owl.carousel.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/lib/owlcarousel/assets/owl.theme.default.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/lib/owlcarousel/assets/owl.theme.default.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/lib/owlcarousel/assets/owl.theme.green.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/lib/owlcarousel/assets/owl.theme.green.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/lib/owlcarousel/assets/owl.video.play.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/lib/owlcarousel/owl.carousel.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/lib/owlcarousel/owl.carousel.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/lib/tempusdominus/css/tempusdominus-bootstrap-4.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/lib/tempusdominus/js/moment-timezone.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/lib/tempusdominus/js/moment.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/lib/tempusdominus/js/tempusdominus-bootstrap-4.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/lib/twentytwenty/jquery.event.move.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/lib/twentytwenty/jquery.twentytwenty.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/lib/twentytwenty/twentytwenty.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/lib/waypoints/links.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/lib/waypoints/waypoints.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/lib/wow/wow.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/lib/wow/wow.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/scss/bootstrap.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/scss/bootstrap/scss/_accordion.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/scss/bootstrap/scss/_alert.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/scss/bootstrap/scss/_badge.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/scss/bootstrap/scss/_breadcrumb.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/scss/bootstrap/scss/_button-group.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/scss/bootstrap/scss/_buttons.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/scss/bootstrap/scss/_card.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/scss/bootstrap/scss/_carousel.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/scss/bootstrap/scss/_close.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/scss/bootstrap/scss/_containers.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/scss/bootstrap/scss/_dropdown.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/scss/bootstrap/scss/_forms.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/scss/bootstrap/scss/_functions.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/scss/bootstrap/scss/_grid.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/scss/bootstrap/scss/_helpers.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/scss/bootstrap/scss/_images.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/scss/bootstrap/scss/_list-group.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/scss/bootstrap/scss/_mixins.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/scss/bootstrap/scss/_modal.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/scss/bootstrap/scss/_nav.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/scss/bootstrap/scss/_navbar.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/scss/bootstrap/scss/_offcanvas.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/scss/bootstrap/scss/_pagination.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/scss/bootstrap/scss/_popover.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/scss/bootstrap/scss/_progress.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/scss/bootstrap/scss/_reboot.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/scss/bootstrap/scss/_root.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/scss/bootstrap/scss/_spinners.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/scss/bootstrap/scss/_tables.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/scss/bootstrap/scss/_toasts.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/scss/bootstrap/scss/_tooltip.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/scss/bootstrap/scss/_transitions.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/scss/bootstrap/scss/_type.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/scss/bootstrap/scss/_utilities.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/scss/bootstrap/scss/_variables.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/scss/bootstrap/scss/bootstrap-grid.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/scss/bootstrap/scss/bootstrap-reboot.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/scss/bootstrap/scss/bootstrap-utilities.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/scss/bootstrap/scss/bootstrap.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/scss/bootstrap/scss/forms/_floating-labels.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/scss/bootstrap/scss/forms/_form-check.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/scss/bootstrap/scss/forms/_form-control.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/scss/bootstrap/scss/forms/_form-range.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/scss/bootstrap/scss/forms/_form-select.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/scss/bootstrap/scss/forms/_form-text.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/scss/bootstrap/scss/forms/_input-group.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/scss/bootstrap/scss/forms/_labels.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/scss/bootstrap/scss/forms/_validation.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/scss/bootstrap/scss/helpers/_clearfix.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/scss/bootstrap/scss/helpers/_colored-links.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/scss/bootstrap/scss/helpers/_position.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/scss/bootstrap/scss/helpers/_ratio.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/scss/bootstrap/scss/helpers/_stretched-link.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/scss/bootstrap/scss/helpers/_text-truncation.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/scss/bootstrap/scss/helpers/_visually-hidden.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/scss/bootstrap/scss/mixins/_alert.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/scss/bootstrap/scss/mixins/_border-radius.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/scss/bootstrap/scss/mixins/_box-shadow.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/scss/bootstrap/scss/mixins/_breakpoints.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/scss/bootstrap/scss/mixins/_buttons.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/scss/bootstrap/scss/mixins/_caret.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/scss/bootstrap/scss/mixins/_clearfix.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/scss/bootstrap/scss/mixins/_color-scheme.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/scss/bootstrap/scss/mixins/_container.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/scss/bootstrap/scss/mixins/_deprecate.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/scss/bootstrap/scss/mixins/_forms.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/scss/bootstrap/scss/mixins/_gradients.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/scss/bootstrap/scss/mixins/_grid.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/scss/bootstrap/scss/mixins/_image.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/scss/bootstrap/scss/mixins/_list-group.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/scss/bootstrap/scss/mixins/_lists.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/scss/bootstrap/scss/mixins/_pagination.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/scss/bootstrap/scss/mixins/_reset-text.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/scss/bootstrap/scss/mixins/_resize.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/scss/bootstrap/scss/mixins/_table-variants.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/scss/bootstrap/scss/mixins/_text-truncate.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/scss/bootstrap/scss/mixins/_transition.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/scss/bootstrap/scss/mixins/_utilities.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/scss/bootstrap/scss/mixins/_visually-hidden.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/scss/bootstrap/scss/utilities/_api.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/scss/bootstrap/scss/vendor/_rfs.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/userPages/about.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dev/sheengo/onlinemedclinic/domains/Doctor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/sheengo/onlinemedclinic/domains/Doctor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/sheengo/onlinemedclinic/validators/UserValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/sheengo/onlinemedclinic/validators/UserValidator.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,13 +168,18 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;
   }
-}]]></component>
+}</component>
   <component name="GithubPullRequestsUISettings">
     <option name="selectedUrlAndAccountId">
       <UrlAndAccount>
@@ -54,14 +199,17 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="MavenImportPreferences">
-    <option name="importingSettings">
-      <MavenImportingSettings>
-        <option name="workspaceImportEnabled" value="true" />
-      </MavenImportingSettings>
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="Use Maven wrapper" />
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
     </option>
   </component>
   <component name="ProjectId" id="2Lgr00dGW7tsSMYbYvRVPYdMXfO" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
@@ -70,30 +218,44 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/home/asror/Desktop/Java Backend/projects/OnlineMedClinic/src/main/java/dev/sheengo/onlinemedclinic/entity",
+    "last_opened_file_path": "D:/PDP UNICORN/Jakarta/OnlineMedClinic/src/main/webapp/views/userPages",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
+    "project.structure.last.edited": "Problems",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.updates",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/main/java/dev/sheengo/onlinemedclinic/entity" />
-      <recent name="$PROJECT_DIR$/src/main/webapp/views/userPages" />
-      <recent name="$PROJECT_DIR$/src/main/webapp/views/DoctorPages" />
-      <recent name="$PROJECT_DIR$/src/main/webapp/views/auth" />
-      <recent name="$PROJECT_DIR$/src/main/webapp/views/adminPages" />
+      <recent name="D:\PDP UNICORN\Jakarta\OnlineMedClinic\src\main\webapp\views\userPages" />
+      <recent name="D:\PDP UNICORN\Jakarta\OnlineMedClinic\src\main\webapp\resources\js" />
+      <recent name="D:\PDP UNICORN\Jakarta\OnlineMedClinic\src\main\webapp\resources" />
+      <recent name="D:\PDP UNICORN\Jakarta\OnlineMedClinic\src\main\webapp\resources\images" />
+      <recent name="D:\PDP UNICORN\Jakarta\OnlineMedClinic\src\main\webapp\resources\css" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\PDP UNICORN\Jakarta\OnlineMedClinic\src\main\webapp" />
     </key>
   </component>
   <component name="RunManager">
+    <configuration default="true" type="JetRunConfigurationType">
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Tom&amp;Jerry" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 10.0.27" ALTERNATIVE_JRE_ENABLED="false">
-      <option name="OPEN_IN_BROWSER" value="false" />
       <option name="UPDATING_POLICY" value="redeploy-artifacts" />
       <deployment>
         <artifact name="OnlineMedClinic:war exploded">
@@ -192,6 +354,10 @@
       <workItem from="1676303345403" duration="1000" />
       <workItem from="1676357915161" duration="130000" />
       <workItem from="1676358099618" duration="13295000" />
+      <workItem from="1676425361459" duration="446000" />
+      <workItem from="1676425841509" duration="1798000" />
+      <workItem from="1676427685505" duration="611000" />
+      <workItem from="1676429070037" duration="779000" />
     </task>
     <task id="LOCAL-00001" summary="pom.xml">
       <created>1676358546110</created>
