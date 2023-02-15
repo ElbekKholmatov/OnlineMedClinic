@@ -1,4 +1,4 @@
-package dev.sheengo.onlinemedclinic.controller;
+package dev.sheengo.onlinemedclinic.controller.adminPages.admin;
 
 import dev.sheengo.onlinemedclinic.dao.UserDAO;
 import dev.sheengo.onlinemedclinic.domains.User;

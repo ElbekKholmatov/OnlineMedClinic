@@ -1,4 +1,4 @@
-package dev.sheengo.onlinemedclinic.controller;
+package dev.sheengo.onlinemedclinic.controller.adminPages.admin;
 
 import dev.sheengo.onlinemedclinic.dao.UserDAO;
 import dev.sheengo.onlinemedclinic.domains.User;
@@ -12,8 +12,7 @@ import java.io.IOException;
 public class DeleteAdminServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        request.getRequestDispatcher("/views/adminPages/admin/DeleteDr.jsp").forward(request, response);
-
+        request.getRequestDispatcher("/WEB-INF/jsp/adminPages/admin/deleteAdmin.jsp").forward(request, response);
     }
 
     @Override
