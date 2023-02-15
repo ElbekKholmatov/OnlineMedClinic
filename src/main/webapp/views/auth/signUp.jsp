@@ -55,6 +55,18 @@
         </div>
 
         <div>
+            <input class="form-control" placeholder="address" type="text"
+                   name="address">
+            <span>${addressException}</span>
+        </div>
+
+        <div>
+            <input class="form-control" placeholder="passport" type="text"
+                   name="passport">
+            <span>${passportException}</span>
+        </div>
+
+        <div>
             <input type="submit" class="submit" value="SIGN IN">
 
             <p class="forgot"><a href="/home"> LogIn </a></p>

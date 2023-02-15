@@ -18,9 +18,12 @@ public class AuthValidator {
     public void checkParamsRegister(HttpServletRequest req) throws AuthException {
         String firstName = req.getParameter("firstName");
         String lastName = req.getParameter("lastName");
-        String email = req.getParameter("email");
+        String phone = req.getParameter("phone");
+        String username = req.getParameter("username");
         String password = req.getParameter("password");
         String rPassword = req.getParameter("rPassword");
+        String address = req.getParameter("address");
+        String passport = req.getParameter("passport");
 
         if ( Objects.isNull(firstName) || firstName.isBlank() ) {
             req.setAttribute("firstNameException", "Firstname is invalid");
