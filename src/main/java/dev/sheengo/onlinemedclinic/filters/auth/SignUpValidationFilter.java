@@ -9,7 +9,7 @@ import jakarta.servlet.http.HttpServletResponse;
 
 import java.io.IOException;
 
-//@WebFilter(filterName = "SignUpValidationFilter", urlPatterns = "/signUp")
+@WebFilter(filterName = "SignUpValidationFilter", urlPatterns = "/signUp")
 public class SignUpValidationFilter implements Filter {
 
     @Override
@@ -22,7 +22,7 @@ public class SignUpValidationFilter implements Filter {
                 AuthValidator.getInstance().checkParamsRegister(req);
                 chain.doFilter(req, res);
             } catch (AuthException e) {
-                RequestDispatcher dispatcher = req.getRequestDispatcher("/auth/signUp.jsp");
+                RequestDispatcher dispatcher = req.getRequestDispatcher("/views/auth/signUp.jsp");
                 dispatcher.forward(req, res);
             }
         } else

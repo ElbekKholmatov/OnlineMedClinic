@@ -77,7 +77,7 @@ public class SecurityFilter implements Filter {
                     .ifPresentOrElse((cookie -> {
                         try {
                             Integer id = Integer.parseInt(request.getSession().getAttribute("id").toString());
-                            User user = UserService.getInstance().get(id);
+                            User user = UserService.getInstance().get(id).getDomain();
 
                             if (isAdminPage.test(requestURI)) {
                                 if (user.getRole().equals(User.UserRole.ADMIN))

@@ -3,9 +3,12 @@ package dev.sheengo.onlinemedclinic.dao;
 import dev.sheengo.onlinemedclinic.domains.User;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.NoResultException;
+import lombok.AccessLevel;
+import lombok.NoArgsConstructor;
 
 import java.util.List;
 
+@NoArgsConstructor(access = AccessLevel.PRIVATE)
 public class UserDAO extends DAO<User> {
     private static final UserDAO dao = new UserDAO();
     @Override
@@ -48,5 +51,4 @@ public class UserDAO extends DAO<User> {
     public static UserDAO getInstance() {
         return dao;
     }
-
 }

@@ -51,8 +51,6 @@ public class User implements Domain {
     @CreationTimestamp
     @Column(nullable = true, columnDefinition = "timestamp default current_timestamp")
     private LocalDateTime createdAt;
-    @CreationTimestamp
-    @Column(nullable = true, columnDefinition = "timestamp default current_timestamp")
     private LocalDateTime updatedAt;
     @OneToOne(cascade = CascadeType.ALL)
     private Document pictureId;

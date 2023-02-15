@@ -1,5 +1,6 @@
 package dev.sheengo.onlinemedclinic.controller.auth;
 
+import dev.sheengo.onlinemedclinic.services.UserService;
 import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
@@ -19,6 +20,7 @@ public class SignUp extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
+        UserService.getInstance().save(request).getRequest()
+                .getRequestDispatcher("views/auth/logIn.jsp").forward(request, response);
     }
 }

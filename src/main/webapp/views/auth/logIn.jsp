@@ -12,7 +12,7 @@
 </head>
 
 <body>
-<form method="post">
+<form method="post" action="/logIn">
     <div class="login">
         <h1>Account Login</h1>
 
@@ -32,7 +32,6 @@
                 color: rgb(0, 157, 255);"></i>
         </div>
         <input type="submit" style="border-radius: 9px" class="submit" value="Log In">
-        <input type="hidden" name="next" value="${next}">
 
         <p>Forgot <a> Username / Password?</a></p>
         <p class="forgot"> Create an account? <a href="/signUp"> Sign up </a></p>
