@@ -9,22 +9,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="868efec0-8191-4b1d-8e00-fd842d8438fb" name="Changes" comment="barcha html lar jsp ga almashtirldi va &#10;fronted tugadi faqat login qismi qolgan xolos boldi.">
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/css/imgstyle.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/auth/userAuth.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/auth/userAuth1.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="868efec0-8191-4b1d-8e00-fd842d8438fb" name="Changes" comment="login va register boldi">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/fragments/css.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/fragments/css.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/Home.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/Home.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/userPages/about.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/userPages/about.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/userPages/appointment.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/userPages/appointment.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/userPages/contact.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/userPages/contact.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/userPages/price.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/userPages/price.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/userPages/service.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/userPages/service.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/userPages/signUp.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/auth/signUp.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/userPages/team.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/userPages/team.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/userPages/testimonial.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/userPages/testimonial.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/sheengo/onlinemedclinic/controller/HomeServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/sheengo/onlinemedclinic/controller/HomeServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/auth/signUp.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/auth/signUp.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -256,6 +244,8 @@
       <workItem from="1676437961004" duration="168000" />
       <workItem from="1676444660548" duration="3921000" />
       <workItem from="1676448596315" duration="707000" />
+      <workItem from="1676453057532" duration="58000" />
+      <workItem from="1676453127129" duration="6201000" />
     </task>
     <task id="LOCAL-00001" summary="pom.xml">
       <created>1676358546110</created>
