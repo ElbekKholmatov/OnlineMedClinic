@@ -63,7 +63,7 @@
 
 <!-- Navbar Start -->
 <nav class="navbar navbar-expand-lg bg-white navbar-light shadow-sm px-5 py-3 py-lg-0">
-    <a href="/views/userPages/index.jsp" class="navbar-brand p-0">
+    <a href="/views/Home.jsp" class="navbar-brand p-0">
         <h1 class="m-0 text-primary"><i class="fa-solid fa-house-chimney-medical"></i> Med Center</h1>
     </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
@@ -89,16 +89,19 @@
                 class="fa fa-search"></i></button>
         <a href="/views/userPages/appointment.jsp" class="btn btn-primary py-2 px-4 ms-3"><i
                 class="fa-solid fa-heart-circle-plus"></i></a>
-
-        <div class="media align-items-center">
+        <a href="/views/auth/userAuth.jsp" class="nav-item nav-link">
+            <div class="media align-items-center">
                 <span class="avatar avatar-sm rounded-circle">
                   <img alt="Image placeholder"
                        src="https://demos.creative-tim.com/argon-dashboard/assets-old/img/theme/team-4.jpg">
                 </span>
-            <div class="media-body ml-2 d-none d-lg-block">
-                <span class="mb-0 text-sm  font-weight-bold">  Jessica Jones</span>
+                <div class="media-body ml-2 d-none d-lg-block">
+                    <span class="mb-0 text-sm  font-weight-bold">  Jessica Jones</span>
+                </div>
             </div>
-        </div>
+        </a>
+
+
     </div>
 </nav>
 <!-- Navbar End -->
@@ -742,68 +745,6 @@
 
 <!-- Back to Top -->
 <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded back-to-top"><i class="bi bi-arrow-up"></i></a>
-<style>
-
-
-    .avatar {
-
-        margin-left: 20px;
-        margin-right: 8px;
-        font-size: 1rem;
-        display: inline-flex;
-        width: 48px;
-        height: 48px;
-        color: #fff;
-        border-radius: 50%;
-        background-color: #adb5bd;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .avatar img {
-        width: 100%;
-        border-radius: 50%;
-    }
-
-    .avatar-sm {
-        font-size: .875rem;
-        width: 36px;
-        height: 36px;
-    }
-
-    .rounded-circle {
-        border-radius: 50% !important;
-    }
-
-    .media {
-        display: flex;
-        align-items: flex-start;
-    }
-
-    .media-body {
-        flex: 1 1;
-    }
-
-    @media (min-width: 992px) {
-
-        .d-lg-inline-block {
-            display: inline-block !important;
-        }
-
-        .d-lg-block {
-            display: block !important;
-        }
-    }
-
-    .font-weight-light {
-        font-weight: 300 !important;
-    }
-
-    .font-weight-bold {
-        font-weight: 600 !important;
-    }
-
-</style>
 <jsp:include page="/fragments/js.jsp"/>
 
 <!-- Template Javascript -->

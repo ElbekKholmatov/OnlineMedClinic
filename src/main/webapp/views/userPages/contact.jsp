@@ -67,7 +67,7 @@
 
 <!-- Navbar Start -->
 <nav class="navbar navbar-expand-lg bg-white navbar-light shadow-sm px-5 py-3 py-lg-0">
-    <a href="/views/userPages/index.jsp" class="navbar-brand p-0">
+    <a href="/views/Home.jsp" class="navbar-brand p-0">
         <h1 class="m-0 text-primary"><i class="fa-solid fa-house-chimney-medical"></i> Med Center</h1>
     </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">

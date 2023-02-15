@@ -64,7 +64,7 @@
 
 <!-- Navbar Start -->
 <nav class="navbar navbar-expand-lg bg-white navbar-light shadow-sm px-5 py-3 py-lg-0">
-    <a href="/views/userPages/index.jsp" class="navbar-brand p-0">
+    <a href="/views/Home.jsp" class="navbar-brand p-0">
         <h1 class="m-0 text-primary"><i class="fa fa-tooth me-2"></i>DentCare</h1>
     </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
@@ -72,7 +72,7 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarCollapse">
         <div class="navbar-nav ms-auto py-0">
-            <a href="/views/userPages/index.jsp" class="nav-item nav-link">Home</a>
+            <a href="/views/Home.jsp" class="nav-item nav-link">Home</a>
             <a href="/views/userPages/about.jsp" class="nav-item nav-link active">About</a>
             <a href="/views/userPages/service.jsp" class="nav-item nav-link">Service</a>
             <div class="nav-item dropdown">

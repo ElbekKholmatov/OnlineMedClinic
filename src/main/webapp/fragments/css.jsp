@@ -2,6 +2,7 @@
     <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/main.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/bootstrap.min.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/fontStyle.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/imgstyle.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/all.min.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/font-awesome.min.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/bootsrap-icons.css">
