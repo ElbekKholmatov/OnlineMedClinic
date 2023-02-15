@@ -20,9 +20,9 @@ public class Order implements Domain {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     @ManyToOne(cascade = CascadeType.ALL)
-    private User userId;
+    private User user;
     @ManyToOne(cascade = CascadeType.ALL)
-    private Doctor doctorId;
+    private Doctor doctor;
     @CreationTimestamp
     @Column(nullable = true, columnDefinition = "timestamp not null default current_timestamp")
     private LocalDateTime visitTime;

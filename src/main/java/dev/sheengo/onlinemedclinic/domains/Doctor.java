@@ -17,7 +17,7 @@ public class Doctor implements Domain {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     @OneToOne(cascade = CascadeType.ALL)
-    private User userId;
+    private User user;
     @OneToOne(cascade = CascadeType.ALL)
     private Specialization specializationId;
     private String info;

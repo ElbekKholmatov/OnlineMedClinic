@@ -13,8 +13,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SignIn</title>
-    <link rel="stylesheet" href="/resources/css/signIn.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+  <jsp:include page="/fragments/css.jsp"/>
 </head>
 <body>
 <form method="post">
@@ -32,8 +31,9 @@
         </div>
 
         <div>
-            <input type="email" class="email" placeholder="Email" name="email" required>
-            <span>${emailException}</span>
+            <input class=" form-control phoneNumber" placeholder="" type="tel"
+                   name="phoneNumber" required="" autocomplete="off" value="+998">
+            <span>${phoneException}</span>
         </div>
 
         <div style="position: relative; padding: 0;">
@@ -106,6 +106,100 @@
         </script>
     </div>
 </form>
+<style>
+    body {
+        background-image: linear-gradient(-225deg, #E3FDF5 0%, #6acdf6 80%);
+        background-image: linear-gradient(to top, #a8edea 0%, #629ac4 80%);
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+    }
+
+    form {
+        background-color: rgba(255, 255, 255, 0.13);
+        position: absolute;
+        transform: translate(-50%, -50%);
+        top: 50%;
+        left: 50%;
+        border-radius: 10px;
+        backdrop-filter: blur(10px);
+        border: 2px solid rgba(255, 255, 255, 0.1);
+        box-shadow: 0 0 40px rgba(8, 7, 16, 0.6);
+        padding: 20px 50px 35px 35px;
+    }
+
+    .reg {
+        height: 550px;
+        width: 600px;
+        margin: 0 auto;
+        padding: 20px;
+        font-family: sans-serif;
+        color: rgb(150, 149, 149);
+        text-align: center;
+    }
+
+    h1 {
+        color: white;
+        margin: 10px auto;
+    }
+
+    div {
+        width: 360px;
+        margin-left: 11px;
+    }
+
+    input {
+        margin: 5px 78px;
+        padding: 24px;
+        border: 1px solid rgb(211, 210, 210);
+        width: 100%;
+        outline: none;
+        border-radius: 9px;
+        transition: 0.4s;
+    }
+
+    input:focus {
+        outline: solid 0.5px rgb(1, 136, 255);
+        box-shadow: 0 0 10px 0px rgb(1, 136, 255);
+    }
+
+
+    .submit {
+        margin: 20px 78px;
+        padding: 21px;
+        width: 410px;
+        background-color: rgb(104, 104, 255);
+        color: white;
+        border: none;
+        cursor: pointer;
+    }
+
+    p {
+        margin: 20px 262px;
+    }
+
+    a {
+        color: rgb(80, 146, 233);
+        cursor: pointer;
+        text-decoration: none;
+    }
+
+    span {
+        margin-left: 80px;
+        display: block;
+        font-size: 10px;
+        color: red;
+        width: 100%;
+    }
+
+    i {
+        position: absolute;
+        font-size: 19px;
+        cursor: pointer;
+        right: -100px;
+        top: 28px;
+        color: rgb(0, 157, 255);
+    }
+</style>
 
 </body>
 </html>

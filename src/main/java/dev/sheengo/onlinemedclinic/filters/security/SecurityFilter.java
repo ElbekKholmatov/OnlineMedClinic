@@ -2,6 +2,7 @@ package dev.sheengo.onlinemedclinic.filters.security;
 
 
 import dev.sheengo.onlinemedclinic.configs.ThreadSafeCollections;
+import dev.sheengo.onlinemedclinic.domains.User;
 import dev.sheengo.onlinemedclinic.services.UserService;
 import jakarta.servlet.*;
 import jakarta.servlet.annotation.WebFilter;
@@ -29,7 +30,10 @@ public class SecurityFilter implements Filter {
             "/download"
     );
     private static final List<String> ADMIN_PAGE_LIST = List.of(
-            "/user/MainPage"
+            "/admin/main"
+    );
+    private static final List<String> DOCTOR_PAGE_LIST = List.of(
+            "/doctor/main"
     );
 
     private static final Predicate<String> isSecure = (uri) -> {
@@ -40,6 +44,12 @@ public class SecurityFilter implements Filter {
     };
     private static final Predicate<String> isAdminPage = (uri) -> {
         for (String item : ADMIN_PAGE_LIST)
+            if (uri.matches(item))
+                return true;
+        return false;
+    };
+    private static final Predicate<String> isDoctorPage = (uri) -> {
+        for (String item : DOCTOR_PAGE_LIST)
             if (uri.matches(item))
                 return true;
         return false;
@@ -62,26 +72,33 @@ public class SecurityFilter implements Filter {
                             request.getSession().setAttribute("id", cookie.getValue());
                         }
                     })
-                    .filter( cookie -> request.getSession().getAttribute("id") != null )
+                    .filter(cookie -> request.getSession().getAttribute("id") != null)
                     .findFirst()
                     .ifPresentOrElse((cookie -> {
                         try {
+                            Integer id = Integer.parseInt(request.getSession().getAttribute("id").toString());
+                            User user = UserService.getInstance().get(id);
+
                             if (isAdminPage.test(requestURI)) {
-
-                                UserService.getInstance().get()
-
-                                if ()
+                                if (user.getRole().equals(User.UserRole.ADMIN))
                                     chain.doFilter(request, response);
                                 else
                                     request.getRequestDispatcher("/views/errorPages/error.jsp").forward(request, response);
-                            } else
+                            } else if (isDoctorPage.test(requestURI)) {
+                                if (user.getRole().equals(User.UserRole.DOCTOR))
+                                    chain.doFilter(request, response);
+                                else
+                                    request.getRequestDispatcher("/views/errorPages/error.jsp").forward(request, response);
+                            } else {
+                                System.out.println(request.getSession().getAttribute("id"));
                                 chain.doFilter(request, response);
+                            }
                         } catch (IOException | ServletException e) {
                             throw new RuntimeException(e);
                         }
                     }), () -> {
                         try {
-                            response.sendRedirect("/home");
+                            response.sendRedirect("/logIn");
                         } catch (IOException e) {
                             throw new RuntimeException(e);
                         }

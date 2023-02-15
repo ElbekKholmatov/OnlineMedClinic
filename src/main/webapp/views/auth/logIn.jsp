@@ -12,18 +12,18 @@
 </head>
 
 <body>
-<form method="post" action="/home">
+<form method="post">
     <div class="login">
         <h1>Account Login</h1>
 
         <div>
-            <input type="email" style="outline: none; border-radius: 9px" id="border" value="${email}" placeholder="Email" name="email" required>
-            <span>${emailException}</span>
+            <input type="text" style="outline: none; border-radius: 9px" id="border" value="${username}" placeholder="Username" name="username" required>
+            <span>${exception}</span>
         </div>
 
         <div class="password" style="position: relative; padding: 0;">
             <input type="password" id="iPass" value="${password}" style="outline: none; border-radius: 9px" placeholder="Password" name="password" required>
-            <span>${passwordException}</span>
+            <span>${exception}</span>
             <i class="bi bi-eye-slash" id="pass" onclick="showPassword()" style="position: absolute;
                 font-size: 19px;
                 cursor: pointer;
