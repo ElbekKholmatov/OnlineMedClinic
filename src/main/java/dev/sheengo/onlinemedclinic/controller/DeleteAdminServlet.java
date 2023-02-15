@@ -7,18 +7,22 @@ import jakarta.servlet.http.*;
 import jakarta.servlet.annotation.*;
 
 import java.io.IOException;
-import java.time.LocalDate;
-import java.time.LocalDateTime;
 
-@WebServlet(name = "HomeServlet", value = "/")
-public class HomeServlet extends HttpServlet {
+@WebServlet(name = "DeleteAdminServlet", value = "/superAmin/deleteAdmin")
+public class DeleteAdminServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        request.getRequestDispatcher("/views/adminPages/admin/DeleteDr.jsp").forward(request, response);
 
     }
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
+        String username = request.getParameter("set_username");
+        UserDAO userDAO = new UserDAO();
+        User user = userDAO.getByEmail(username);
+        user.setRole(User.UserRole.USER);
+        userDAO.update(user);
+        response.sendRedirect("/superAdmin/main");
     }
 }
