@@ -13,7 +13,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SignIn</title>
-  <jsp:include page="/fragments/css.jsp"/>
+  <jsp:include page="/resources/fragments/css.jsp"/>
 </head>
 <body>
 <form method="post">
@@ -31,9 +31,15 @@
         </div>
 
         <div>
-            <input class=" form-control phoneNumber" placeholder="" type="tel"
-                   name="phoneNumber" required="" autocomplete="off" value="+998">
+            <input class="form-control phoneNumber" placeholder="+998900000000" type="tel"
+                   name="phoneNumber" required="" autocomplete="off" value="">
             <span>${phoneException}</span>
+        </div>
+
+        <div>
+            <input class="form-control" placeholder="username" type="text"
+                   name="username">
+            <span>${usernameException}</span>
         </div>
 
         <div style="position: relative; padding: 0;">
