@@ -10,7 +10,7 @@ import jakarta.servlet.http.HttpSession;
 
 import java.util.Objects;
 
-public class UserService extends Service<User> {
+public class UserService implements Service<User> {
     private static final ThreadLocal<UserService> instance = ThreadLocal.withInitial(UserService::new);
 
     public static UserService getInstance() {
@@ -42,7 +42,7 @@ public class UserService extends Service<User> {
         String page = user.getRole().equals(User.UserRole.SUPER_ADMIN) ? "/superAdmin/main" :
                 user.getRole().equals(User.UserRole.ADMIN) ? "/admin/main"
                 : (user.getRole().equals(User.UserRole.DOCTOR)) ? "/doctor/main"
-                : "user/main";
+                : "/user/main";
 
         return Response.<User>builder()
                 .cookie(cookie)

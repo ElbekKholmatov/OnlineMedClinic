@@ -4,7 +4,7 @@ import dev.sheengo.onlinemedclinic.dao.DocumentDAO;
 import dev.sheengo.onlinemedclinic.domains.Document;
 import jakarta.servlet.http.HttpServletRequest;
 
-public class DocumentService extends Service<Document>{
+public class DocumentService implements Service<Document>{
     private static final ThreadLocal<DocumentService> instance = ThreadLocal.withInitial(DocumentService::new);
 
     public static DocumentService getInstance() {
