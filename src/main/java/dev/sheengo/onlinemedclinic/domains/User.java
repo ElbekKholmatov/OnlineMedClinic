@@ -55,7 +55,6 @@ public class User implements Domain {
     @OneToOne(cascade = CascadeType.ALL)
     private Document pictureId;
     private LocalDate birthdate;
-
     public enum UserRole{
         USER, DOCTOR, ADMIN, SUPER_ADMIN
     }

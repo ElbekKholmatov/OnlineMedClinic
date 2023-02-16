@@ -1,13 +1,16 @@
 package dev.sheengo.onlinemedclinic.services;
 
 import dev.sheengo.onlinemedclinic.configs.ThreadSafeCollections;
+import dev.sheengo.onlinemedclinic.dao.SpecializationDAO;
 import dev.sheengo.onlinemedclinic.dao.UserDAO;
+import dev.sheengo.onlinemedclinic.domains.Specialization;
 import dev.sheengo.onlinemedclinic.domains.User;
 import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.http.Cookie;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpSession;
 
+import java.util.List;
 import java.util.Objects;
 
 public class UserService implements Service<User> {
@@ -125,4 +128,8 @@ public class UserService implements Service<User> {
                 .returnPage("/superAdmin/main")
                 .build();
         }
+
+    public List<Specialization> getAll() {
+        return SpecializationDAO.getInstance().getAll();
+    }
 }
