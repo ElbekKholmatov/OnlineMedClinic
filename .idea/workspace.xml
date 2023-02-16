@@ -9,19 +9,123 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="868efec0-8191-4b1d-8e00-fd842d8438fb" name="Changes" comment="Service abstract class added">
-      <change afterPath="$PROJECT_DIR$/src/main/java/dev/sheengo/onlinemedclinic/dao/UserDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="868efec0-8191-4b1d-8e00-fd842d8438fb" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/activities.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/add-appointment.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/add-asset.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/add-blog.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/add-department.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/add-doctor.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/add-expense.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/add-invoice.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/add-leave.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/add-patient.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/add-payment.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/add-provident-fund.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/add-salary.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/add-schedule.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/add-staff.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/add-tax.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/appointments.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/assets.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/bank-settings.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/blank-page.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/blog-details.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/blog.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/calendar.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/change-password.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/change-password2.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/chat.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/compose.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/create-invoice.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/departments.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/doctor-dashboard.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/doctor-profile.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/doctor-setting.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/doctors.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/edit-appointment.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/edit-asset.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/edit-blog.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/edit-department.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/edit-doctor.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/edit-expense.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/edit-invoice.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/edit-invoices.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/edit-leave.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/edit-patient.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/edit-payment.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/edit-profile.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/edit-provident-fund.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/edit-salary.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/edit-schedule.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/edit-staff.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/edit-tax.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/email-settings.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/error-404.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/error-500.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/expense-reports.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/expenses.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/forgot-password.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/form-basic-inputs.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/form-horizontal.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/form-input-groups.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/form-vertical.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/gallery.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/inbox.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/incoming-call.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/invoice-reports.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/invoice-view.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/invoices-cancelled.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/invoices-draft.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/invoices-grid.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/invoices-list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/invoices-overdue.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/invoices-paid.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/invoices-recurring.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/invoices-settings.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/invoices.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/localization-details.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/lock-screen.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/login.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/mail-view.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/others-settings.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/patient-dashboard.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/patient-profile.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/patient-setting.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/patients.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/payment-settings.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/payments.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/profile.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/provident-fund.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/register.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/salary-view.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/salary.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/schedule.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/seo-settings.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/settings.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/social-links.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/social-settings.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/staff-attendance.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/staff-holiday.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/staff-leave.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/staff-list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/staff-profile.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/staff-setting.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/tables-basic.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/tables-datatables.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/tabs.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/tax-settings.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/taxes.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/theme-settings.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/typography.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/uikit.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/video-call.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/view-invoice.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/voice-call.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/dev/sheengo/onlinemedclinic/controller/HomeServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/sheengo/onlinemedclinic/controller/HomeServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dev/sheengo/onlinemedclinic/domains/Disease.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/sheengo/onlinemedclinic/domains/Disease.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dev/sheengo/onlinemedclinic/domains/Doctor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/sheengo/onlinemedclinic/domains/Doctor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dev/sheengo/onlinemedclinic/domains/DoctorSchedule.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/sheengo/onlinemedclinic/domains/DoctorSchedule.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dev/sheengo/onlinemedclinic/domains/Document.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/sheengo/onlinemedclinic/domains/Document.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dev/sheengo/onlinemedclinic/domains/History.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/sheengo/onlinemedclinic/domains/History.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dev/sheengo/onlinemedclinic/domains/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/sheengo/onlinemedclinic/domains/Order.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dev/sheengo/onlinemedclinic/domains/Specialization.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/sheengo/onlinemedclinic/domains/Specialization.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dev/sheengo/onlinemedclinic/domains/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/sheengo/onlinemedclinic/domains/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dev/sheengo/onlinemedclinic/filters/HomeFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/sheengo/onlinemedclinic/filters/HomeFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/sheengo/onlinemedclinic/validators/UserValidator.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,14 +141,17 @@
       </list>
     </option>
   </component>
+  <component name="Git.Rebase.Settings">
+    <option name="NEW_BASE" value="origin/master" />
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;
   }
-}]]></component>
+}</component>
   <component name="GithubPullRequestsUISettings">
     <option name="selectedUrlAndAccountId">
       <UrlAndAccount>
@@ -52,6 +159,9 @@
         <option name="url" value="https://github.com/ElbekKholmatov/OnlineMedClinic.git" />
       </UrlAndAccount>
     </option>
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/main/java/dev/sheengo/onlinemedclinic/domains/User.java" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="LogFilters">
     <option name="FILTER_ERRORS" value="false" />
@@ -71,27 +181,29 @@
     </option>
   </component>
   <component name="ProjectId" id="2Lgr00dGW7tsSMYbYvRVPYdMXfO" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/home/asror/Desktop/Java Backend/projects/OnlineMedClinic/src/main/java/dev/sheengo/onlinemedclinic/entity",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/asror/Desktop/Java Backend/projects/OnlineMedClinic/src/main/java/dev/sheengo/onlinemedclinic/entity&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/java/dev/sheengo/onlinemedclinic/entity" />
