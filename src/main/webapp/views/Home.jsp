@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
   Created by IntelliJ IDEA.
   User: shakh
@@ -82,7 +83,7 @@
             <a href="/views/userPages/about.jsp" class="nav-item nav-link">About</a>
             <a href="/views/userPages/service.jsp" class="nav-item nav-link">Service</a>
                         <div class="nav-item dropdown show">
-                            <a href="#"  style="padding-bottom: 5px;" class="nav-link dropdown-toggle" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Pages</a>
+                            <a href=""  style="padding-bottom: 5px;" class="nav-link dropdown-toggle" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Pages</a>
                             <div  class="dropdown-menu" aria-labelledby="dropdownMenuLink">
                                 <a href="/views/userPages/price.jsp" class="dropdown-item">Pricing Plan</a>
                                 <a href="/views/userPages/team.jsp" class="dropdown-item">Our Dentist</a>
