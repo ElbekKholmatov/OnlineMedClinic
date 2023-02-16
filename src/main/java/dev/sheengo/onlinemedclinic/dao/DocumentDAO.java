@@ -7,28 +7,9 @@ import lombok.AccessLevel;
 import lombok.NoArgsConstructor;
 
 @NoArgsConstructor(access = AccessLevel.PRIVATE)
-public class DocumentDAO extends DAO<Document>{
+public class DocumentDAO extends DAO<Document, Integer>{
     private static final DocumentDAO instance = new DocumentDAO();
     public static DocumentDAO getInstance(){return instance;}
-    @Override
-    public Document save(Document document) {
-        return null;
-    }
-
-    @Override
-    public boolean update(Document document) {
-        return false;
-    }
-
-    @Override
-    public boolean delete(Integer id) {
-        return false;
-    }
-
-    @Override
-    public Document get(Integer id) {
-        return null;
-    }
 
     public Document get(String filename) {
         String query = "select d from Document d where d.generatedFileName = ?1";

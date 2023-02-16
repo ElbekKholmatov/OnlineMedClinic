@@ -10,29 +10,9 @@ import lombok.NoArgsConstructor;
 import java.util.List;
 
 @NoArgsConstructor(access = AccessLevel.PRIVATE)
-public class OrderDAO extends DAO<Order> {
+public class OrderDAO extends DAO<Order, Integer> {
 
-    private static OrderDAO instance;
-
-    @Override
-    public Order save(Order order) {
-        return null;
-    }
-
-    @Override
-    public boolean update(Order order) {
-        return false;
-    }
-
-    @Override
-    public boolean delete(Integer id) {
-        return false;
-    }
-
-    @Override
-    public Order get(Integer id) {
-        return null;
-    }
+    private static OrderDAO instance = new OrderDAO();
 
     public List<Order> findAllOrders() {
 
@@ -66,13 +46,6 @@ public class OrderDAO extends DAO<Order> {
 
 
     public static OrderDAO getInstance() {
-        if (instance == null) {
-            synchronized (OrderDAO.class) {
-                if (instance == null) {
-                    instance = new OrderDAO();
-                }
-            }
-        }
         return instance;
     }
 

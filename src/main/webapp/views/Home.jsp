@@ -105,7 +105,7 @@
             <c:when test="${firstname == null}">
                 <a style="margin-left: 5px" href="/views/auth/userAuth.jsp" class="nav-item nav-link">
                     <button type="button" class="btn btn-primary ms-2 ">Login</button>
-                </a>/
+                </a>
             </c:when>
             <c:otherwise>
                 <%--                <i style="font-size: 35px; color: #0a58ca; background-color: white;"--%>

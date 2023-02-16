@@ -9,35 +9,12 @@ import lombok.NoArgsConstructor;
 import java.util.List;
 
 @NoArgsConstructor(access = AccessLevel.PRIVATE)
-public class UserDAO extends DAO<User> {
+public class UserDAO extends DAO<User, Integer> {
     private static final UserDAO dao = new UserDAO();
-    @Override
-    public User save(User user) {
-        EntityManager entityManager = getEntityManager();
-        entityManager.getTransaction().begin();
-        entityManager.persist(user);
-        entityManager.getTransaction().commit();
-        return user;
-    }
 
     @Override
     public boolean update(User user) {
         return false;
-    }
-
-    @Override
-    public boolean delete(Integer id) {
-        return false;
-    }
-
-    @Override
-    public User get(Integer id) {
-        EntityManager entityManager = getEntityManager();
-        entityManager.getTransaction().begin();
-        User user = entityManager.find(User.class, id);
-//        entityManager.contains(user);
-        entityManager.getTransaction().commit();
-        return user;
     }
 
     public User get(String username) {
