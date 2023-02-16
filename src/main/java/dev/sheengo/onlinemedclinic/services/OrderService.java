@@ -1,9 +1,13 @@
 package dev.sheengo.onlinemedclinic.services;
 
+import dev.sheengo.onlinemedclinic.dao.DoctorDAO;
+import dev.sheengo.onlinemedclinic.domains.Doctor;
 import dev.sheengo.onlinemedclinic.domains.Order;
 import jakarta.servlet.http.HttpServletRequest;
 import lombok.AccessLevel;
 import lombok.NoArgsConstructor;
+
+import java.util.List;
 
 @NoArgsConstructor(access = AccessLevel.PRIVATE)
 public class OrderService implements Service<Order>{
@@ -41,6 +45,6 @@ public class OrderService implements Service<Order>{
 
     public void selectCategory(HttpServletRequest req) {
         String category = req.getParameter("category");
-
+        req.setAttribute("doctors", DoctorDAO.getInstance().getDoctorsByCategory(Short.parseShort(category)));
     }
 }

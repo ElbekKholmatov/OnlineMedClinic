@@ -21,13 +21,14 @@ public class DoctorDAO extends DAO<Doctor, Integer> {
         return doctor;
     }
 
-    public List<Doctor> getDoctorsByCategory(Integer categoryId){
+    public List<Doctor> getDoctorsByCategory(Short categoryId){
 
-        String query = "select d from Doctor d where d.specializationId = :categoryId";
+        String query = "select d from Doctor d where d.specializationId.id = :categoryId";
 
         begin();
         List<Doctor> doctors = getEntityManager().createQuery(query, Doctor.class)
                 .setParameter("categoryId", categoryId).getResultList();
+        System.out.println(doctors);
         commit();
         return doctors;
     }

@@ -26,5 +26,6 @@ public class SelectCategoryController extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         OrderService.getInstance().selectCategory(req);
+        req.getRequestDispatcher("/views/selectDoctorPage.jsp").forward(req, resp);
     }
 }
