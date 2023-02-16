@@ -13,10 +13,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SignIn</title>
-  <jsp:include page="/resources/fragments/css.jsp"/>
+  <jsp:include page="/fragments/css.jsp"/>
 </head>
 <body>
 <form method="post">
+
     <div class="reg">
         <h1>Register account</h1>
         <div>
@@ -31,45 +32,46 @@
         </div>
 
         <div>
-            <input class="form-control phoneNumber" placeholder="+998900000000" type="tel"
+            <input class="phoneNumber" placeholder="+998900000000" type="tel"
                    name="phoneNumber" required="" autocomplete="off" value="">
             <span>${phoneException}</span>
         </div>
 
         <div>
-            <input class="form-control" placeholder="username" type="text"
+            <input placeholder="username" type="text"
                    name="username">
             <span>${usernameException}</span>
         </div>
 
         <div style="position: relative; padding: 0;">
             <input type="password" id="iPass" placeholder="Password" name="password" required>
-            <span>${passwordException}</span>
             <i class="bi bi-eye-slash" id="pass" onclick="showPassword()"></i>
+
+            <span>${passwordException}</span>
         </div>
 
-        <div style="position: relative;">
-            <input type="password" id="iRePass" placeholder="Repeat password" name="rPassword" required>
-            <span>${passwordDoNotMatchException}</span>
-            <i class="bi bi-eye-slash" id="rePass" onclick="showRePassword()"></i>
-        </div>
-
-        <div>
-            <input class="form-control" placeholder="passport" type="text"
-                   name="passport">
-            <span>${passportException}</span>
-        </div>
+<%--        <div style="position: relative;">--%>
+<%--            <input type="password" id="iRePass" placeholder="Repeat password" name="rPassword" required>--%>
+<%--            <span>${passwordDoNotMatchException}</span>--%>
+<%--            <i class="bi bi-eye-slash" id="rePass" onclick="showRePassword()"></i>--%>
+<%--        </div>--%>
 
         <div>
-            <input class="form-control" placeholder="address" type="text"
+            <input  placeholder="address" type="text"
                    name="address">
             <span>${addressException}</span>
         </div>
 
         <div>
+            <input  placeholder="passport" type="text"
+                   name="passport">
+            <span>${passportException}</span>
+        </div>
+
+        <div>
             <input type="submit" class="submit" value="SIGN IN">
 
-            <p class="forgot"><a href="/logIn"> LogIn </a></p>
+            <p class="forgot"><a href="/views/auth/userAuth.jsp"> LogIn </a></p>
         </div>
 
         <script>
@@ -123,6 +125,97 @@
             }
         </script>
     </div>
+
+
+
+<%--    <div class="reg">--%>
+<%--        <h1>Register account</h1>--%>
+<%--        <div>--%>
+<%--            <input type="text" class="name" id="myDiv" placeholder="Firstname" name="firstName" onclick="my()"--%>
+<%--                   required>--%>
+<%--            <span id="firstName">${firstNameException}</span>--%>
+<%--        </div>--%>
+
+<%--        <div>--%>
+<%--            <input type="text" class="name" placeholder="Lastname" name="lastName">--%>
+<%--            <span>${lastNameException}</span>--%>
+<%--        </div>--%>
+
+<%--        <div>--%>
+<%--            <input class=" form-control phoneNumber" placeholder="" type="tel"--%>
+<%--                   name="phoneNumber" required="" autocomplete="off" value="+998">--%>
+<%--            <span>${phoneException}</span>--%>
+<%--        </div>--%>
+
+<%--        <div style="position: relative; padding: 0;">--%>
+<%--            <input type="password" id="iPass" placeholder="Password" name="password" required>--%>
+<%--            <span>${passwordException}</span>--%>
+<%--            <i class="bi bi-eye-slash" id="pass" onclick="showPassword()"></i>--%>
+<%--        </div>--%>
+
+<%--        <div style="position: relative;">--%>
+<%--            <input type="password" id="iRePass" placeholder="Repeat password" name="rPassword" required>--%>
+<%--            <span>${passwordDoNotMatchException}</span>--%>
+<%--            <i class="bi bi-eye-slash" id="rePass" onclick="showRePassword()"></i>--%>
+<%--        </div>--%>
+
+<%--        <div>--%>
+<%--            <input type="submit" class="submit" value="SIGN IN">--%>
+
+<%--            <p class="forgot"><a href="/home"> LogIn </a></p>--%>
+<%--        </div>--%>
+
+<%--        <script>--%>
+
+<%--            function showPassword() {--%>
+<%--                let icon = document.getElementById("pass");--%>
+<%--                let input = document.getElementById("iPass");--%>
+
+<%--                setClassType(input, icon);--%>
+<%--            }--%>
+
+<%--            function showRePassword() {--%>
+<%--                let icon = document.getElementById("rePass");--%>
+<%--                let input = document.getElementById("iRePass");--%>
+
+<%--                setClassType(input, icon);--%>
+<%--            }--%>
+
+<%--            function setClassType(input, icon) {--%>
+<%--                if (icon.className == "bi bi-eye-slash") {--%>
+<%--                    input.type = "text";--%>
+<%--                    icon.className = "bi bi-eye";--%>
+<%--                    icon.style.color = "red";--%>
+<%--                } else {--%>
+<%--                    input.type = "password";--%>
+<%--                    icon.className = "bi bi-eye-slash";--%>
+<%--                    icon.style.color = "rgb(0, 157, 255)";--%>
+<%--                }--%>
+<%--            }--%>
+
+<%--            function my() {--%>
+<%--                let input = document.getElementById("myDiv");--%>
+<%--                let span = document.getElementById("firstName");--%>
+
+<%--                input.addEventListener('input', event => {--%>
+<%--                    if (input.value.length < 3) {--%>
+<%--                        input.style.borderColor = "red";--%>
+<%--                        input.style.boxShadow = "0 0 10px 0px red";--%>
+<%--                        span.innerHTML = "Fullname must be more than 3 letters";--%>
+<%--                    }--%>
+<%--                    if (input.value.length >= 3) {--%>
+<%--                        input.style.borderColor = "#02bb02";--%>
+<%--                        input.style.boxShadow = "0 0 10px 0px #02bb02";--%>
+<%--                        span.innerHTML = "";--%>
+<%--                    }--%>
+
+<%--                });--%>
+<%--                input.addEventListener('blur', event => {--%>
+<%--                    input.style.boxShadow = "none";--%>
+<%--                });--%>
+<%--            }--%>
+<%--        </script>--%>
+<%--    </div>--%>
 </form>
 <style>
     body {
@@ -140,16 +233,17 @@
         left: 50%;
         border-radius: 10px;
         backdrop-filter: blur(10px);
-        border: 2px solid rgba(255, 255, 255, 0.1);
+        border: 1px solid rgba(255, 255, 255, 0.1);
         box-shadow: 0 0 40px rgba(8, 7, 16, 0.6);
-        padding: 20px 50px 35px 35px;
+        padding: auto;
+
     }
 
     .reg {
-        height: 550px;
-        width: 600px;
+        height: 650px;
+        width: 700px;
         margin: 0 auto;
-        padding: 20px;
+        padding: 3px;
         font-family: sans-serif;
         color: rgb(150, 149, 149);
         text-align: center;
@@ -161,15 +255,20 @@
     }
 
     div {
-        width: 360px;
-        margin-left: 11px;
+        width: 90%;
+        margin: auto;
+    }
+    #pass{
+        margin-right: 155px;
+        margin-top: -5px;
     }
 
     input {
-        margin: 5px 78px;
-        padding: 24px;
+        height: 51px;
+        margin-top: 10px;
+        width: 90%;
+        padding: 20px;
         border: 1px solid rgb(211, 210, 210);
-        width: 100%;
         outline: none;
         border-radius: 9px;
         transition: 0.4s;
@@ -192,7 +291,7 @@
     }
 
     p {
-        margin: 20px 262px;
+        margin: 0px auto;
     }
 
     a {
@@ -210,6 +309,7 @@
     }
 
     i {
+        margin-left: -200px;
         position: absolute;
         font-size: 19px;
         cursor: pointer;
