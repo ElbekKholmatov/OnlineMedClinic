@@ -2,6 +2,7 @@ package dev.sheengo.onlinemedclinic.controller.userController.order;
 
 import dev.sheengo.onlinemedclinic.dao.UserDAO;
 import dev.sheengo.onlinemedclinic.domains.Specialization;
+import dev.sheengo.onlinemedclinic.services.OrderService;
 import dev.sheengo.onlinemedclinic.services.SpecializationService;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
@@ -24,6 +25,6 @@ public class SelectCategoryController extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        super.doPost(req, resp);
+        OrderService.getInstance().selectCategory(req);
     }
 }

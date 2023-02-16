@@ -3,6 +3,7 @@
 <html>
 <head>
     <title>Title</title>
+    <jsp:include page="/fragments/css.jsp"/>
 </head>
 <body>
 <form method="post">
@@ -11,8 +12,8 @@
         <c:forEach items="${categories}" var="category">
             <option value="${category.getId()}">${category.getName()}</option>
         </c:forEach>
-        <button class="btn btn-primary">Next</button>
     </select>
+    <button type="submit" class="btn btn-primary">Next</button>
 </form>
 </body>
 </html>

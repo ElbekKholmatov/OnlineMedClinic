@@ -14,12 +14,6 @@ public class OrderDAO extends DAO<Order, Integer> {
 
     private static OrderDAO instance = new OrderDAO();
 
-    public List<Order> findAllOrders() {
-
-        EntityManager entityManager = getEntityManager();
-        return entityManager.createQuery("select o from Order o", Order.class).getResultList();
-    }
-
     public List<Order> findOrderByUserId(Integer id) {
 
         EntityManager entityManager = getEntityManager();
