@@ -10,12 +10,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="868efec0-8191-4b1d-8e00-fd842d8438fb" name="Changes" comment="fixed">
-      <change afterPath="$PROJECT_DIR$/src/main/java/dev/sheengo/onlinemedclinic/controller/userController/mainPageController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dev/sheengo/onlinemedclinic/dao/UserDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/sheengo/onlinemedclinic/dao/UserDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dev/sheengo/onlinemedclinic/services/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/sheengo/onlinemedclinic/services/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dev/sheengo/onlinemedclinic/validators/AuthValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/sheengo/onlinemedclinic/validators/AuthValidator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/Home.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/Home.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -206,7 +201,8 @@
       <workItem from="1676358099618" duration="13295000" />
       <workItem from="1676390934273" duration="329000" />
       <workItem from="1676531621711" duration="645000" />
-      <workItem from="1676536021819" duration="628000" />
+      <workItem from="1676536021819" duration="760000" />
+      <workItem from="1676536790043" duration="1390000" />
     </task>
     <task id="LOCAL-00001" summary="pom.xml">
       <created>1676358546110</created>
@@ -264,7 +260,14 @@
       <option name="project" value="LOCAL" />
       <updated>1676536648648</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="fixed">
+      <created>1676536685660</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1676536685660</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
