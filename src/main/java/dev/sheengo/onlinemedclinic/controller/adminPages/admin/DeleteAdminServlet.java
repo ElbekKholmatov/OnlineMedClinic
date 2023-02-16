@@ -12,15 +12,17 @@ import java.io.IOException;
 public class DeleteAdminServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        request.getRequestDispatcher("/WEB-INF/jsp/adminPages/admin/deleteAdmin.jsp").forward(request, response);
+        request.getRequestDispatcher("/views/adminPages/admin/DeleteAdmin.jsp").forward(request, response);
     }
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String username = request.getParameter("set_username");
         UserDAO userDAO = new UserDAO();
-        User user = userDAO.getByEmail(username);
-        user.setRole(User.UserRole.USER);
+        User user = User.builder()
+                .username(username)
+                .role(User.UserRole.USER)
+                .build();
         userDAO.update(user);
         response.sendRedirect("/superAdmin/main");
     }
