@@ -9,9 +9,415 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="868efec0-8191-4b1d-8e00-fd842d8438fb" name="Changes" comment="login va register boldi">
+    <list default="true" id="868efec0-8191-4b1d-8e00-fd842d8438fb" name="Changes" comment="admin va doctor page boldi">
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/css/bootstrap-datetimepicker.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/css/bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/css/ckeditor.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/css/dataTables.bootstrap4.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/css/feather.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/css/fullcalendar.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/css/select2.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/css/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/css/tagsinput.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/fonts/Feather.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/fonts/Feather.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/fonts/Feather.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/img/activity-01.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/img/activity-02.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/img/activity-03.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/img/bg-img-01.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/img/blog/blog-01.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/img/blog/blog-02.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/img/blog/blog-03.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/img/blog/blog-04.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/img/blog/blog-1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/img/blog/blog-10.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/img/blog/blog-11.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/img/blog/blog-12.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/img/blog/blog-13.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/img/blog/blog-2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/img/blog/blog-3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/img/blog/blog-4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/img/blog/blog-5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/img/blog/blog-6.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/img/blog/blog-7.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/img/blog/blog-8.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/img/blog/blog-9.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/img/blog/blog-detail.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/img/call-01.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/img/call-02.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/img/call-03.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/img/call.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/img/clock.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/img/doctor-03.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/img/error-01.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/img/error-02.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/img/favicon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/img/icons/bar-icon.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/img/icons/calendar-icon.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/img/icons/calendar.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/img/icons/call-icon-01.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/img/icons/call-icon-02.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/img/icons/call-icon-03.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/img/icons/call-incoming.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/img/icons/call-outgoing.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/img/icons/call-received.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/img/icons/call-remove.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/img/icons/camera-icon.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/img/icons/chat-foot-icon-01.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/img/icons/chat-foot-icon-02.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/img/icons/chat-foot-icon-03.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/img/icons/chat-foot-icon-04.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/img/icons/chat-icon-01.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/img/icons/chat-icon-02.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/img/icons/chat-icon-03.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/img/icons/chat-icon-04.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/img/icons/chat-icon-05.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/img/icons/chat-icon-06.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/img/icons/chat-icon-07.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/img/icons/chat-icon-08.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/img/icons/clip.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/img/icons/clock.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/img/icons/danger.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/img/icons/dep-icon-01.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/img/icons/dep-icon-02.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/img/icons/dep-icon-03.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/img/icons/dep-icon-04.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/img/icons/dep-icon-05.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/img/icons/doctor-dash-01.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/img/icons/doctor-dash-02.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/img/icons/doctor-dash-03.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/img/icons/doctor-dash-04.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/img/icons/document-icon.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/img/icons/draft.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/img/icons/edit-2.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/img/icons/edit.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/img/icons/empty-wallet.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/img/icons/folder-icon-01.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/img/icons/folder-icon-02.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/img/icons/folder-icon-03.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/img/icons/folder-icon-04.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/img/icons/folder-icon-05.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/img/icons/forward-icon-01.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/img/icons/forward-icon-02.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/img/icons/forward-icon-03.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/img/icons/gallery-icon.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/img/icons/health-img.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/img/icons/inbox.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/img/icons/login-icon-01.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/img/icons/login-icon-02.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/img/icons/login-icon-03.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/img/icons/logout.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/img/icons/mass-icon.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/img/icons/medal-01.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/img/icons/medal-02.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/img/icons/medal-03.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/img/icons/menu-icon-01.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/img/icons/menu-icon-02.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/img/icons/menu-icon-03.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/img/icons/menu-icon-04.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/img/icons/menu-icon-05.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/img/icons/menu-icon-06.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/img/icons/menu-icon-07.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/img/icons/menu-icon-08.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/img/icons/menu-icon-09.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/img/icons/menu-icon-10.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/img/icons/menu-icon-11.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/img/icons/menu-icon-12.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/img/icons/menu-icon-13.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/img/icons/menu-icon-14.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/img/icons/menu-icon-15.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/img/icons/menu-icon-16.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/img/icons/note-icon-01.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/img/icons/note-icon-02.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/img/icons/pdf-icon-01.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/img/icons/pdf-icon-02.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/img/icons/pdf-icon-03.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/img/icons/pdf-icon-04.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/img/icons/plus.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/img/icons/printer.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/img/icons/profile-add.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/img/icons/profile-user.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/img/icons/profile.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/img/icons/ram.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/img/icons/re-fresh.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/img/icons/refresh-icon.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/img/icons/replay-01.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/img/icons/replay.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/img/icons/report-icon-01.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/img/icons/report-icon-02.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/img/icons/report-icon-03.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/img/icons/report-icon-04.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/img/icons/right-icon.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/img/icons/scissor.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/img/icons/search-normal.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/img/icons/sent.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/img/icons/setting-icon-01.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/img/icons/social-01.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/img/icons/social-02.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/img/icons/social-03.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/img/icons/social-04.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/img/icons/sort-icon-01.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/img/icons/sort-icon-02.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/img/icons/star-empty.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/img/icons/star.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/img/icons/tag-icon-01.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/img/icons/tag-icon-02.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/img/icons/tag-icon-03.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/img/icons/tag-icon-04.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/img/icons/tag.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/img/icons/timer.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/img/icons/trash.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/img/icons/user-icon.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/img/icons/video-icon-01.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/img/icons/video-icon-02.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/img/icons/video-icon-03.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/img/icons/voice-icon-01.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/img/icons/voice-icon-02.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/img/icons/voice-icon-03.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/img/icons/warning.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/img/invoice-circle1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/img/invoice-circle2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/img/invoices-icon1.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/img/invoices-icon2.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/img/invoices-icon3.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/img/invoices-icon4.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/img/invoices-icon5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/img/login-02.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/img/login-0l.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/img/login-logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/img/logo-dark.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/img/logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/img/morning-img-01.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/img/morning-img-02.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/img/morning-img-03.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/img/profile-bg.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/img/profile-user-01.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/img/profile-user-02.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/img/profile-user.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/img/profiles/avatar-01.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/img/profiles/avatar-02.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/img/profiles/avatar-03.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/img/profiles/avatar-04.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/img/profiles/avatar-05.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/img/profiles/avatar-06.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/img/profiles/avatar-07.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/img/profiles/avatar-08.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/img/profiles/avatar-09.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/img/profiles/avatar-10.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/img/profiles/avatar-11.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/img/profiles/avatar-12.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/img/sent.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/img/signature.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/img/user-02.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/img/user-03.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/img/user-04.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/img/user-05.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/img/user-06.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/img/user.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/js/app.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/js/bootstrap-datetimepicker.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/js/bootstrap.bundle.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/js/calander.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/js/circle-progress.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/js/ckeditor.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/js/dataTables.bootstrap4.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/js/feather.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/js/fullcalendar.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/js/jquery-3.6.1.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/js/jquery-ui.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/js/jquery.counterup.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/js/jquery.dataTables.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/js/jquery.fullcalendar.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/js/jquery.slimscroll.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/js/jquery.waypoints.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/js/moment.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/js/select2.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/js/tagsinput.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/plugins/apexchart/apexcharts.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/plugins/apexchart/chart-data.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/plugins/bootstrap-tagsinput/css/bootstrap-tagsinput.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/plugins/bootstrap-tagsinput/js/bootstrap-tagsinput.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/plugins/datatables/datatables.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/plugins/datatables/datatables.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/plugins/datatables/jquery.dataTables.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/plugins/feather/feather.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/plugins/feather/fonts/Feather.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/plugins/feather/fonts/Feather.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/plugins/feather/fonts/Feather.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/plugins/fontawesome/css/all.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/plugins/fontawesome/css/fontawesome.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/plugins/fontawesome/webfonts/fa-brands-400.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/plugins/fontawesome/webfonts/fa-brands-400.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/plugins/fontawesome/webfonts/fa-regular-400.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/plugins/fontawesome/webfonts/fa-regular-400.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/plugins/fontawesome/webfonts/fa-solid-900.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/plugins/fontawesome/webfonts/fa-solid-900.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/plugins/fontawesome/webfonts/fa-v4compatibility.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/plugins/fontawesome/webfonts/fa-v4compatibility.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/plugins/light-gallery/css/lightgallery.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/plugins/light-gallery/fonts/lg-1.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/plugins/light-gallery/fonts/lg.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/plugins/light-gallery/fonts/lg.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/plugins/light-gallery/fonts/lg.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/plugins/light-gallery/fonts/lg.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/plugins/light-gallery/img/loading.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/plugins/light-gallery/img/video-play.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/plugins/light-gallery/img/vimeo-play.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/plugins/light-gallery/img/youtube-play.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/plugins/light-gallery/js/lightgallery-all.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/plugins/moment/moment.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/plugins/simple-calendar/jquery.simple-calendar.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/plugins/simple-calendar/simple-calendar.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/plugins/slick/ajax-loader.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/plugins/slick/fonts/slick-1.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/plugins/slick/fonts/slick.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/plugins/slick/fonts/slick.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/plugins/slick/fonts/slick.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/plugins/slick/fonts/slick.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/plugins/slick/slick-theme.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/plugins/slick/slick.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/plugins/slick/slick.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/plugins/summernote/font/summernote.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/plugins/summernote/font/summernote.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/plugins/summernote/font/summernote.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/plugins/summernote/font/summernote.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/plugins/summernote/summernote-bs5.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/resources/assets/plugins/summernote/summernote-bs5.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/DoctorPages/doctor-dashboard.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/DoctorPages/doctor-profile.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/DoctorPages/doctor-setting.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/DoctorPages/doctors.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/DoctorPages/edit-doctor.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/DoctorPages/forgot-password.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/DoctorPages/settings.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/add-doctor.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/activities.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/add-appointment.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/add-asset.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/add-blog.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/add-department.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/add-doctor.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/add-expense.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/add-invoice.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/add-leave.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/add-patient.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/add-payment.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/add-provident-fund.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/add-salary.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/add-schedule.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/add-staff.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/add-tax.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/appointments.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/assets.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/bank-settings.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/blank-page.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/blog-details.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/blog.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/calendar.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/change-password.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/change-password2.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/chat.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/compose.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/create-invoice.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/departments.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/doctor-dashboard.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/doctor-profile.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/doctor-setting.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/doctors.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/edit-appointment.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/edit-asset.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/edit-blog.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/edit-department.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/edit-doctor.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/edit-expense.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/edit-invoice.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/edit-invoices.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/edit-leave.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/edit-patient.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/edit-payment.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/edit-profile.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/edit-provident-fund.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/edit-salary.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/edit-schedule.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/edit-staff.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/edit-tax.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/email-settings.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/error-404.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/error-500.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/expense-reports.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/expenses.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/forgot-password.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/form-basic-inputs.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/form-horizontal.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/form-input-groups.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/form-vertical.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/gallery.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/inbox.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/incoming-call.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/invoice-reports.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/invoice-view.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/invoices-cancelled.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/invoices-draft.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/invoices-grid.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/invoices-list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/invoices-overdue.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/invoices-paid.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/invoices-recurring.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/invoices-settings.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/invoices.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/localization-details.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/lock-screen.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/login.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/mail-view.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/others-settings.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/patient-dashboard.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/patient-profile.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/patient-setting.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/patients.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/payment-settings.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/payments.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/profile.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/provident-fund.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/register.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/salary-view.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/salary.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/schedule.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/seo-settings.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/settings.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/social-links.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/social-settings.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/staff-attendance.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/staff-holiday.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/staff-leave.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/staff-list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/staff-profile.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/staff-setting.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/tables-basic.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/tables-datatables.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/tabs.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/tax-settings.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/taxes.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/theme-settings.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/typography.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/uikit.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/video-call.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/view-invoice.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/voice-call.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/doctor-dashboard.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/patient-dashboard.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/soqqa.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/soqqa.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/userPages/edit-profile.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/userPages/forgot-password.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/userPages/own.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/userPages/settings.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dev/sheengo/onlinemedclinic/controller/HomeServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/sheengo/onlinemedclinic/controller/HomeServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/fragments/css.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/fragments/css.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/Home.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/Home.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/views/auth/signUp.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/auth/signUp.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -19,14 +425,21 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="ChangesViewManager">
+    <option name="groupingKeys">
+      <option value="directory" />
+      <option value="module" />
+    </option>
+  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
         <option value="Class" />
         <option value="JavaScript File" />
-        <option value="Jsp File" />
         <option value="CSS File" />
+        <option value="Jsp File" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -79,38 +492,39 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/PDP UNICORN/Jakarta/OnlineMedClinic/src/main/webapp/resources/fontawesome&quot;,
-    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Problems&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "D:/PDP UNICORN/Jakarta/OnlineMedClinic/src/main/webapp/views/adminPages",
+    "list.type.of.created.stylesheet": "CSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Problems",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;postgresql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "postgresql"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\PDP UNICORN\Jakarta\OnlineMedClinic\src\main\webapp\resources\fontawesome" />
-      <recent name="D:\PDP UNICORN\Jakarta\OnlineMedClinic\src\main\webapp\resources\css\fonts" />
+      <recent name="D:\PDP UNICORN\Jakarta\OnlineMedClinic\src\main\webapp\views\adminPages" />
+      <recent name="D:\PDP UNICORN\Jakarta\OnlineMedClinic\src\main\webapp\views\DoctorPages" />
       <recent name="D:\PDP UNICORN\Jakarta\OnlineMedClinic\src\main\webapp\views\userPages" />
-      <recent name="D:\PDP UNICORN\Jakarta\OnlineMedClinic\src\main\webapp\views\js" />
-      <recent name="D:\PDP UNICORN\Jakarta\OnlineMedClinic\src\main\webapp\resources\js" />
+      <recent name="D:\PDP UNICORN\Jakarta\OnlineMedClinic\src\main\webapp\views\adminPages\adminHtml" />
+      <recent name="D:\PDP UNICORN\Jakarta\OnlineMedClinic\src\main\webapp\resources" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\PDP UNICORN\Jakarta\OnlineMedClinic\src\main\webapp\views\auth" />
@@ -245,7 +659,9 @@
       <workItem from="1676444660548" duration="3921000" />
       <workItem from="1676448596315" duration="707000" />
       <workItem from="1676453057532" duration="58000" />
-      <workItem from="1676453127129" duration="6201000" />
+      <workItem from="1676453127129" duration="9147000" />
+      <workItem from="1676476481125" duration="730000" />
+      <workItem from="1676519081892" duration="5054000" />
     </task>
     <task id="LOCAL-00001" summary="pom.xml">
       <created>1676358546110</created>
@@ -296,7 +712,14 @@
       <option name="project" value="LOCAL" />
       <updated>1676430216716</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="100% login va register boldi&#10;asosiy ishla boldi tugdi">
+      <created>1676465951913</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1676465951913</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -320,6 +743,8 @@
     <MESSAGE value="Domains update" />
     <MESSAGE value="Service abstract class added" />
     <MESSAGE value="barcha css html js kabi fronted fayllarni qoshildi" />
-    <option name="LAST_COMMIT_MESSAGE" value="barcha css html js kabi fronted fayllarni qoshildi" />
+    <MESSAGE value="100% login va register boldi&#10;asosiy ishla boldi tugdi" />
+    <MESSAGE value="admin va doctor page boldi" />
+    <option name="LAST_COMMIT_MESSAGE" value="admin va doctor page boldi" />
   </component>
 </project>

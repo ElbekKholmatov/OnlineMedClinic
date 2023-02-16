@@ -24,6 +24,20 @@ h6,
     font-weight: 500 !important;
 }
 
+.logo {
+    align-items: center;
+    display: flex;
+    height: 70px;
+    justify-content: start
+}
+
+.logo span {
+    color: #2e37a4;
+    font-size: 20px;
+    font-weight: 500;
+    margin-left: 10px
+}
+
 .btn {
     font-family: 'Jost', sans-serif;
     font-weight: 600;

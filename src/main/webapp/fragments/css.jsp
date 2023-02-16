@@ -11,7 +11,7 @@
     <link href="${pageContext.request.contextPath}/resources/css/style.css" rel="stylesheet">
     <!-- Template Stylesheet -->
 
-    <link href="${pageContext.request.contextPath}/resources/lib/owlcarousel/assets/owl.carousel.min.css"
+    <link href="${pageContext.request.contextPath}/resources/lib/owlcarousel//resources//resources/assets/owl.carousel.min.css"
           rel="stylesheet">
     <link href="${pageContext.request.contextPath}/resources/lib/animate/animate.min.css" rel="stylesheet">
     <link href="${pageContext.request.contextPath}/resources/lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css"

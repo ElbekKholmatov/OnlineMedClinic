@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
   Created by IntelliJ IDEA.
   User: shakh
@@ -63,14 +64,21 @@
 
 <!-- Navbar Start -->
 <nav class="navbar navbar-expand-lg bg-white navbar-light shadow-sm px-5 py-3 py-lg-0">
-    <a href="/views/Home.jsp" class="navbar-brand p-0">
-        <h1 class="m-0 text-primary"><i class="fa-solid fa-house-chimney-medical"></i> Med Center</h1>
+    <a href="/views/Home.jsp"   style="font-size: 50px; text-decoration: none;" class="logo">
+        <img src="/resources/assets/img/logo.png" width="35" height="35" alt=""> <span>Pre Clinic</span>
     </a>
+    <%--    <a href="/views/Home.jsp" class="navbar-brand p-0">--%>
+    <%--        <h1 class="m-0 text-primary"><i class="fa-solid fa-house-chimney-medical"></i> Med Center</h1>--%>
+    <%--    </a>--%>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
         <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarCollapse">
         <div class="navbar-nav ms-auto py-0">
+            <a href="/views/adminPages/soqqa.html" class="nav-item nav-link ">Soqqa Page</a>
+            <a href="/views/adminPages/index.html" class="nav-item nav-link ">Admin Page</a>
+            <a href="/views/adminPages/doctor-dashboard.html" class="nav-item nav-link ">Doctor Page</a>
+            <a href="/views/adminPages/patient-dashboard.html" class="nav-item nav-link ">Patient Page</a>
             <a href="/views/Home.jsp" class="nav-item nav-link active">Home</a>
             <a href="/views/userPages/about.jsp" class="nav-item nav-link">About</a>
             <a href="/views/userPages/service.jsp" class="nav-item nav-link">Service</a>
@@ -89,18 +97,41 @@
                 class="fa fa-search"></i></button>
         <a href="/views/userPages/appointment.jsp" class="btn btn-primary py-2 px-4 ms-3"><i
                 class="fa-solid fa-heart-circle-plus"></i></a>
-        <a href="/views/auth/userAuth.jsp" class="nav-item nav-link">
-            <div class="media align-items-center">
-                <span class="avatar avatar-sm rounded-circle">
-                  <img alt="Image placeholder"
-                       src="https://demos.creative-tim.com/argon-dashboard/assets-old/img/theme/team-4.jpg">
-                </span>
-                <div class="media-body ml-2 d-none d-lg-block">
-                    <span class="mb-0 text-sm  font-weight-bold">  Jessica Jones</span>
-                </div>
-            </div>
-        </a>
 
+        <c:choose>
+            <c:when test="${filename == null}">
+                <a style="margin-left: 5px" href="/views/auth/userAuth.jsp" class="nav-item nav-link">
+                    <button type="button" class="btn btn-primary ms-2 ">Login</button>
+                </a>
+            </c:when>
+            <c:otherwise>
+                <%--                <i style="font-size: 35px; color: #0a58ca; background-color: white;"--%>
+                <%--                   class="bi bi-person-circle"></i>--%>
+
+                <a href="/views/auth/userAuth.jsp" class="nav-item nav-link">
+
+
+                    <div class="media align-items-center">
+        <span class="avatar avatar-sm rounded-circle">
+        <c:choose>
+            <c:when test="${filePath != null}">
+                           <img alt="Image placeholder"
+                                src="/download?fileName=${filePath}">
+            </c:when>
+            <c:otherwise>
+                <i style="font-size: 35px; color: #0a58ca; background-color: white;" class="bi bi-person-circle"></i>
+            </c:otherwise>
+        </c:choose>
+
+        </span>
+                        <div class="media-body ml-2 d-none d-lg-block">
+                            <span class="mb-0 text-sm font-weight-bold">${firsName}</span>
+                        </div>
+                    </div>
+                </a>
+
+            </c:otherwise>
+        </c:choose>
 
     </div>
 </nav>
@@ -430,120 +461,120 @@
 <!-- Offer End -->
 
 
-<!-- Pricing Start -->
-<div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
-    <div class="container">
-        <div class="row g-5">
-            <div class="col-lg-5">
-                <div class="section-title mb-4">
-                    <h5 class="position-relative d-inline-block text-primary text-uppercase">Pricing Plan</h5>
-                    <h1 class="display-5 mb-0">We Offer Fair Prices for Dental Treatment</h1>
-                </div>
-                <p class="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum et tempor sit. Aliqu diam amet
-                    diam et eos labore. Clita erat ipsum et lorem et sit, sed stet no labore lorem sit. Sanctus clita
-                    duo justo eirmod magna dolore erat amet</p>
-                <h5 class="text-uppercase text-primary wow fadeInUp" data-wow-delay="0.3s">Call for Appointment</h5>
-                <h1 class="wow fadeInUp" data-wow-delay="0.6s">+012 345 6789</h1>
-            </div>
-            <div class="col-lg-7">
-                <div class="owl-carousel price-carousel wow zoomIn" data-wow-delay="0.9s">
-                    <div class="price-item pb-4">
-                        <div class="position-relative">
-                            <img class="img-fluid rounded-top" src="/resources/img/price-1.jpg" alt="">
-                            <div class="d-flex align-items-center justify-content-center bg-light rounded pt-2 px-3 position-absolute top-100 start-50 translate-middle"
-                                 style="z-index: 2;">
-                                <h2 class="text-primary m-0">$35</h2>
-                            </div>
-                        </div>
-                        <div class="position-relative text-center bg-light border-bottom border-primary py-5 p-4">
-                            <h4>Teeth Whitening</h4>
-                            <hr class="text-primary w-50 mx-auto mt-0">
-                            <div class="d-flex justify-content-between mb-3"><span>Modern Equipment</span><i
-                                    class="fa fa-check text-primary pt-1"></i></div>
-                            <div class="d-flex justify-content-between mb-3"><span>Professional Dentist</span><i
-                                    class="fa fa-check text-primary pt-1"></i></div>
-                            <div class="d-flex justify-content-between mb-2"><span>24/7 Call Support</span><i
-                                    class="fa fa-check text-primary pt-1"></i></div>
-                            <a href="/views/userPages/appointment.jsp"
-                               class="btn btn-primary py-2 px-4 position-absolute top-100 start-50 translate-middle">Appointment</a>
-                        </div>
-                    </div>
-                    <div class="price-item pb-4">
-                        <div class="position-relative">
-                            <img class="img-fluid rounded-top" src="/resources/img/price-2.jpg" alt="">
-                            <div class="d-flex align-items-center justify-content-center bg-light rounded pt-2 px-3 position-absolute top-100 start-50 translate-middle"
-                                 style="z-index: 2;">
-                                <h2 class="text-primary m-0">$49</h2>
-                            </div>
-                        </div>
-                        <div class="position-relative text-center bg-light border-bottom border-primary py-5 p-4">
-                            <h4>Dental Implant</h4>
-                            <hr class="text-primary w-50 mx-auto mt-0">
-                            <div class="d-flex justify-content-between mb-3"><span>Modern Equipment</span><i
-                                    class="fa fa-check text-primary pt-1"></i></div>
-                            <div class="d-flex justify-content-between mb-3"><span>Professional Dentist</span><i
-                                    class="fa fa-check text-primary pt-1"></i></div>
-                            <div class="d-flex justify-content-between mb-2"><span>24/7 Call Support</span><i
-                                    class="fa fa-check text-primary pt-1"></i></div>
-                            <a href="/views/userPages/appointment.jsp"
-                               class="btn btn-primary py-2 px-4 position-absolute top-100 start-50 translate-middle">Appointment</a>
-                        </div>
-                    </div>
-                    <div class="price-item pb-4">
-                        <div class="position-relative">
-                            <img class="img-fluid rounded-top" src="/resources/img/price-3.jpg" alt="">
-                            <div class="d-flex align-items-center justify-content-center bg-light rounded pt-2 px-3 position-absolute top-100 start-50 translate-middle"
-                                 style="z-index: 2;">
-                                <h2 class="text-primary m-0">$99</h2>
-                            </div>
-                        </div>
-                        <div class="position-relative text-center bg-light border-bottom border-primary py-5 p-4">
-                            <h4>Root Canal</h4>
-                            <hr class="text-primary w-50 mx-auto mt-0">
-                            <div class="d-flex justify-content-between mb-3"><span>Modern Equipment</span><i
-                                    class="fa fa-check text-primary pt-1"></i></div>
-                            <div class="d-flex justify-content-between mb-3"><span>Professional Dentist</span><i
-                                    class="fa fa-check text-primary pt-1"></i></div>
-                            <div class="d-flex justify-content-between mb-2"><span>24/7 Call Support</span><i
-                                    class="fa fa-check text-primary pt-1"></i></div>
-                            <a href="/views/userPages/appointment.jsp"
-                               class="btn btn-primary py-2 px-4 position-absolute top-100 start-50 translate-middle">Appointment</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- Pricing End -->
+<%--<!-- Pricing Start -->--%>
+<%--<div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">--%>
+<%--    <div class="container">--%>
+<%--        <div class="row g-5">--%>
+<%--            <div class="col-lg-5">--%>
+<%--                <div class="section-title mb-4">--%>
+<%--                    <h5 class="position-relative d-inline-block text-primary text-uppercase">Pricing Plan</h5>--%>
+<%--                    <h1 class="display-5 mb-0">We Offer Fair Prices for Dental Treatment</h1>--%>
+<%--                </div>--%>
+<%--                <p class="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum et tempor sit. Aliqu diam amet--%>
+<%--                    diam et eos labore. Clita erat ipsum et lorem et sit, sed stet no labore lorem sit. Sanctus clita--%>
+<%--                    duo justo eirmod magna dolore erat amet</p>--%>
+<%--                <h5 class="text-uppercase text-primary wow fadeInUp" data-wow-delay="0.3s">Call for Appointment</h5>--%>
+<%--                <h1 class="wow fadeInUp" data-wow-delay="0.6s">+012 345 6789</h1>--%>
+<%--            </div>--%>
+<%--            <div class="col-lg-7">--%>
+<%--                <div class="owl-carousel price-carousel wow zoomIn" data-wow-delay="0.9s">--%>
+<%--                    <div class="price-item pb-4">--%>
+<%--                        <div class="position-relative">--%>
+<%--                            <img class="img-fluid rounded-top" src="/resources/img/price-1.jpg" alt="">--%>
+<%--                            <div class="d-flex align-items-center justify-content-center bg-light rounded pt-2 px-3 position-absolute top-100 start-50 translate-middle"--%>
+<%--                                 style="z-index: 2;">--%>
+<%--                                <h2 class="text-primary m-0">$35</h2>--%>
+<%--                            </div>--%>
+<%--                        </div>--%>
+<%--                        <div class="position-relative text-center bg-light border-bottom border-primary py-5 p-4">--%>
+<%--                            <h4>Teeth Whitening</h4>--%>
+<%--                            <hr class="text-primary w-50 mx-auto mt-0">--%>
+<%--                            <div class="d-flex justify-content-between mb-3"><span>Modern Equipment</span><i--%>
+<%--                                    class="fa fa-check text-primary pt-1"></i></div>--%>
+<%--                            <div class="d-flex justify-content-between mb-3"><span>Professional Dentist</span><i--%>
+<%--                                    class="fa fa-check text-primary pt-1"></i></div>--%>
+<%--                            <div class="d-flex justify-content-between mb-2"><span>24/7 Call Support</span><i--%>
+<%--                                    class="fa fa-check text-primary pt-1"></i></div>--%>
+<%--                            <a href="/views/userPages/appointment.jsp"--%>
+<%--                               class="btn btn-primary py-2 px-4 position-absolute top-100 start-50 translate-middle">Appointment</a>--%>
+<%--                        </div>--%>
+<%--                    </div>--%>
+<%--                    <div class="price-item pb-4">--%>
+<%--                        <div class="position-relative">--%>
+<%--                            <img class="img-fluid rounded-top" src="/resources/img/price-2.jpg" alt="">--%>
+<%--                            <div class="d-flex align-items-center justify-content-center bg-light rounded pt-2 px-3 position-absolute top-100 start-50 translate-middle"--%>
+<%--                                 style="z-index: 2;">--%>
+<%--                                <h2 class="text-primary m-0">$49</h2>--%>
+<%--                            </div>--%>
+<%--                        </div>--%>
+<%--                        <div class="position-relative text-center bg-light border-bottom border-primary py-5 p-4">--%>
+<%--                            <h4>Dental Implant</h4>--%>
+<%--                            <hr class="text-primary w-50 mx-auto mt-0">--%>
+<%--                            <div class="d-flex justify-content-between mb-3"><span>Modern Equipment</span><i--%>
+<%--                                    class="fa fa-check text-primary pt-1"></i></div>--%>
+<%--                            <div class="d-flex justify-content-between mb-3"><span>Professional Dentist</span><i--%>
+<%--                                    class="fa fa-check text-primary pt-1"></i></div>--%>
+<%--                            <div class="d-flex justify-content-between mb-2"><span>24/7 Call Support</span><i--%>
+<%--                                    class="fa fa-check text-primary pt-1"></i></div>--%>
+<%--                            <a href="/views/userPages/appointment.jsp"--%>
+<%--                               class="btn btn-primary py-2 px-4 position-absolute top-100 start-50 translate-middle">Appointment</a>--%>
+<%--                        </div>--%>
+<%--                    </div>--%>
+<%--                    <div class="price-item pb-4">--%>
+<%--                        <div class="position-relative">--%>
+<%--                            <img class="img-fluid rounded-top" src="/resources/img/price-3.jpg" alt="">--%>
+<%--                            <div class="d-flex align-items-center justify-content-center bg-light rounded pt-2 px-3 position-absolute top-100 start-50 translate-middle"--%>
+<%--                                 style="z-index: 2;">--%>
+<%--                                <h2 class="text-primary m-0">$99</h2>--%>
+<%--                            </div>--%>
+<%--                        </div>--%>
+<%--                        <div class="position-relative text-center bg-light border-bottom border-primary py-5 p-4">--%>
+<%--                            <h4>Root Canal</h4>--%>
+<%--                            <hr class="text-primary w-50 mx-auto mt-0">--%>
+<%--                            <div class="d-flex justify-content-between mb-3"><span>Modern Equipment</span><i--%>
+<%--                                    class="fa fa-check text-primary pt-1"></i></div>--%>
+<%--                            <div class="d-flex justify-content-between mb-3"><span>Professional Dentist</span><i--%>
+<%--                                    class="fa fa-check text-primary pt-1"></i></div>--%>
+<%--                            <div class="d-flex justify-content-between mb-2"><span>24/7 Call Support</span><i--%>
+<%--                                    class="fa fa-check text-primary pt-1"></i></div>--%>
+<%--                            <a href="/views/userPages/appointment.jsp"--%>
+<%--                               class="btn btn-primary py-2 px-4 position-absolute top-100 start-50 translate-middle">Appointment</a>--%>
+<%--                        </div>--%>
+<%--                    </div>--%>
+<%--                </div>--%>
+<%--            </div>--%>
+<%--        </div>--%>
+<%--    </div>--%>
+<%--</div>--%>
+<%--<!-- Pricing End -->--%>
 
 
-<!-- Testimonial Start -->
-<div class="container-fluid bg-primary bg-testimonial py-5 my-5 wow fadeInUp" data-wow-delay="0.1s">
-    <div class="container py-5">
-        <div class="row justify-content-center">
-            <div class="col-lg-7">
-                <div class="owl-carousel testimonial-carousel rounded p-5 wow zoomIn" data-wow-delay="0.6s">
-                    <div class="testimonial-item text-center text-white">
-                        <img class="img-fluid mx-auto rounded mb-4" src="/resources/img/testimonial-1.jpg" alt="">
-                        <p class="fs-5">Dolores sed duo clita justo dolor et stet lorem kasd dolore lorem ipsum. At
-                            lorem lorem magna ut et, nonumy labore diam erat. Erat dolor rebum sit ipsum.</p>
-                        <hr class="mx-auto w-25">
-                        <h4 class="text-white mb-0">Client Name</h4>
-                    </div>
-                    <div class="testimonial-item text-center text-white">
-                        <img class="img-fluid mx-auto rounded mb-4" src="/resources/img/testimonial-2.jpg" alt="">
-                        <p class="fs-5">Dolores sed duo clita justo dolor et stet lorem kasd dolore lorem ipsum. At
-                            lorem lorem magna ut et, nonumy labore diam erat. Erat dolor rebum sit ipsum.</p>
-                        <hr class="mx-auto w-25">
-                        <h4 class="text-white mb-0">Client Name</h4>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- Testimonial End -->
+<%--<!-- Testimonial Start -->--%>
+<%--<div class="container-fluid bg-primary bg-testimonial py-5 my-5 wow fadeInUp" data-wow-delay="0.1s">--%>
+<%--    <div class="container py-5">--%>
+<%--        <div class="row justify-content-center">--%>
+<%--            <div class="col-lg-7">--%>
+<%--                <div class="owl-carousel testimonial-carousel rounded p-5 wow zoomIn" data-wow-delay="0.6s">--%>
+<%--                    <div class="testimonial-item text-center text-white">--%>
+<%--                        <img class="img-fluid mx-auto rounded mb-4" src="/resources/img/testimonial-1.jpg" alt="">--%>
+<%--                        <p class="fs-5">Dolores sed duo clita justo dolor et stet lorem kasd dolore lorem ipsum. At--%>
+<%--                            lorem lorem magna ut et, nonumy labore diam erat. Erat dolor rebum sit ipsum.</p>--%>
+<%--                        <hr class="mx-auto w-25">--%>
+<%--                        <h4 class="text-white mb-0">Client Name</h4>--%>
+<%--                    </div>--%>
+<%--                    <div class="testimonial-item text-center text-white">--%>
+<%--                        <img class="img-fluid mx-auto rounded mb-4" src="/resources/img/testimonial-2.jpg" alt="">--%>
+<%--                        <p class="fs-5">Dolores sed duo clita justo dolor et stet lorem kasd dolore lorem ipsum. At--%>
+<%--                            lorem lorem magna ut et, nonumy labore diam erat. Erat dolor rebum sit ipsum.</p>--%>
+<%--                        <hr class="mx-auto w-25">--%>
+<%--                        <h4 class="text-white mb-0">Client Name</h4>--%>
+<%--                    </div>--%>
+<%--                </div>--%>
+<%--            </div>--%>
+<%--        </div>--%>
+<%--    </div>--%>
+<%--</div>--%>
+<%--<!-- Testimonial End -->--%>
 
 <!-- Team Start -->
 <div class="container-fluid py-5">
@@ -745,6 +776,26 @@
 
 <!-- Back to Top -->
 <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded back-to-top"><i class="bi bi-arrow-up"></i></a>
+<style>
+
+    .logo {
+        align-items: center;
+        display: flex;
+        height: 70px;
+        justify-content: start
+    }
+    .logo i{
+        font-size: 50px;
+    }
+
+    .logo span {
+        color: #2e37a4;
+        font-size: 20px;
+        font-weight: 700;
+        margin-left: 10px
+    }
+
+</style>
 <jsp:include page="/fragments/js.jsp"/>
 
 <!-- Template Javascript -->
