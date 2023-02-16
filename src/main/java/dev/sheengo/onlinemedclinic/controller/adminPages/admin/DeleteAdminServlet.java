@@ -8,7 +8,7 @@ import jakarta.servlet.annotation.*;
 
 import java.io.IOException;
 
-@WebServlet(name = "DeleteAdminServlet", value = "/superAmin/deleteAdmin")
+@WebServlet(name = "DeleteAdminServlet", value = "/superAdmin/deleteAdmin")
 public class DeleteAdminServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
