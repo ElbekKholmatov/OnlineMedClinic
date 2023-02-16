@@ -82,7 +82,7 @@
             <a href="/views/userPages/about.jsp" class="nav-item nav-link">About</a>
             <a href="/views/userPages/service.jsp" class="nav-item nav-link">Service</a>
                         <div class="nav-item dropdown show">
-                            <a href="#"  style="padding-bottom: 5px;" class="nav-link dropdown-toggle" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Pages</a>
+                            <a href=""  style="padding-bottom: 5px;" class="nav-link dropdown-toggle" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Pages</a>
                             <div  class="dropdown-menu" aria-labelledby="dropdownMenuLink">
                                 <a href="/views/userPages/price.jsp" class="dropdown-item">Pricing Plan</a>
                                 <a href="/views/userPages/team.jsp" class="dropdown-item">Our Dentist</a>
@@ -101,10 +101,10 @@
                 src="/resources/assets/img/icons/setting-icon-01.svg" alt=""> </a>
 
         <c:choose>
-            <c:when test="${filename == null}">
+            <c:when test="${firstname == null}">
                 <a style="margin-left: 5px" href="/views/auth/userAuth.jsp" class="nav-item nav-link">
                     <button type="button" class="btn btn-primary ms-2 ">Login</button>
-                </a>
+                </a>/
             </c:when>
             <c:otherwise>
                 <%--                <i style="font-size: 35px; color: #0a58ca; background-color: white;"--%>
@@ -113,6 +113,7 @@
                 <a href="/views/auth/userAuth.jsp" class="nav-item nav-link">
                     <div class="media align-items-center">
         <span class="avatar avatar-sm rounded-circle">
+                </a>
         <c:choose>
             <c:when test="${filePath != null}">
                            <img alt="Image placeholder"
@@ -125,10 +126,10 @@
 
         </span>
                         <div class="media-body ml-2 d-none d-lg-block">
-                            <span class="mb-0 text-sm font-weight-bold">${firsName}</span>
+                            <span class="mb-0 text-sm font-weight-bold">${firstname}</span>
                         </div>
                     </div>
-                </a>
+
 
             </c:otherwise>
         </c:choose>
