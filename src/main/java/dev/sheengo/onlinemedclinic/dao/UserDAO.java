@@ -2,8 +2,15 @@ package dev.sheengo.onlinemedclinic.dao;
 
 import dev.sheengo.onlinemedclinic.domains.User;
 import jakarta.persistence.EntityManager;
+import jakarta.persistence.NoResultException;
+import lombok.AccessLevel;
+import lombok.NoArgsConstructor;
 
+import java.util.List;
+
+@NoArgsConstructor(access = AccessLevel.PRIVATE)
 public class UserDAO extends DAO<User> {
+    private static final UserDAO dao = new UserDAO();
     @Override
     public User save(User user) {
         EntityManager entityManager = getEntityManager();
@@ -25,6 +32,24 @@ public class UserDAO extends DAO<User> {
 
     @Override
     public User get(Integer id) {
-        return null;
+        EntityManager entityManager = getEntityManager();
+        entityManager.getTransaction().begin();
+        User user = entityManager.find(User.class, id);
+//        entityManager.contains(user);
+        entityManager.getTransaction().commit();
+        return user;
+    }
+    public User get(String username) {
+        try {
+            String query = "select u from User u where u.username = :username";
+            return getEntityManager().createQuery(query, User.class)
+                    .setParameter("username", username).getSingleResult();
+        } catch (NoResultException e){
+            return null;
+        }
+    }
+
+    public static UserDAO getInstance() {
+        return dao;
     }
 }
