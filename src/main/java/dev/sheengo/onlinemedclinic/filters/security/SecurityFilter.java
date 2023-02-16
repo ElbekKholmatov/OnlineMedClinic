@@ -77,6 +77,7 @@ public class SecurityFilter implements Filter {
                         try {
                             Integer id = Integer.parseInt(request.getSession().getAttribute("id").toString());
                             User user = UserService.getInstance().get(id).getDomain();
+                            request.getSession().setAttribute("firstname", user.getFirstName());
 
                             if (isAdminPage.test(requestURI)) {
                                 if (user.getRole().equals(User.UserRole.ADMIN))

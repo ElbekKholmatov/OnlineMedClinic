@@ -103,7 +103,7 @@
 
         <c:choose>
             <c:when test="${firstname == null}">
-                <a style="margin-left: 5px" href="/views/auth/userAuth.jsp" class="nav-item nav-link">
+                <a style="margin-left: 5px" href="/logIn" class="nav-item nav-link">
                     <button type="button" class="btn btn-primary ms-2 ">Login</button>
                 </a>
             </c:when>

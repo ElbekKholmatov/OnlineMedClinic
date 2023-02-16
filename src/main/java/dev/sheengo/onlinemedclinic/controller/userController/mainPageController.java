@@ -13,7 +13,10 @@ import java.io.IOException;
 public class mainPageController extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        HttpSession session = request.getSession();
         HttpServletRequest getRequest = UserService.getInstance().get(request).getRequest();
+        getRequest.setAttribute("id", session.getAttribute("id"));
+        getRequest.setAttribute("firstname", session.getAttribute("firstname"));
         getRequest.getRequestDispatcher("/views/Home.jsp").forward(getRequest, response);
     }
 
