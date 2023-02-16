@@ -20,19 +20,19 @@
     <jsp:include page="/fragments/css.jsp"/>
 </head>
 
-<body>
-<!-- Spinner Start -->
-<div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-    <div class="spinner-grow text-primary m-1" role="status">
-        <span class="sr-only">Loading...</span>
-    </div>
-    <div class="spinner-grow text-dark m-1" role="status">
-        <span class="sr-only">Loading...</span>
-    </div>
-    <div class="spinner-grow text-secondary m-1" role="status">
-        <span class="sr-only">Loading...</span>
-    </div>
-</div>
+<%--<body>--%>
+<%--<!-- Spinner Start -->--%>
+<%--<div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">--%>
+<%--    <div class="spinner-grow text-primary m-1" role="status">--%>
+<%--        <span class="sr-only">Loading...</span>--%>
+<%--    </div>--%>
+<%--    <div class="spinner-grow text-dark m-1" role="status">--%>
+<%--        <span class="sr-only">Loading...</span>--%>
+<%--    </div>--%>
+<%--    <div class="spinner-grow text-secondary m-1" role="status">--%>
+<%--        <span class="sr-only">Loading...</span>--%>
+<%--    </div>--%>
+<%--</div>--%>
 <!-- Spinner End -->
 
 
@@ -73,7 +73,7 @@
             <a href="/views/userPages/about.jsp" class="nav-item nav-link">About</a>
             <a href="/views/userPages/service.jsp" class="nav-item nav-link">Service</a>
             <div class="nav-item dropdown">
-                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
+                <a href="#"  style="padding-bottom: 5px;" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
                 <div class="dropdown-menu m-0">
                     <a href="/views/userPages/price.jsp" class="dropdown-item">Pricing Plan</a>
                     <a href="/views/userPages/team.jsp" class="dropdown-item">Our Dentist</a>
@@ -171,7 +171,7 @@
                                 <input type="text" class="form-control bg-light border-0" placeholder="Your Name" style="height: 55px;">
                             </div>
                             <div class="col-12 col-sm-6">
-                                <input type="email" class="form-control bg-light border-0" placeholder="Your Email" style="height: 55px;">
+                                <input type="email" class="form-control bg-light border-0" placeholder="Your Username" style="height: 55px;">
                             </div>
                             <div class="col-12 col-sm-6">
                                 <div class="date" id="date1" data-target-input="nearest">
@@ -206,7 +206,7 @@
         <div class="bg-primary p-5">
             <form class="mx-auto" style="max-width: 600px;">
                 <div class="input-group">
-                    <input type="text" class="form-control border-white p-3" placeholder="Your Email">
+                    <input type="text" class="form-control border-white p-3" placeholder="Your Username">
                     <button class="btn btn-dark px-4">Sign Up</button>
                 </div>
             </form>

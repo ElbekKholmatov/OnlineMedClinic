@@ -64,7 +64,7 @@
 
 <!-- Navbar Start -->
 <nav class="navbar navbar-expand-lg bg-white navbar-light shadow-sm px-5 py-3 py-lg-0">
-    <a href="/views/Home.jsp"   style="font-size: 50px; text-decoration: none;" class="logo">
+    <a href="/views/Home.jsp" style="font-size: 50px; text-decoration: none;" class="logo">
         <img src="/resources/assets/img/logo.png" width="35" height="35" alt=""> <span>Pre Clinic</span>
     </a>
     <%--    <a href="/views/Home.jsp" class="navbar-brand p-0">--%>
@@ -82,21 +82,24 @@
             <a href="/views/Home.jsp" class="nav-item nav-link active">Home</a>
             <a href="/views/userPages/about.jsp" class="nav-item nav-link">About</a>
             <a href="/views/userPages/service.jsp" class="nav-item nav-link">Service</a>
-            <div class="nav-item dropdown">
-                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
-                <div class="dropdown-menu m-0">
-                    <a href="/views/userPages/price.jsp" class="dropdown-item">Pricing Plan</a>
-                    <a href="/views/userPages/team.jsp" class="dropdown-item">Our Dentist</a>
-                    <a href="/views/userPages/testimonial.jsp" class="dropdown-item">Testimonial</a>
-                    <a href="/views/userPages/appointment.jsp" class="dropdown-item">Appointment</a>
-                </div>
-            </div>
+                        <div class="nav-item dropdown show">
+                            <a href="#"  style="padding-bottom: 5px;" class="nav-link dropdown-toggle" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Pages</a>
+                            <div  class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                <a href="/views/userPages/price.jsp" class="dropdown-item">Pricing Plan</a>
+                                <a href="/views/userPages/team.jsp" class="dropdown-item">Our Dentist</a>
+                                <a href="/views/userPages/testimonial.jsp" class="dropdown-item">Testimonial</a>
+                                <a href="/views/userPages/appointment.jsp" class="dropdown-item">Appointment</a>
+                            </div>
+                        </div>
             <a href="/views/userPages/contact.jsp" class="nav-item nav-link">Contact</a>
         </div>
         <button type="button" class="btn text-dark" data-bs-toggle="modal" data-bs-target="#searchModal"><i
                 class="fa fa-search"></i></button>
         <a href="/views/userPages/appointment.jsp" class="btn btn-primary py-2 px-4 ms-3"><i
                 class="fa-solid fa-heart-circle-plus"></i></a>
+
+        <a href="/views/userPages/settings.html" style="margin-left: 10px;" class="hasnotifications nav-link"><img
+                src="/resources/assets/img/icons/setting-icon-01.svg" alt=""> </a>
 
         <c:choose>
             <c:when test="${filename == null}">
@@ -109,8 +112,6 @@
                 <%--                   class="bi bi-person-circle"></i>--%>
 
                 <a href="/views/auth/userAuth.jsp" class="nav-item nav-link">
-
-
                     <div class="media align-items-center">
         <span class="avatar avatar-sm rounded-circle">
         <c:choose>
@@ -132,6 +133,7 @@
 
             </c:otherwise>
         </c:choose>
+
 
     </div>
 </nav>
@@ -337,7 +339,7 @@
                                        style="height: 55px;">
                             </div>
                             <div class="col-12 col-sm-6">
-                                <input type="email" class="form-control bg-light border-0" placeholder="Your Email"
+                                <input type="email" class="form-control bg-light border-0" placeholder="Your Username"
                                        style="height: 55px;">
                             </div>
                             <div class="col-12 col-sm-6">
@@ -699,7 +701,7 @@
         <div class="bg-primary p-5">
             <form class="mx-auto" style="max-width: 600px;">
                 <div class="input-group">
-                    <input type="text" class="form-control border-white p-3" placeholder="Your Email">
+                    <input type="text" class="form-control border-white p-3" placeholder="Your Username">
                     <button class="btn btn-dark px-4">Sign Up</button>
                 </div>
             </form>
@@ -784,7 +786,8 @@
         height: 70px;
         justify-content: start
     }
-    .logo i{
+
+    .logo i {
         font-size: 50px;
     }
 

@@ -76,7 +76,7 @@
             <a href="/views/userPages/about.jsp" class="nav-item nav-link active">About</a>
             <a href="/views/userPages/service.jsp" class="nav-item nav-link">Service</a>
             <div class="nav-item dropdown">
-                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
+                <a href="#"  style="padding-bottom: 5px;" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
                 <div class="dropdown-menu m-0">
                     <a href="/views/userPages/price.jsp" class="dropdown-item">Pricing Plan</a>
                     <a href="/views/userPages/team.jsp" class="dropdown-item">Our Dentist</a>
@@ -174,7 +174,7 @@
         <div class="bg-primary p-5">
             <form class="mx-auto" style="max-width: 600px;">
                 <div class="input-group">
-                    <input type="text" class="form-control border-white p-3" placeholder="Your Email">
+                    <input type="text" class="form-control border-white p-3" placeholder="Your Username">
                     <button class="btn btn-dark px-4">Sign Up</button>
                 </div>
             </form>
