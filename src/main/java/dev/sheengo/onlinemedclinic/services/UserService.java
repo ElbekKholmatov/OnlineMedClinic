@@ -111,4 +111,18 @@ public class UserService extends Service<User> {
                 .domain(UserDAO.getInstance().get(username))
                 .build();
     }
+
+    public Response<User> updateSetAdmin(HttpServletRequest request) {
+        String username = request.getParameter("set_username");
+        boolean user = UserDAO.getInstance().updateSetAdmin(
+                User.builder()
+                        .username(username)
+                        .role(User.UserRole.ADMIN)
+                        .build()
+        );
+        return Response.<User>builder()
+                .request(request)
+                .returnPage("/superAdmin/main")
+                .build();
+        }
 }

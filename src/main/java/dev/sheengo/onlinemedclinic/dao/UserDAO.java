@@ -39,14 +39,26 @@ public class UserDAO extends DAO<User> {
         entityManager.getTransaction().commit();
         return user;
     }
+
     public User get(String username) {
         try {
             String query = "select u from User u where u.username = :username";
             return getEntityManager().createQuery(query, User.class)
                     .setParameter("username", username).getSingleResult();
-        } catch (NoResultException e){
+        } catch (NoResultException e) {
             return null;
         }
+    }
+
+    public boolean updateSetAdmin(User build) {
+        EntityManager entityManager = getEntityManager();
+        entityManager.getTransaction().begin();
+        entityManager.createQuery("update User u set u.role = :role where u.username = :username")
+                .setParameter("role", build.getRole())
+                .setParameter("username", build.getUsername())
+                .executeUpdate();
+        entityManager.getTransaction().commit();
+        return true;
     }
 
     public static UserDAO getInstance() {
