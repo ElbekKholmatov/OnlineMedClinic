@@ -50,11 +50,18 @@
             <span>${passwordException}</span>
         </div>
 
-<%--        <div style="position: relative;">--%>
-<%--            <input type="password" id="iRePass" placeholder="Repeat password" name="rPassword" required>--%>
-<%--            <span>${passwordDoNotMatchException}</span>--%>
-<%--            <i class="bi bi-eye-slash" id="rePass" onclick="showRePassword()"></i>--%>
+<%--        <div style="position: relative; padding: 0;">--%>
+<%--            <input type="password" id="iPass" placeholder="Password" name="rPassword" required>--%>
+<%--            <i class="bi bi-eye-slash" id="pass" onclick="showPassword()"></i>--%>
+
+<%--            <span>${passwordException}</span>--%>
 <%--        </div>--%>
+
+        <div style="position: relative; padding: 0;">
+            <input type="password" id="iRePass" placeholder="Repeat password" name="rPassword" required>
+            <span>${passwordDoNotMatchException}</span>
+            <i class="bi bi-eye-slash" id="pass" onclick="showRePassword()"></i>
+        </div>
 
         <div>
             <input  placeholder="address" type="text"
@@ -69,7 +76,7 @@
         </div>
 
         <div>
-            <input type="submit" class="submit" value="SIGN IN">
+            <input type="submit" class="submit" value="SIGN UP">
 
             <p class="forgot"><a href="/views/auth/userAuth.jsp"> LogIn </a></p>
         </div>
