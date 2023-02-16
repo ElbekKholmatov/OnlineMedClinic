@@ -18,12 +18,12 @@ public class DeleteAdminServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String username = request.getParameter("set_username");
-        UserDAO userDAO = new UserDAO();
+//        UserDAO userDAO = new UserDAO();
         User user = User.builder()
                 .username(username)
                 .role(User.UserRole.USER)
                 .build();
-        userDAO.update(user);
+//        userDAO.update(user);
         response.sendRedirect("/superAdmin/main");
     }
 }

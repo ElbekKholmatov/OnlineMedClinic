@@ -4,6 +4,7 @@ import dev.sheengo.onlinemedclinic.dao.UserDAO;
 import dev.sheengo.onlinemedclinic.domains.User;
 import dev.sheengo.onlinemedclinic.filters.SetAdminFilter;
 import dev.sheengo.onlinemedclinic.services.Response;
+import dev.sheengo.onlinemedclinic.services.UserService;
 import jakarta.persistence.EntityManager;
 import jakarta.servlet.*;
 import jakarta.servlet.http.*;
@@ -21,7 +22,6 @@ public class SetAdminServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        String username = request.getParameter("set_username");
-        SetAdminFilter setAdminFilter = new SetAdminFilter();
+        UserService.getInstance().updateSetAdmin(request).getRequest().getRequestDispatcher("/views/adminPages/SuperAdmin.jsp").forward(request, response);
     }
 }

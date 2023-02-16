@@ -15,9 +15,13 @@ public class SetAdminValidator {
 
     public void checkParamsSetAdmin(HttpServletRequest req) {
         var id = req.getParameter("set_username");
-        User user = UserService.getInstance().getUserByUsername(id);
         if (id == null || id.isEmpty()) {
             throw new IllegalArgumentException("Id is empty");
         }
+        User user = UserService.getInstance().get(id).getDomain();
+        if (user == null) {
+            throw new IllegalArgumentException("User not found");
+        }
+
     }
 }

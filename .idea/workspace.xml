@@ -10,10 +10,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="868efec0-8191-4b1d-8e00-fd842d8438fb" name="Changes" comment="fixed">
-      <change afterPath="$PROJECT_DIR$/src/main/java/dev/sheengo/onlinemedclinic/filters/SetAdminFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/dev/sheengo/onlinemedclinic/validators/SetAdminValidator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/sheengo/onlinemedclinic/controller/adminPages/admin/DeleteAdminServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/sheengo/onlinemedclinic/controller/adminPages/admin/DeleteAdminServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/dev/sheengo/onlinemedclinic/controller/adminPages/admin/SetAdminServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/sheengo/onlinemedclinic/controller/adminPages/admin/SetAdminServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/sheengo/onlinemedclinic/dao/UserDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/sheengo/onlinemedclinic/dao/UserDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/sheengo/onlinemedclinic/services/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/sheengo/onlinemedclinic/services/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/sheengo/onlinemedclinic/validators/SetAdminValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/sheengo/onlinemedclinic/validators/SetAdminValidator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,30 +79,30 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/asror/Desktop/Java Backend/projects/OnlineMedClinic/src/main/java/dev/sheengo/onlinemedclinic/entity&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "/home/jason/IdeaProjects/OnlineMedClinic/src/main/java/dev/sheengo/onlinemedclinic/services",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/java/dev/sheengo/onlinemedclinic/services" />
+      <recent name="$PROJECT_DIR$/src/main/java/dev/sheengo/onlinemedclinic/dao" />
       <recent name="$PROJECT_DIR$/src/main/java/dev/sheengo/onlinemedclinic/entity" />
       <recent name="$PROJECT_DIR$/src/main/webapp/views/userPages" />
       <recent name="$PROJECT_DIR$/src/main/webapp/views/DoctorPages" />
-      <recent name="$PROJECT_DIR$/src/main/webapp/views/auth" />
-      <recent name="$PROJECT_DIR$/src/main/webapp/views/adminPages" />
     </key>
   </component>
   <component name="RunManager">
@@ -286,7 +289,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/main/java/dev/sheengo/onlinemedclinic/controller/adminPages/admin/SetAdminServlet.java</url>
-          <line>22</line>
+          <line>23</line>
           <properties class="dev.sheengo.onlinemedclinic.controller.adminPages.admin.SetAdminServlet" method="doPost">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />
