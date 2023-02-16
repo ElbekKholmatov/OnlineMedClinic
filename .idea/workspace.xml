@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ArtifactsWorkspaceSettings">
     <artifacts-to-build>
+      <artifact name="OnlineMedClinic:war" />
       <artifact name="OnlineMedClinic:war exploded" />
     </artifacts-to-build>
   </component>
@@ -9,173 +10,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="868efec0-8191-4b1d-8e00-fd842d8438fb" name="Changes" comment="admin va doctor page boldi 101">
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/activities.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/add-appointment.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/add-asset.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/add-blog.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/add-department.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/add-doctor.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/add-expense.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/add-invoice.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/add-leave.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/add-patient.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/add-payment.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/add-provident-fund.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/add-salary.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/add-schedule.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/add-staff.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/add-tax.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/appointments.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/assets.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/bank-settings.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/blank-page.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/blog-details.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/blog.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/calendar.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/change-password.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/change-password2.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/chat.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/compose.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/create-invoice.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/departments.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/doctor-dashboard.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/doctor-profile.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/doctor-setting.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/doctors.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/edit-appointment.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/edit-asset.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/edit-blog.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/edit-department.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/edit-doctor.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/edit-expense.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/edit-invoice.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/edit-invoices.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/edit-leave.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/edit-patient.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/edit-payment.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/edit-profile.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/edit-provident-fund.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/edit-salary.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/edit-schedule.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/edit-staff.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/edit-tax.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/email-settings.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/error-404.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/error-500.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/expense-reports.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/expenses.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/forgot-password.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/form-basic-inputs.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/form-horizontal.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/form-input-groups.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/form-vertical.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/gallery.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/inbox.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/incoming-call.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/invoice-reports.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/invoice-view.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/invoices-cancelled.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/invoices-draft.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/invoices-grid.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/invoices-list.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/invoices-overdue.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/invoices-paid.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/invoices-recurring.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/invoices-settings.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/invoices.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/localization-details.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/lock-screen.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/login.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/mail-view.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/others-settings.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/patient-dashboard.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/patient-profile.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/patient-setting.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/patients.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/payment-settings.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/payments.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/profile.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/provident-fund.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/register.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/salary-view.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/salary.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/schedule.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/seo-settings.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/settings.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/social-links.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/social-settings.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/staff-attendance.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/staff-holiday.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/staff-leave.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/staff-list.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/staff-profile.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/staff-setting.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/tables-basic.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/tables-datatables.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/tabs.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/tax-settings.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/taxes.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/theme-settings.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/typography.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/uikit.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/video-call.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/view-invoice.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/adminHtml/voice-call.html" afterDir="false" />
+    <list default="true" id="ba06edfa-851e-4a64-82b3-9a3571fd825e" name="Changes" comment="Asrorxo'ja merged first time">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/css/bootstrap.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/css/bootstrap.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/views/Home.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/Home.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/userPages/about.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/userPages/about.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/userPages/appointment.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/userPages/appointment.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/userPages/contact.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/userPages/contact.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/userPages/price.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/userPages/price.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/userPages/service.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/userPages/service.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/userPages/team.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/userPages/team.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/userPages/testimonial.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/userPages/testimonial.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
-  <component name="ChangesViewManager">
-    <option name="groupingKeys">
-      <option value="directory" />
-    </option>
-  </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Interface" />
-        <option value="Class" />
-        <option value="JavaScript File" />
-        <option value="CSS File" />
-        <option value="Jsp File" />
-        <option value="HTML File" />
-      </list>
-    </option>
-  </component>
-  <component name="Git.Settings">
-    <option name="RECENT_BRANCH_BY_REPOSITORY">
-      <map>
-        <entry key="$PROJECT_DIR$" value="master" />
-      </map>
-    </option>
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="GitHubPullRequestSearchHistory">{
-  &quot;lastFilter&quot;: {
-    &quot;state&quot;: &quot;OPEN&quot;
-  }
-}</component>
-  <component name="GithubPullRequestsUISettings">
-    <option name="selectedUrlAndAccountId">
-      <UrlAndAccount>
-        <option name="accountId" value="9d38da91-3fcb-4880-ae3c-d0dee8d4b278" />
-        <option name="url" value="https://github.com/ElbekKholmatov/OnlineMedClinic.git" />
-      </UrlAndAccount>
-    </option>
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/src/main/java/dev/sheengo/onlinemedclinic/domains/User.java" root0="FORCE_HIGHLIGHTING" />
@@ -187,91 +31,22 @@
     <option name="FILTER_DEBUG" value="true" />
     <option name="CUSTOM_FILTER" />
   </component>
-  <component name="MarkdownSettingsMigration">
-    <option name="stateVersion" value="1" />
-  </component>
-  <component name="MavenImportPreferences">
-    <option name="generalSettings">
-      <MavenGeneralSettings>
-        <option name="mavenHome" value="Use Maven wrapper" />
-        <option name="useMavenConfig" value="true" />
-      </MavenGeneralSettings>
-    </option>
-  </component>
-  <component name="ProjectId" id="2Lgr00dGW7tsSMYbYvRVPYdMXfO" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
-  <component name="ProjectViewState">
-    <option name="showLibraryContents" value="true" />
-  </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/PDP UNICORN/Jakarta/OnlineMedClinic/src/main/webapp/views/adminPages&quot;,
-    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Problems&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
-  },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;postgresql&quot;
-    ]
-  }
-}</component>
-  <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\PDP UNICORN\Jakarta\OnlineMedClinic\src\main\webapp\views\adminPages" />
-      <recent name="D:\PDP UNICORN\Jakarta\OnlineMedClinic\src\main\webapp\views\DoctorPages" />
-      <recent name="D:\PDP UNICORN\Jakarta\OnlineMedClinic\src\main\webapp\views\userPages" />
-      <recent name="D:\PDP UNICORN\Jakarta\OnlineMedClinic\src\main\webapp\views\adminPages\adminHtml" />
-      <recent name="D:\PDP UNICORN\Jakarta\OnlineMedClinic\src\main\webapp\resources" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\PDP UNICORN\Jakarta\OnlineMedClinic\src\main\webapp\views\auth" />
-      <recent name="D:\PDP UNICORN\Jakarta\OnlineMedClinic\src\main\webapp\resources" />
-      <recent name="D:\PDP UNICORN\Jakarta\OnlineMedClinic\src\main\webapp\views\userPages" />
-      <recent name="D:\PDP UNICORN\Jakarta\OnlineMedClinic\src\main\webapp\views" />
-      <recent name="D:\PDP UNICORN\Jakarta\OnlineMedClinic\src\main\webapp" />
-    </key>
-  </component>
   <component name="RunManager">
-    <configuration default="true" type="JetRunConfigurationType">
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
-      <option name="filePath" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Tom&amp;Jerry" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 10.0.27" ALTERNATIVE_JRE_ENABLED="false">
+    <configuration name="Tomcat 10.0.27" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 10.0.27" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
       <option name="OPEN_IN_BROWSER" value="false" />
-      <option name="UPDATE_ON_FRAME_DEACTIVATION" value="true" />
       <option name="UPDATING_POLICY" value="redeploy-artifacts" />
       <deployment>
-        <artifact name="OnlineMedClinic:war exploded">
+        <artifact name="OnlineMedClinic:war">
           <settings>
             <option name="CONTEXT_PATH" value="" />
           </settings>
         </artifact>
       </deployment>
       <server-settings>
-        <option name="BASE_DIRECTORY_NAME" value="5db14150-64df-4535-a813-9faf3f915323" />
+        <option name="BASE_DIRECTORY_NAME" value="2a433a48-e5cd-4c42-a273-47d4f4f06c34" />
       </server-settings>
       <predefined_log_file enabled="true" id="Tomcat" />
       <predefined_log_file enabled="true" id="Tomcat Catalina" />
@@ -279,7 +54,7 @@
       <predefined_log_file id="Tomcat Host Manager" />
       <predefined_log_file id="Tomcat Localhost Access" />
       <RunnerSettings RunnerId="Debug">
-        <option name="DEBUG_PORT" value="35965" />
+        <option name="DEBUG_PORT" value="65530" />
       </RunnerSettings>
       <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
         <option name="USE_ENV_VARIABLES" value="true" />
@@ -344,130 +119,13 @@
       <method v="2">
         <option name="Make" enabled="true" />
         <option name="BuildArtifacts" enabled="true">
+          <artifact name="OnlineMedClinic:war" />
           <artifact name="OnlineMedClinic:war exploded" />
         </option>
       </method>
     </configuration>
   </component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
-    <task active="true" id="Default" summary="Default task">
-      <changelist id="868efec0-8191-4b1d-8e00-fd842d8438fb" name="Changes" comment="" />
-      <created>1676303344226</created>
-      <option name="number" value="Default" />
-      <option name="presentableId" value="Default" />
-      <updated>1676303344226</updated>
-      <workItem from="1676303345403" duration="1000" />
-      <workItem from="1676357915161" duration="130000" />
-      <workItem from="1676358099618" duration="13295000" />
-      <workItem from="1676425361459" duration="446000" />
-      <workItem from="1676425841509" duration="1798000" />
-      <workItem from="1676427685505" duration="611000" />
-      <workItem from="1676429070037" duration="3375000" />
-      <workItem from="1676443543337" duration="1254000" />
-      <workItem from="1676398594142" duration="70000" />
-      <workItem from="1676424029333" duration="2747000" />
-      <workItem from="1676427666308" duration="9296000" />
-      <workItem from="1676437961004" duration="168000" />
-      <workItem from="1676444660548" duration="3921000" />
-      <workItem from="1676448596315" duration="707000" />
-      <workItem from="1676453057532" duration="58000" />
-      <workItem from="1676453127129" duration="9147000" />
-      <workItem from="1676476481125" duration="730000" />
-      <workItem from="1676519081892" duration="5054000" />
-      <workItem from="1676533188212" duration="4695000" />
-    </task>
-    <task id="LOCAL-00001" summary="pom.xml">
-      <created>1676358546110</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1676358546110</updated>
-    </task>
-    <task id="LOCAL-00002" summary="added directories">
-      <created>1676359904329</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1676359904329</updated>
-    </task>
-    <task id="LOCAL-00003" summary="Domains added">
-      <created>1676363696147</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1676363696147</updated>
-    </task>
-    <task id="LOCAL-00004" summary="Domains update">
-      <created>1676363900299</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1676363900299</updated>
-    </task>
-    <task id="LOCAL-00005" summary="Domains update">
-      <created>1676365835376</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1676365835376</updated>
-    </task>
-    <task id="LOCAL-00006" summary="Service abstract class added">
-      <created>1676366213295</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1676366213295</updated>
-    </task>
-    <task id="LOCAL-00007" summary="barcha css html js kabi fronted fayllarni qoshildi">
-      <created>1676430216715</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1676430216716</updated>
-    </task>
-    <task id="LOCAL-00008" summary="100% login va register boldi&#10;asosiy ishla boldi tugdi">
-      <created>1676465951913</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1676465951913</updated>
-    </task>
-    <task id="LOCAL-00009" summary="admin va doctor page boldi 100">
-      <created>1676528132504</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1676528132504</updated>
-    </task>
-    <option name="localTasksCounter" value="10" />
     <servers />
-  </component>
-  <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="3" />
-  </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State />
-          </value>
-        </entry>
-      </map>
-    </option>
-  </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="pom.xml" />
-    <MESSAGE value="added directories" />
-    <MESSAGE value="Domains added" />
-    <MESSAGE value="Domains update" />
-    <MESSAGE value="Service abstract class added" />
-    <MESSAGE value="barcha css html js kabi fronted fayllarni qoshildi" />
-    <MESSAGE value="100% login va register boldi&#10;asosiy ishla boldi tugdi" />
-    <MESSAGE value="admin va doctor page boldi" />
-    <MESSAGE value="admin va doctor page boldi 100" />
-    <MESSAGE value="admin va doctor page boldi 101" />
-    <option name="LAST_COMMIT_MESSAGE" value="admin va doctor page boldi 101" />
   </component>
 </project>
