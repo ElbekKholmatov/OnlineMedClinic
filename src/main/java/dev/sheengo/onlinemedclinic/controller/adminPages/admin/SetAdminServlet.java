@@ -12,7 +12,7 @@ import jakarta.servlet.annotation.*;
 
 import java.io.IOException;
 
-@WebServlet(name = "SetAdminServlet", value = "/superAmin/setAdmin")
+@WebServlet(name = "SetAdminServlet", value = "/superAdmin/setAdmin")
 public class SetAdminServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -22,6 +22,6 @@ public class SetAdminServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        UserService.getInstance().updateSetAdmin(request).getRequest().getRequestDispatcher("/views/adminPages/SuperAdmin.jsp").forward(request, response);
+        UserService.getInstance().updateSetAdmin(request).getRequest().getRequestDispatcher("/superAdmin/main").forward(request, response);
     }
 }
