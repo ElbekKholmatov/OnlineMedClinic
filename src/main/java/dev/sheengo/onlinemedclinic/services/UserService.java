@@ -8,6 +8,8 @@ import jakarta.servlet.http.Cookie;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpSession;
 
+import java.util.Objects;
+
 public class UserService extends Service<User> {
     private static final ThreadLocal<UserService> instance = ThreadLocal.withInitial(UserService::new);
 
@@ -87,7 +89,14 @@ public class UserService extends Service<User> {
 
     @Override
     public Response<User> get(HttpServletRequest request) {
-        return null;
+        Integer id = Integer.parseInt(request.getSession().getAttribute("id").toString());
+        Response<User> response = get(id);
+        User user = response.getDomain();
+        request.setAttribute("firstName", user.getFirstName());
+        if ( Objects.nonNull(user.getPictureId()) ) {
+            request.setAttribute("filePath", user.getPictureId().getFilePath());
+        }
+        return Response.<User>builder().request(request).build();
     }
 
     @Override

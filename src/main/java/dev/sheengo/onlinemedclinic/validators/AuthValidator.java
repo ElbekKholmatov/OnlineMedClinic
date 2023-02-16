@@ -1,14 +1,16 @@
 package dev.sheengo.onlinemedclinic.validators;
 
-import dev.sheengo.onlinemedclinic.dao.UserDAO;
 import dev.sheengo.onlinemedclinic.domains.User;
 import dev.sheengo.onlinemedclinic.exceptions.AuthException;
 import dev.sheengo.onlinemedclinic.services.Response;
 import dev.sheengo.onlinemedclinic.services.UserService;
 import jakarta.servlet.http.HttpServletRequest;
+import lombok.AccessLevel;
+import lombok.NoArgsConstructor;
 
 import java.util.Objects;
 
+@NoArgsConstructor(access = AccessLevel.PRIVATE)
 public class AuthValidator {
     public static final String phonePattern = "^(\\+998)?\\d{9}$";
     public static final String passwordPattern = "(?=^.{8,}$)((?=.*\\d)|(?=.*\\W+))(?![.\\n])(?=.*[A-Z])(?=.*[a-z]).*$";
@@ -29,6 +31,8 @@ public class AuthValidator {
         String address = req.getParameter("address");
         String passport = req.getParameter("passport");
 
+        User user = UserService.getInstance().get(username).getDomain();
+
         if (Objects.isNull(firstName) || firstName.isBlank()) {
             req.setAttribute("firstNameException", "Firstname is invalid");
             throw new AuthException();
@@ -38,14 +42,14 @@ public class AuthValidator {
             throw new AuthException();
         }
         if (Objects.isNull(phone) || !phone.matches(phonePattern)) {
-            req.setAttribute("phoneException", "Phone is invalid");
+            req.setAttribute("phoneException", "PhoneNumber is invalid");
             throw new AuthException();
         }
         if (Objects.isNull(username) || username.length() < 3) {
             req.setAttribute("usernameException", "username must be more than 3 letters");
             throw new AuthException();
         }
-        if (Objects.nonNull(UserDAO.getInstance().get(username))) {
+        if (Objects.nonNull(user)) {
             req.setAttribute("usernameException", "Username already exists");
             throw new AuthException();
         }

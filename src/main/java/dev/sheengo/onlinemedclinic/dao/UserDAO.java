@@ -35,6 +35,7 @@ public class UserDAO extends DAO<User> {
         EntityManager entityManager = getEntityManager();
         entityManager.getTransaction().begin();
         User user = entityManager.find(User.class, id);
+//        entityManager.contains(user);
         entityManager.getTransaction().commit();
         return user;
     }
