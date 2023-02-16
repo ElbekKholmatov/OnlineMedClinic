@@ -126,6 +126,8 @@
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/dev/sheengo/onlinemedclinic/controller/HomeServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/sheengo/onlinemedclinic/controller/HomeServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/dev/sheengo/onlinemedclinic/validators/UserValidator.java" beforeDir="false" />
+    <list default="true" id="868efec0-8191-4b1d-8e00-fd842d8438fb" name="Changes" comment="Asrorxo'ja merged first time">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -140,9 +142,6 @@
         <option value="Class" />
       </list>
     </option>
-  </component>
-  <component name="Git.Rebase.Settings">
-    <option name="NEW_BASE" value="origin/master" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -380,6 +379,7 @@
     <MESSAGE value="Domains added" />
     <MESSAGE value="Domains update" />
     <MESSAGE value="Service abstract class added" />
-    <option name="LAST_COMMIT_MESSAGE" value="Service abstract class added" />
+    <MESSAGE value="Asrorxo'ja merged first time" />
+    <option name="LAST_COMMIT_MESSAGE" value="Asrorxo'ja merged first time" />
   </component>
 </project>
