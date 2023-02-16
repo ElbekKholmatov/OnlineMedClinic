@@ -67,8 +67,7 @@ public class SecurityFilter implements Filter {
             Cookie[] cookies = Objects.requireNonNullElse(request.getCookies(), new Cookie[]{});
             Arrays.stream(cookies)
                     .peek(cookie -> {
-                        if (cookie.getName().equals("id") &&
-                                ThreadSafeCollections.id.contains(Integer.parseInt(cookie.getValue()))) {
+                        if (cookie.getName().equals("id")) {
                             request.getSession().setAttribute("id", cookie.getValue());
                         }
                     })
