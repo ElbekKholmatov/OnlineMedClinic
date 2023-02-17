@@ -6,16 +6,22 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="c" uri="jakarta.tags.core" %>
 <html>
 <head>
     <title>Delete Admin</title>
 </head>
 <body>
-<form action="/superAmin/deleteAdmin" method="post">
+<form action="/superAdmin/deleteAdmin" method="post">
     <h3>Remove Admin</h3>
     <div class="form-group">
-        <label for="delete_username">Username</label>
-        <input type="text" class="form-control" id="delete_username" name="delete_username" placeholder="Enter username">
+        <select class="form-select" id="delete_username"
+                name="delete_username">
+            <option selected>select admin</option>
+            <c:forEach items="${admins}" var="admin">
+                <option value="${admin.getUsername()}">${admin.getUsername()}</option>
+            </c:forEach>
+        </select>
     </div>
     <button type="submit" class="btn btn-primary">remove admin</button>
 </form>

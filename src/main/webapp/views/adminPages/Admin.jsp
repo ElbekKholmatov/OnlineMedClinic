@@ -8,9 +8,23 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Title</title>
+    <title>AdminPage</title>
 </head>
 <body>
+<h1>Admin Page</h1>
+DR
+<div>
+    <button onclick="location.href='/admin/dr/getListDr'">Get List Dr</button>
+    <button onclick="location.href='/admin/dr/deleteDr'">Delete Dr</button>
+    <button onclick="location.href='/admin/dr/setDr'">Set Dr</button>
+</div>
+ISSUES
+<div>
+    <button onclick="location.href='/admin/issue/update'">Get List Pt</button>
+    <button onclick="location.href='/admin/issue/getList'">Delete Pt</button>
+    <button onclick="location.href='/admin/issue/delete'">Set Pt</button>
+    <button onclick="location.href='/admin/issue/create'">Set Pt</button>
+</div>
 
 </body>
 </html>

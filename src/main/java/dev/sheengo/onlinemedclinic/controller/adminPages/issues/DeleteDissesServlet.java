@@ -8,8 +8,8 @@ import jakarta.servlet.http.HttpServletResponse;
 
 import java.io.IOException;
 
-@WebServlet(name = "GetListIssueServlet", value = "/admin/issue/getList")
-public class GetListIssueServlet extends HttpServlet {
+@WebServlet(name = "DeleteDissesServlet", value = "/admin/issue/delete")
+public class DeleteDissesServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 

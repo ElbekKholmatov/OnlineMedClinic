@@ -12,7 +12,7 @@
 </head>
 <body>
 <div>
-    <form action="/superAmin/setAdmin" method="post">
+    <form action="/superAdmin/setAdmin" method="post">
         <h3>Set Admin</h3>
         <div class="form-group">
             <label for="set_username">Username</label>

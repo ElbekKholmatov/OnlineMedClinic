@@ -1,6 +1,7 @@
 package dev.sheengo.onlinemedclinic.dao;
 
 import dev.sheengo.onlinemedclinic.domains.User;
+import dev.sheengo.onlinemedclinic.services.Response;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.NoResultException;
 import lombok.AccessLevel;
@@ -40,5 +41,35 @@ public class UserDAO extends DAO<User, Integer> {
 
     public static UserDAO getInstance() {
         return dao;
+    }
+
+    public boolean updateDeleteAdmin(User user) {
+        EntityManager entityManager = getEntityManager();
+        entityManager.getTransaction().begin();
+        entityManager.createQuery("update User u set u.role = :role where u.username = :username")
+                .setParameter("role", user.getRole())
+                .setParameter("username", user.getUsername())
+                .executeUpdate();
+        entityManager.getTransaction().commit();
+        return true;
+    }
+
+    public List<User> getOneRoleUsers(User.UserRole role) {
+        EntityManager entityManager = getEntityManager();
+        return entityManager.createQuery("select u from User u where u.role = :role", User.class)
+                .setParameter("role", role)
+                .getResultList();
+
+    }
+
+    public boolean updateSetDr(User user) {
+        EntityManager entityManager = getEntityManager();
+        entityManager.getTransaction().begin();
+        entityManager.createQuery("update User u set u.role = :role where u.username = :username")
+                .setParameter("role", user.getRole())
+                .setParameter("username", user.getUsername())
+                .executeUpdate();
+        entityManager.getTransaction().commit();
+        return true;
     }
 }

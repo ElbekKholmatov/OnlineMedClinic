@@ -6,13 +6,14 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="c" uri="jakarta.tags.core" %>
 <html>
 <head>
     <title>Admin Set</title>
 </head>
 <body>
 <div>
-    <form action="/superAmin/setAdmin" method="post">
+    <form action="/admin/dr/setDr" method="post">
         <h3>Set Admin</h3>
         <div class="form-group">
             <label for="set_username">Username</label>

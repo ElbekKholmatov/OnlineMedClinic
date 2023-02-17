@@ -22,6 +22,6 @@ public class SetAdminServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        UserService.getInstance().updateSetAdmin(request).getRequest().getRequestDispatcher("/superAdmin/main").forward(request, response);
+        UserService.getInstance().updateSetAdmin(request).getRequest().getRequestDispatcher("/views/adminPages/SuperAdminPage.jsp").forward(request, response);
     }
 }

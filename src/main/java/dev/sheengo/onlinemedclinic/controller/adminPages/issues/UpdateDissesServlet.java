@@ -1,13 +1,15 @@
 package dev.sheengo.onlinemedclinic.controller.adminPages.issues;
 
-import jakarta.servlet.*;
-import jakarta.servlet.http.*;
-import jakarta.servlet.annotation.*;
+import jakarta.servlet.ServletException;
+import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 
 import java.io.IOException;
 
-@WebServlet(name = "CreateIssueServlet", value = "/admin/issue/create")
-public class CreateIssueServlet extends HttpServlet {
+@WebServlet(name = "UpdateDissesServlet", value = "/admin/issue/update")
+public class UpdateDissesServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 

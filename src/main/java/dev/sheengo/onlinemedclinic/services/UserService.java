@@ -3,11 +3,13 @@ package dev.sheengo.onlinemedclinic.services;
 import dev.sheengo.onlinemedclinic.configs.ThreadSafeCollections;
 import dev.sheengo.onlinemedclinic.dao.UserDAO;
 import dev.sheengo.onlinemedclinic.domains.User;
+import jakarta.servlet.AsyncContext;
 import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.http.Cookie;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpSession;
 
+import java.util.List;
 import java.util.Objects;
 
 public class UserService implements Service<User> {
@@ -112,6 +114,45 @@ public class UserService implements Service<User> {
                 .build();
     }
 
+
+    public Response<User> updateDeleteAdmin(HttpServletRequest request) {
+        String username = request.getParameter("delete_username");
+        boolean user = UserDAO.getInstance().updateDeleteAdmin(
+                User.builder()
+                        .username(username)
+                        .role(User.UserRole.USER)
+                        .build()
+        );
+        return Response.<User>builder()
+                .request(request)
+                .returnPage("/superAdmin/main")
+                .build();
+    }
+
+    public List<User> getAdmins() {
+        return UserDAO.getInstance().getOneRoleUsers(User.UserRole.ADMIN);
+    }
+    public List<User> getUsers() {
+        return UserDAO.getInstance().getOneRoleUsers(User.UserRole.USER);
+    }
+
+    public List<User> getDrs() {
+        return UserDAO.getInstance().getOneRoleUsers(User.UserRole.DOCTOR);
+    }
+
+    public Response<User> updateSetDr(HttpServletRequest request) {
+        String username = request.getParameter("set_username");
+        boolean user = UserDAO.getInstance().updateSetDr(
+                User.builder()
+                        .username(username)
+                        .role(User.UserRole.DOCTOR)
+                        .build()
+        );
+        return Response.<User>builder()
+                .request(request)
+                .returnPage("/superAdmin/main")
+                .build();
+    }
     public Response<User> updateSetAdmin(HttpServletRequest request) {
         String username = request.getParameter("set_username");
         boolean user = UserDAO.getInstance().updateSetAdmin(
@@ -124,5 +165,5 @@ public class UserService implements Service<User> {
                 .request(request)
                 .returnPage("/superAdmin/main")
                 .build();
-        }
+    }
 }
