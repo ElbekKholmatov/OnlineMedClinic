@@ -1,4 +1,4 @@
-package dev.sheengo.onlinemedclinic.controller.adminPages.issues;
+package dev.sheengo.onlinemedclinic.controller.admin.admin.disease;
 
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
@@ -8,8 +8,8 @@ import jakarta.servlet.http.HttpServletResponse;
 
 import java.io.IOException;
 
-@WebServlet(name = "DeleteDissesServlet", value = "/admin/issue/delete")
-public class DeleteDissesServlet extends HttpServlet {
+@WebServlet(name = "DeleteDiseaseServlet", value = "/admin/disease/delete")
+public class DeleteDiseaseServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 

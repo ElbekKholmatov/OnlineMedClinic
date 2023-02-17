@@ -1,4 +1,4 @@
-package dev.sheengo.onlinemedclinic.controller.adminPages.admin;
+package dev.sheengo.onlinemedclinic.controller.admin.supreme.adminCRUD;
 
 import dev.sheengo.onlinemedclinic.services.UserService;
 import jakarta.servlet.*;

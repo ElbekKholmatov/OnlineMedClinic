@@ -1,7 +1,11 @@
 package dev.sheengo.onlinemedclinic.services;
 
 import dev.sheengo.onlinemedclinic.configs.ThreadSafeCollections;
+import dev.sheengo.onlinemedclinic.dao.DoctorDAO;
+import dev.sheengo.onlinemedclinic.dao.SpecializationDAO;
 import dev.sheengo.onlinemedclinic.dao.UserDAO;
+import dev.sheengo.onlinemedclinic.domains.Doctor;
+import dev.sheengo.onlinemedclinic.domains.Specialization;
 import dev.sheengo.onlinemedclinic.domains.User;
 import jakarta.servlet.AsyncContext;
 import jakarta.servlet.RequestDispatcher;
@@ -142,10 +146,19 @@ public class UserService implements Service<User> {
 
     public Response<User> updateSetDr(HttpServletRequest request) {
         String username = request.getParameter("set_username");
+        Short specId = Short.parseShort(request.getParameter("specialization_id"));
         boolean user = UserDAO.getInstance().updateSetDr(
                 User.builder()
                         .username(username)
                         .role(User.UserRole.DOCTOR)
+                        .build()
+        );
+        User usrjon = UserDAO.getInstance().get(username);
+        Specialization specialization = SpecializationDAO.getInstance().get(specId);
+        DoctorDAO.getInstance().save(
+                Doctor.builder()
+                        .user(usrjon)
+                        .specializationId(specialization)
                         .build()
         );
         return Response.<User>builder()
@@ -165,5 +178,10 @@ public class UserService implements Service<User> {
                 .request(request)
                 .returnPage("/superAdmin/main")
                 .build();
+    }
+
+
+    public List<Specialization> getAll() {
+        return SpecializationDAO.getInstance().getAll();
     }
 }

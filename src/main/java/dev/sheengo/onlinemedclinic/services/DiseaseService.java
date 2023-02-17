@@ -2,9 +2,11 @@ package dev.sheengo.onlinemedclinic.services;
 
 import dev.sheengo.onlinemedclinic.dao.DiseaseDAO;
 import dev.sheengo.onlinemedclinic.domains.Disease;
+import jakarta.servlet.SessionCookieConfig;
 import jakarta.servlet.http.HttpServletRequest;
 
 import java.util.List;
+import java.util.Optional;
 
 public class DiseaseService implements Service<Disease> {
     private static final ThreadLocal<DiseaseService> instance = ThreadLocal.withInitial(DiseaseService::new);
@@ -39,7 +41,7 @@ public class DiseaseService implements Service<Disease> {
                 .specializationId(SpecializationService.getInstance().get(Integer.parseInt(specializationId)).getDomain())
                 .build());
         return Response.<Disease>builder()
-                .returnPage("/admin/ListIssues.jsp")
+                .returnPage("/admin/Listdiseases.jsp")
                 .build();
     }
 
@@ -65,5 +67,29 @@ public class DiseaseService implements Service<Disease> {
 
     public List<Disease> getAll() {
         return DiseaseDAO.getInstance().getAll();
+    }
+
+    public Response<Disease> get(String name) {
+        Optional<Disease> disease = DiseaseDAO.getInstance().get(name);
+        return disease.map(disease1 -> Response.<Disease>builder()
+                .domain(disease1)
+                .build())
+                .orElseGet(() -> Response.<Disease>builder()
+                        .domain(Disease.builder()
+                                .name("No disease found")
+                                .build())
+                        .build());
+    }
+
+    public Response<Disease> get(String name, Integer speID) {
+        Optional<Disease> disease = DiseaseDAO.getInstance().get(name, speID);
+        return disease.map(disease1 -> Response.<Disease>builder()
+                .domain(disease1)
+                .build())
+                .orElseGet(() -> Response.<Disease>builder()
+                        .domain(Disease.builder()
+                                .name("No disease found")
+                                .build())
+                        .build());
     }
 }

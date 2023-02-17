@@ -1,11 +1,6 @@
-package dev.sheengo.onlinemedclinic.controller.adminPages.admin;
+package dev.sheengo.onlinemedclinic.controller.admin.supreme.adminCRUD;
 
-import dev.sheengo.onlinemedclinic.dao.UserDAO;
-import dev.sheengo.onlinemedclinic.domains.User;
-import dev.sheengo.onlinemedclinic.filters.SetAdminFilter;
-import dev.sheengo.onlinemedclinic.services.Response;
 import dev.sheengo.onlinemedclinic.services.UserService;
-import jakarta.persistence.EntityManager;
 import jakarta.servlet.*;
 import jakarta.servlet.http.*;
 import jakarta.servlet.annotation.*;

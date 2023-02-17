@@ -12,9 +12,10 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
-public class Specialization implements Domain{
+public class Specialization implements Domain {
     @Id
-    @Column(columnDefinition = "smallserial")
+    @GeneratedValue(generator = "specialization_id_seq", strategy = GenerationType.SEQUENCE)
+    @SequenceGenerator(name = "specialization_id_seq", sequenceName = "specialization_id_seq", allocationSize = 1)
     private Short id;
     @Column(nullable = false)
     private String name;

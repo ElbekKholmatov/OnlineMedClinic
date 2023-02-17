@@ -1,4 +1,4 @@
-package dev.sheengo.onlinemedclinic.controller.adminPages.issues;
+package dev.sheengo.onlinemedclinic.controller.admin.admin.disease;
 
 import dev.sheengo.onlinemedclinic.services.DiseaseService;
 import dev.sheengo.onlinemedclinic.services.SpecializationService;
@@ -8,12 +8,12 @@ import jakarta.servlet.annotation.*;
 
 import java.io.IOException;
 
-@WebServlet(name = "CreateDissesServlet", value = "/admin/issue/create")
-public class CreateDissesServlet extends HttpServlet {
+@WebServlet(name = "CreateDiseaseServlet", value = "/admin/disease/create")
+public class CreateDiseaseServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         request.setAttribute("specializations", SpecializationService.getInstance().getAll());
-        RequestDispatcher dispatcher = request.getRequestDispatcher("/views/adminPages/issues/CreateDisses.jsp");
+        RequestDispatcher dispatcher = request.getRequestDispatcher("/views/adminPages/diseases/Createdisease.jsp");
         dispatcher.forward(request, response);
     }
 

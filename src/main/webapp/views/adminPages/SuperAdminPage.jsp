@@ -16,6 +16,7 @@
     <button onclick="location.href='#'">Logout</button>
     <button onclick="location.href='/superAdmin/setAdmin'">Set Admin</button>
     <button onclick="location.href='/superAdmin/deleteAdmin'">Delete Admin</button>
+    <button onclick="location.href='/superAdmin/getListDR'">List of Admins</button>
 
 </div>
 

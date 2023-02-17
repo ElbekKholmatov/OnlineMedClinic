@@ -13,7 +13,7 @@
     <title>Title</title>
 </head>
 <body>
-<form action="/admin/issue/create" method="post">
+<form action="/admin/disease/create" method="post">
     name: <input type="text" name="name" value="name"/>
     description: <input type="text" name="description" value="description"/>
     <select class="form-select"   aria-label="select example" style="margin-top: 30px" id="specialization_id"

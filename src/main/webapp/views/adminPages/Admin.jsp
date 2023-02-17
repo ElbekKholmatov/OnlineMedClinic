@@ -18,12 +18,18 @@ DR
     <button onclick="location.href='/admin/dr/deleteDr'">Delete Dr</button>
     <button onclick="location.href='/admin/dr/setDr'">Set Dr</button>
 </div>
-ISSUES
+SPECIALIZATIONS
 <div>
-    <button onclick="location.href='/admin/issue/update'">Get List Pt</button>
-    <button onclick="location.href='/admin/issue/getList'">Delete Pt</button>
-    <button onclick="location.href='/admin/issue/delete'">Set Pt</button>
-    <button onclick="location.href='/admin/issue/create'">Set Pt</button>
+    <button onclick="location.href='/admin/specialization/getList'">Get List S</button>
+    <button onclick="location.href='/admin/specialization/deleteSpecialization'">Delete S</button>
+    <button onclick="location.href='/admin/specialization/create'">Create S</button>
+</div>
+diseaseS
+<div>
+    <button onclick="location.href='/admin/disease/update'">Update disease</button>
+    <button onclick="location.href='/admin/disease/getList'">Get disease List</button>
+    <button onclick="location.href='/admin/disease/delete'">Delete disease</button>
+    <button onclick="location.href='/admin/disease/create'">Set disease</button>
 </div>
 
 </body>

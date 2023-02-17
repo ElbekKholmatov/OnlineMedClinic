@@ -2,6 +2,7 @@ package dev.sheengo.onlinemedclinic.services;
 
 import dev.sheengo.onlinemedclinic.dao.SpecializationDAO;
 import dev.sheengo.onlinemedclinic.domains.Specialization;
+import jakarta.servlet.SessionCookieConfig;
 import jakarta.servlet.http.HttpServletRequest;
 
 import java.util.List;
@@ -18,7 +19,14 @@ public class SpecializationService implements Service<Specialization> {
 
     @Override
     public Response<Specialization> save(HttpServletRequest request) {
-        return null;
+        String name = request.getParameter("name");
+        String description = request.getParameter("description");
+        SpecializationDAO.getInstance().save(
+                Specialization.builder()
+                        .name(name)
+                        .description(description)
+                        .build());
+        return Response.<Specialization>builder().request(request).build();
     }
 
     @Override
@@ -43,5 +51,9 @@ public class SpecializationService implements Service<Specialization> {
 
     public List<Specialization> getAll() {
         return SpecializationDAO.getInstance().getAll();
+    }
+
+    public Response<Specialization> get(String name) {
+        return SpecializationDAO.getInstance().get(name);
     }
 }
