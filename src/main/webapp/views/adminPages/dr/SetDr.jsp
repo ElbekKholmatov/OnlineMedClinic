@@ -18,6 +18,13 @@
         <div class="form-group">
             <label for="set_username">Username</label>
             <input type="text" class="form-control" id="set_username" name="set_username" placeholder="Enter username">
+            <select class="form-select"   aria-label="select example" style="margin-top: 30px" id="specialization_id"
+                    name="specialization_id">
+                <option value="0">Choose a category</option>
+                <c:forEach items="${specializations}" var="specialization">
+                    <option value="${specialization.getId()}">${specialization.getName()}</option>
+                </c:forEach>
+            </select>
         </div>
         <button type="submit" class="btn btn-primary">set admin</button>
     </form>
