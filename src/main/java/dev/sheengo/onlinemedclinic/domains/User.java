@@ -7,6 +7,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.hibernate.annotations.CreationTimestamp;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 
@@ -32,6 +33,8 @@ public class User implements Domain {
     @Column(nullable = false)
     // unique
     private String username;
+    @Column(nullable = false)
+    private String password;
     @Builder.Default
     @Enumerated(EnumType.STRING)
     private Status status = Status.ACTIVE;
@@ -48,14 +51,10 @@ public class User implements Domain {
     @CreationTimestamp
     @Column(nullable = true, columnDefinition = "timestamp default current_timestamp")
     private LocalDateTime createdAt;
-    @CreationTimestamp
-    @Column(nullable = true, columnDefinition = "timestamp default current_timestamp")
     private LocalDateTime updatedAt;
     @OneToOne(cascade = CascadeType.ALL)
     private Document pictureId;
-    @Column(nullable = false)
-    private LocalDateTime birthdate;
-
+    private LocalDate birthdate;
     public enum UserRole{
         USER, DOCTOR, ADMIN, SUPER_ADMIN
     }

@@ -1,18 +1,80 @@
 package dev.sheengo.onlinemedclinic.dao;
 
+import dev.sheengo.onlinemedclinic.domains.Disease;
 import dev.sheengo.onlinemedclinic.domains.Domain;
+import dev.sheengo.onlinemedclinic.domains.Specialization;
 import jakarta.persistence.EntityManager;
+import jakarta.persistence.EntityManagerFactory;
 import jakarta.persistence.Persistence;
 
-public abstract class DAO<T extends Domain> {
-    private static final EntityManager entityManager = Persistence
-            .createEntityManagerFactory("persistence_unit").createEntityManager();
-    abstract public T save(T t);
-    abstract public boolean update(T t);
-    abstract public boolean delete(Integer id);
-    abstract public T get(Integer id);
+import java.io.Serializable;
+import java.lang.reflect.ParameterizedType;
+import java.util.List;
 
-    public EntityManager getEntityManager(){
-        return entityManager;
+public abstract class DAO<T extends Domain, ID extends Serializable> {
+    private final EntityManagerFactory emf = Persistence.createEntityManagerFactory("persistence_unit");;
+    private final EntityManager em =  emf.createEntityManager();
+    private final Class<T> persistenceClass;
+
+    protected EntityManager getEntityManager() {
+        return em;
+    }
+
+    @SuppressWarnings("unchecked")
+    protected DAO() {
+        this.persistenceClass = (Class<T>) (((ParameterizedType) getClass()
+                .getGenericSuperclass())
+                .getActualTypeArguments()[0]);
+    }
+
+    public T save(T t) {
+        begin();
+//        em.persist(t);
+        Specialization build = Specialization.builder().name("dw").description("dw").build();
+        Disease build1 = Disease.builder().name("1").description("2").build();
+        build1.setSpecialization(build);
+        em.persist(build1);
+        commit();
+        return t;
+    }
+
+    public T get(ID id) {
+        begin();
+        T t = em.find(persistenceClass, id);
+        commit();
+        return t;
+    }
+
+    public boolean update(T t) {
+        em.merge(t);
+        return true;
+    }
+
+    public boolean delete(T t) {
+        em.remove(t);
+        return true;
+    }
+
+    @SuppressWarnings("unchecked")
+    public List<T> getAll(){
+        begin();
+        List<T> resultList = em.createQuery("from " + persistenceClass.getSimpleName())
+                .getResultList();
+        commit();
+        return resultList;
+    }
+
+    public boolean deleteById(ID id) {
+        return em.createQuery("delete from " + persistenceClass.getSimpleName() + " t where t.id = :id")
+                .setParameter("id", id)
+                .executeUpdate() == 0;
+    }
+
+    protected void begin() {
+        em.getTransaction().begin();
+    }
+
+    protected void commit() {
+        em.getTransaction().commit();
     }
 }

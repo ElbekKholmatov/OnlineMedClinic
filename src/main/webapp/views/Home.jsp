@@ -77,7 +77,7 @@
         <div class="navbar-nav ms-auto py-0">
             <a href="/views/adminPages/soqqa.html" class="nav-item nav-link ">Soqqa Page</a>
             <a href="/views/adminPages/index.html" class="nav-item nav-link ">Admin Page</a>
-            <a href="/views/adminPages/doctor-dashboard.html" class="nav-item nav-link ">Doctor Page</a>
+            <a href="/views/dr/main.jsp" class="nav-item nav-link ">Doctor Page</a>
             <a href="/views/adminPages/patient-dashboard.html" class="nav-item nav-link ">Patient Page</a>
             <a href="/views/Home.jsp" class="nav-item nav-link active">Home</a>
             <a href="/views/userPages/about.jsp" class="nav-item nav-link">About</a>
@@ -103,7 +103,7 @@
 
         <c:choose>
             <c:when test="${firstname == null}">
-                <a style="margin-left: 5px" href="/views/auth/userAuth.jsp" class="nav-item nav-link">
+                <a style="margin-left: 5px" href="/logIn" class="nav-item nav-link">
                     <button type="button" class="btn btn-primary ms-2 ">Login</button>
                 </a>
             </c:when>

@@ -1,30 +1,90 @@
 package dev.sheengo.onlinemedclinic.dao;
 
 import dev.sheengo.onlinemedclinic.domains.User;
+import dev.sheengo.onlinemedclinic.services.Response;
 import jakarta.persistence.EntityManager;
+import jakarta.persistence.NoResultException;
+import lombok.AccessLevel;
+import lombok.NoArgsConstructor;
 
-public class UserDAO extends DAO<User> {
-    @Override
-    public User save(User user) {
-        EntityManager entityManager = getEntityManager();
-        entityManager.getTransaction().begin();
-        entityManager.persist(user);
-        entityManager.getTransaction().commit();
-        return user;
-    }
+import java.util.List;
+
+@NoArgsConstructor(access = AccessLevel.PRIVATE)
+public class UserDAO extends DAO<User, Integer> {
+    private static final UserDAO dao = new UserDAO();
 
     @Override
     public boolean update(User user) {
         return false;
     }
 
-    @Override
-    public boolean delete(Integer id) {
-        return false;
+    public User get(String username) {
+        try {
+            String query = "select u from User u where u.username = :username";
+            return getEntityManager().createQuery(query, User.class)
+                    .setParameter("username", username).getSingleResult();
+        } catch (NoResultException e) {
+            return null;
+        }
     }
 
-    @Override
-    public User get(Integer id) {
-        return null;
+
+    public boolean updateSetAdmin(User user) {
+        EntityManager entityManager = getEntityManager();
+        entityManager.getTransaction().begin();
+        entityManager.createQuery("update User u set u.role = :role where u.username = :username")
+                .setParameter("role", user.getRole())
+                .setParameter("username", user.getUsername())
+                .executeUpdate();
+        entityManager.getTransaction().commit();
+        return true;
+    }
+
+    public static UserDAO getInstance() {
+        return dao;
+    }
+
+    public boolean updateDeleteAdmin(User user) {
+        EntityManager entityManager = getEntityManager();
+        entityManager.getTransaction().begin();
+        entityManager.createQuery("update User u set u.role = :role where u.username = :username")
+                .setParameter("role", user.getRole())
+                .setParameter("username", user.getUsername())
+                .executeUpdate();
+        entityManager.getTransaction().commit();
+        return true;
+    }
+
+    public List<User> getOneRoleUsers(User.UserRole role) {
+        EntityManager entityManager = getEntityManager();
+        return entityManager.createQuery("select u from User u where u.role = :role", User.class)
+                .setParameter("role", role)
+                .getResultList();
+
+    }
+
+    public boolean updateSetDr(User user) {
+        EntityManager entityManager = getEntityManager();
+        entityManager.getTransaction().begin();
+        entityManager.createQuery("update User u set u.role = :role where u.username = :username")
+                .setParameter("role", user.getRole())
+                .setParameter("username", user.getUsername())
+                .executeUpdate();
+        entityManager.getTransaction().commit();
+        return true;
+    }
+
+    public List<User> getAllAdmins() {
+        EntityManager entityManager = getEntityManager();
+        return entityManager.createQuery("select u from User u where u.role = :role", User.class)
+                .setParameter("role", User.UserRole.ADMIN)
+                .getResultList();
+    }
+
+    public List<User> getAllDoctors() {
+        EntityManager entityManager = getEntityManager();
+        return entityManager.createQuery("select u from User u where u.role = :role", User.class)
+                .setParameter("role", User.UserRole.DOCTOR)
+                .getResultList();
     }
 }
