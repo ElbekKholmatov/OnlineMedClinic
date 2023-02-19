@@ -29,11 +29,7 @@ public abstract class DAO<T extends Domain, ID extends Serializable> {
 
     public T save(T t) {
         begin();
-//        em.persist(t);
-        Specialization build = Specialization.builder().name("dw").description("dw").build();
-        Disease build1 = Disease.builder().name("1").description("2").build();
-        build1.setSpecialization(build);
-        em.persist(build1);
+        em.persist(t);
         commit();
         return t;
     }

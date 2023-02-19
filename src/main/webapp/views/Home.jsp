@@ -113,7 +113,7 @@
 
                 <a href="/views/auth/userAuth.jsp" class="nav-item nav-link">
                     <div class="media align-items-center">
-        <span class="avatar avatar-sm rounded-circle">
+<%--        <span class="avatar avatar-sm rounded-circle">--%>
                 </a>
         <c:choose>
             <c:when test="${filePath != null}">

@@ -78,7 +78,7 @@
         <div>
             <input type="submit" class="submit" value="SIGN UP">
 
-            <p class="forgot"><a href="/views/auth/logIn.jsp"> LogIn </a></p>
+            <p class="forgot"><a href="/logIn"> LogIn </a></p>
         </div>
 
         <script>
