@@ -6,6 +6,7 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="c" uri="jakarta.tags.core" %>
 
 
 <head>
@@ -171,12 +172,12 @@
 <%--                            <label for="floatingTextarea2">Info</label>--%>
 <%--                        </div>--%>
 
-                        <a class="btn btn-primary" href="/views/userPages/appointment2.jsp">
+                        <a class="btn btn-primary" href="/user/order/selectDoctor">
                             Back
                         </a>
-                        <a class="btn btn-primary" href="/views/Home.jsp">
+                        <BUTTON class="btn btn-primary" type="submit">
                             Next
-                        </a>
+                        </BUTTON>
                     </form>
 
 

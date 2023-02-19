@@ -6,6 +6,7 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="c" uri="jakarta.tags.core" %>
 
 
 <head>
@@ -159,20 +160,19 @@
                             </c:forEach>
                         </select>
 
-<%--                        <div class="form-floating">--%>
-<%--        <textarea class="form-control" name="info" placeholder="Kasallik haqida ma'lumot..."--%>
-<%--                  id="floatingTextarea2" style="height: 110px"></textarea>--%>
-<%--                            <label for="floatingTextarea2">Info</label>--%>
-<%--                        </div>--%>
+                        <div class="form-floating">
+        <textarea class="form-control" name="info" placeholder="Kasallik haqida ma'lumot..."
+                  id="floatingTextarea2" style="height: 110px"></textarea>
+                            <label for="floatingTextarea2">Info</label>
+                        </div>
 
-                        <a class="btn btn-primary" href="/views/userPages/appointment.jsp">
+                        <a class="btn btn-primary" href="/user/order">
                             Back
                         </a>
-                        <a class="btn btn-primary" href="/views/userPages/appointment3.jsp">
+                        <button class="btn btn-primary" type="submit">
                             Next
-                        </a>
+                        </button>
                     </form>
-
 
 
                     <%--                    <h1 class="text-white mb-4">Make Appointment</h1>--%>

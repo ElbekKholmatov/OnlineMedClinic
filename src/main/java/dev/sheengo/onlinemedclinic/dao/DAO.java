@@ -54,7 +54,6 @@ public abstract class DAO<T extends Domain, ID extends Serializable> {
         em.remove(t);
         return true;
     }
-
     @SuppressWarnings("unchecked")
     public List<T> getAll(){
         begin();
@@ -63,6 +62,8 @@ public abstract class DAO<T extends Domain, ID extends Serializable> {
         commit();
         return resultList;
     }
+
+
 
     public boolean deleteById(ID id) {
         return em.createQuery("delete from " + persistenceClass.getSimpleName() + " t where t.id = :id")
