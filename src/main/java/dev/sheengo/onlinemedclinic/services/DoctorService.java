@@ -41,7 +41,7 @@ public class DoctorService implements Service<Doctor> {
         UserService userService = UserService.getInstance();
         User userObj = userService.get(Integer.parseInt(request.getSession().getAttribute("id").toString())).getDomain();
 
-        Specialization specializationObj = DoctorDAO.getInstance().findSpecializationByUserId(userObj.getId());
+        Specialization specializationObj = DoctorDAO.getInstance().findDoctorByUserId(userObj.getId()).getSpecialization();
 
         DoctorDAO doctorDAO = DoctorDAO.getInstance();
         Doctor doctorObj = doctorDAO.findDoctorByUserId(userObj.getId());

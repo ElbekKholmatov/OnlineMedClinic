@@ -6,6 +6,7 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="c" uri="jakarta.tags.core" %>
 
 
 <head>
@@ -153,9 +154,9 @@
                                 <option value="${category.getId()}">${category.getName()}</option>
                             </c:forEach>
                         </select>
-                        <a class="btn btn-primary" href="/views/userPages/appointment2.jsp">
+                        <button class="btn btn-primary" type="submit">
                          Next
-                        </a>
+                        </button>
                     </form>
 
 

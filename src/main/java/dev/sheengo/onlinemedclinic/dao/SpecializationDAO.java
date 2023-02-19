@@ -13,11 +13,6 @@ public class SpecializationDAO extends DAO<Specialization, Short> {
         return dao;
     }
 
-    public List<Specialization> getAll() {
-        EntityManager entityManager = getEntityManager();
-        return entityManager.createQuery("select s from Specialization s", Specialization.class).getResultList();
-    }
-
     public Response<Specialization> get(String name) {
         EntityManager entityManager = getEntityManager();
         return Response.<Specialization>builder()

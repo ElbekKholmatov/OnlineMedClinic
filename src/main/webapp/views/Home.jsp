@@ -95,7 +95,7 @@
         </div>
         <button type="button" class="btn text-dark" data-bs-toggle="modal" data-bs-target="#searchModal"><i
                 class="fa fa-search"></i></button>
-        <a href="/views/userPages/appointment.jsp" class="btn btn-primary py-2 px-4 ms-3"><i
+        <a href="/user/order" class="btn btn-primary py-2 px-4 ms-3"><i
                 class="fa-solid fa-heart-circle-plus"></i></a>
 
         <a href="/views/userPages/settings.html" style="margin-left: 10px;" class="hasnotifications nav-link"><img
@@ -113,7 +113,7 @@
 
                 <a href="/views/auth/userAuth.jsp" class="nav-item nav-link">
                     <div class="media align-items-center">
-        <span class="avatar avatar-sm rounded-circle">
+<%--        <span class="avatar avatar-sm rounded-circle">--%>
                 </a>
         <c:choose>
             <c:when test="${filePath != null}">

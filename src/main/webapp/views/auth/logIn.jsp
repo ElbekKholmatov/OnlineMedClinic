@@ -13,7 +13,7 @@
 </head>
 
 <body>
-<form method="post">
+<form method="post" action="/logIn">
     <div class="login">
         <h1>Account Login</h1>
 
@@ -38,7 +38,7 @@
         <input type="hidden" name="next" value="${next}">
 
         <p>Forgot <a href="/views/auth/signUp.jsp"> Username / Password?</a></p>
-        <p class="forgot"> Create an account? <a href="/views/auth/signUp.jsp"> Sign up </a></p>
+        <p class="forgot"> Create an account? <a href="/signUp"> Sign up </a></p>
     </div>
 </form>
 
