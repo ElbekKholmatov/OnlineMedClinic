@@ -2,6 +2,7 @@ package dev.sheengo.onlinemedclinic.controller.userController.order;
 
 import dev.sheengo.onlinemedclinic.dao.UserDAO;
 import dev.sheengo.onlinemedclinic.domains.Specialization;
+import dev.sheengo.onlinemedclinic.domains.User;
 import dev.sheengo.onlinemedclinic.services.OrderService;
 import dev.sheengo.onlinemedclinic.services.SpecializationService;
 import jakarta.servlet.ServletException;
@@ -11,6 +12,8 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
 import java.io.IOException;
+import java.time.LocalDateTime;
+import java.util.Date;
 import java.util.List;
 
 @WebServlet(name = "SelectCategoryController", urlPatterns = "/user/order")

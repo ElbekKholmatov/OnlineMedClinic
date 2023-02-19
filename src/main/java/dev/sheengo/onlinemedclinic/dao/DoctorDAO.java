@@ -13,7 +13,6 @@ public class DoctorDAO extends DAO<Doctor, Integer> {
     private static DoctorDAO instance = new DoctorDAO();
 
     public Doctor findDoctorByUserId(Integer id) {
-
         EntityManager entityManager = getEntityManager();
         entityManager.getTransaction().begin();
         Doctor doctor = entityManager.find(Doctor.class, id);
@@ -23,7 +22,7 @@ public class DoctorDAO extends DAO<Doctor, Integer> {
 
     public List<Doctor> getDoctorsByCategory(Short categoryId){
 
-        String query = "select d from Doctor d where d.specializationId.id = :categoryId";
+        String query = "select d from Doctor d where d.specialization.id = :categoryId";
 
         begin();
         List<Doctor> doctors = getEntityManager().createQuery(query, Doctor.class)

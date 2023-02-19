@@ -16,7 +16,7 @@ public class HomeServlet extends HttpServlet {
 //        HttpServletRequest getRequest = UserService.getInstance().get(request).getRequest();
 //        getRequest.setAttribute("id", session.getAttribute("id"));
 //        getRequest.setAttribute("firstname", session.getAttribute("firstname"));
-        request.getRequestDispatcher("/views/Home.jsp").forward(request, response);
+//        request.getRequestDispatcher("/views/Home.jsp").forward(request, response);
     }
 
     @Override

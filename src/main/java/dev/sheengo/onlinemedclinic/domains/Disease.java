@@ -18,7 +18,7 @@ public class Disease implements Domain{
     private Short id;
     @Column(nullable = false)
     private String name;
-    @ManyToOne(cascade = CascadeType.ALL)
-    private Specialization specializationId;
+    @ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    private Specialization specialization;
     private String description;
 }

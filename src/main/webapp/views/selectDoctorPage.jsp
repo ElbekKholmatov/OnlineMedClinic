@@ -3,12 +3,28 @@
 <html>
 <head>
     <title>Doctor</title>
+    <jsp:include page="/fragments/css.jsp"/>
 </head>
 <body>
-<%--<select class="form-select" aria-label="Default select example" name="selectDoctor">--%>
-<%--    <option selected disabled>Select doctor</option>--%>
-<%--&lt;%&ndash;    <c:forEach items="${doctors} "&ndash;%&gt;--%>
-<%--</select>--%>
-<h1>Salom</h1>
+<form method="post" action="/user/order/selectDoctor">
+    <select class="form-select" aria-label="Default select example" name="doctor">
+        <option selected disabled>Select doctor</option>
+        <c:forEach items="${doctors}" var="doctor">
+            <option value="${doctor.getUser().getId()}">
+                    ${doctor.getUser().getId()}
+                    ${doctor.getUser().getFirstName()}
+                    ${doctor.getUser().getLastName()}
+            </option>
+        </c:forEach>
+    </select>
+
+    <div class="form-floating">
+        <textarea class="form-control" name="info" placeholder="Kasallik haqida ma'lumot..."
+                  id="floatingTextarea2" style="height: 110px"></textarea>
+        <label for="floatingTextarea2">Info</label>
+    </div>
+
+    <button type="submit" class="btn btn-primary m-5">Next</button>
+</form>
 </body>
 </html>

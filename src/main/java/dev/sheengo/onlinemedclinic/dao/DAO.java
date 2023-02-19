@@ -1,5 +1,6 @@
 package dev.sheengo.onlinemedclinic.dao;
 
+import dev.sheengo.onlinemedclinic.domains.Disease;
 import dev.sheengo.onlinemedclinic.domains.Domain;
 import dev.sheengo.onlinemedclinic.domains.Specialization;
 import jakarta.persistence.EntityManager;
@@ -11,8 +12,8 @@ import java.lang.reflect.ParameterizedType;
 import java.util.List;
 
 public abstract class DAO<T extends Domain, ID extends Serializable> {
-    protected final EntityManagerFactory emf = Persistence.createEntityManagerFactory("persistence_unit");;
-    protected final EntityManager em =  emf.createEntityManager();
+    private final EntityManagerFactory emf = Persistence.createEntityManagerFactory("persistence_unit");;
+    private final EntityManager em =  emf.createEntityManager();
     private final Class<T> persistenceClass;
 
     protected EntityManager getEntityManager() {return em;}
@@ -26,7 +27,11 @@ public abstract class DAO<T extends Domain, ID extends Serializable> {
 
     public T save(T t) {
         begin();
-        em.persist(t);
+//        em.persist(t);
+        Specialization build = Specialization.builder().name("dw").description("dw").build();
+        Disease build1 = Disease.builder().name("1").description("2").build();
+        build1.setSpecialization(build);
+        em.persist(build1);
         commit();
         return t;
     }
