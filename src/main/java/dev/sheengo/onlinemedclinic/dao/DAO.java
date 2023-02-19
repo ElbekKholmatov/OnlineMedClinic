@@ -16,7 +16,9 @@ public abstract class DAO<T extends Domain, ID extends Serializable> {
     private final EntityManager em =  emf.createEntityManager();
     private final Class<T> persistenceClass;
 
-    protected EntityManager getEntityManager() {return em;}
+    protected EntityManager getEntityManager() {
+        return em;
+    }
 
     @SuppressWarnings("unchecked")
     protected DAO() {
@@ -37,7 +39,10 @@ public abstract class DAO<T extends Domain, ID extends Serializable> {
     }
 
     public T get(ID id) {
-        return em.find(persistenceClass, id);
+        begin();
+        T t = em.find(persistenceClass, id);
+        commit();
+        return t;
     }
 
     public boolean update(T t) {
@@ -48,14 +53,6 @@ public abstract class DAO<T extends Domain, ID extends Serializable> {
     public boolean delete(T t) {
         em.remove(t);
         return true;
-    }
-    @SuppressWarnings("unchecked")
-    public List<T> getAll(){
-        begin();
-        List<T> resultList = em.createQuery("from " + persistenceClass.getSimpleName())
-                .getResultList();
-        commit();
-        return resultList;
     }
 
     @SuppressWarnings("unchecked")

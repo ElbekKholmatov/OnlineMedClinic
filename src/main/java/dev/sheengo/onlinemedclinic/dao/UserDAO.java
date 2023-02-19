@@ -28,6 +28,7 @@ public class UserDAO extends DAO<User, Integer> {
         }
     }
 
+
     public boolean updateSetAdmin(User user) {
         EntityManager entityManager = getEntityManager();
         entityManager.getTransaction().begin();

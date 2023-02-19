@@ -7,7 +7,7 @@ import jakarta.servlet.annotation.*;
 
 import java.io.IOException;
 
-@WebServlet(name = "DoctorUpdateServlet", value = "/doc/update")
+@WebServlet(name = "DoctorUpdateServlet", value = "/dr/update")
 public class DoctorUpdateServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

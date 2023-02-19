@@ -5,7 +5,6 @@ import jakarta.servlet.http.HttpServletRequest;
 
 public interface Service<T extends Domain> {
     Response<T> service(HttpServletRequest request);
-
     Response<T> save(HttpServletRequest request);
     Response<T> update(HttpServletRequest request);
     Response<T> delete(HttpServletRequest request);
