@@ -13,7 +13,7 @@
     <title>Title</title>
 </head>
 <body>
-<form action="/admin/specialization/update/*" method="post">
+<form action="/admin/specialization/update/${specialization.getId()}" method="post">
     <table>
         <tr>
             <td>Specialization ID</td>

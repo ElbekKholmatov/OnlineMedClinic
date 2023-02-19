@@ -13,11 +13,10 @@
     <title>Title</title>
 </head>
 <body>
-<form action="/admin/specialization/delete/*" method="post">
-    <c:forEach items="${specializations}" var="specialization">
-        <input type="text" name="id" id="id" value="${specialization.getId()}"/>
-        ${specialization.getName()}
-    </c:forEach>
+<form action="/admin/specialization/delete/${specialization.getId()}" method="post">
+    <input type="hidden" id="id" name="id" value="${specialization.getId()}"/>
+    <input type="text" id="name" name="name" value="${specialization.getName()}"/>
+    <input type="submit" value="Delete"/>
 </form>
 </body>
 </html>

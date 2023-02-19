@@ -13,9 +13,9 @@
     <title>Title</title>
 </head>
 <body>
-<form action="/admin/specialization/create" method="post">
-    name: <input type="text" name="name" value="name"/>
-    description: <input type="text" name="description" value="description"/>
+<form class="form-control" method="post">
+    name: <input type="text" name="name" placeholder="name"/>
+    description: <input type="text" name="description" placeholder="description"/>
     <button type="submit">submit</button>
 </form>
 </body>

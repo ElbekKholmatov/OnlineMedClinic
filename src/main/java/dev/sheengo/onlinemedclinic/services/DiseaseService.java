@@ -2,6 +2,7 @@ package dev.sheengo.onlinemedclinic.services;
 
 import dev.sheengo.onlinemedclinic.dao.DiseaseDAO;
 import dev.sheengo.onlinemedclinic.domains.Disease;
+import dev.sheengo.onlinemedclinic.domains.Specialization;
 import jakarta.servlet.SessionCookieConfig;
 import jakarta.servlet.http.HttpServletRequest;
 
@@ -34,15 +35,13 @@ public class DiseaseService implements Service<Disease> {
     public Response<Disease> save(HttpServletRequest request) {
         String name = request.getParameter("name");
         String description = request.getParameter("description");
-        String specializationId = request.getParameter("specializationId");
+        String specializationId = request.getParameter("specialization_id");
         DiseaseDAO.getInstance().save(Disease.builder()
                 .name(name)
                 .description(description)
                 .specialization(SpecializationService.getInstance().get(Integer.parseInt(specializationId)).getDomain())
                 .build());
-        return Response.<Disease>builder()
-                .returnPage("/admin/Listdiseases.jsp")
-                .build();
+        return Response.<Disease>builder().request(request).build();
     }
 
     @Override

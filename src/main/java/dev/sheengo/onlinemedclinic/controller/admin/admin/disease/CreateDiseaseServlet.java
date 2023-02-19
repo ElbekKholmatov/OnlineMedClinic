@@ -13,7 +13,7 @@ public class CreateDiseaseServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         request.setAttribute("specializations", SpecializationService.getInstance().getAll());
-        RequestDispatcher dispatcher = request.getRequestDispatcher("/views/adminPages/diseases/Createdisease.jsp");
+        RequestDispatcher dispatcher = request.getRequestDispatcher("/views/adminPages/issues/CreateIssue.jsp");
         dispatcher.forward(request, response);
     }
 
