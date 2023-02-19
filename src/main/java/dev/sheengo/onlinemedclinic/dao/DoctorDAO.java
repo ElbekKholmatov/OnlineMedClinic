@@ -10,24 +10,26 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor(access = AccessLevel.PRIVATE)
 public class DoctorDAO extends DAO<Doctor, Integer> {
 
-    private static DoctorDAO instance = new DoctorDAO();
+    private static final DoctorDAO instance = new DoctorDAO();
 
     public Doctor findDoctorByUserId(Integer id) {
 
         EntityManager entityManager = getEntityManager();
-        entityManager.getTransaction().begin();
+        begin();
         Doctor doctor = entityManager.find(Doctor.class, id);
-        entityManager.getTransaction().commit();
+        commit();
         return doctor;
     }
 
-    public Specialization findSpecializationSpecializationId(Integer id) {
+    public Specialization findSpecializationByUserId(Integer id) {
 
-        EntityManager entityManager = getEntityManager();
-        entityManager.getTransaction().begin();
-        Specialization specialization = entityManager.find(Specialization.class, id);
-        entityManager.getTransaction().commit();
-        return specialization;
+        Doctor doctor = findDoctorByUserId(id);
+
+        if (doctor == null) {
+            return null;
+        }
+
+        return doctor.getSpecialization();
     }
 
 

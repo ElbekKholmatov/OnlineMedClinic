@@ -17,7 +17,7 @@ public class Doctor implements Domain {
     @OneToOne(cascade = CascadeType.ALL)
     private User user;
     @OneToOne(cascade = CascadeType.ALL)
-    private Specialization specializationId;
+    private Specialization specialization;
     private String info;
     @Column(nullable = true, columnDefinition = "numeric(15, 2) default 0")
     private Double rating;

@@ -1,24 +1,22 @@
 package dev.sheengo.onlinemedclinic.controller.doctor;
 
-import dev.sheengo.onlinemedclinic.dao.DoctorDAO;
-import dev.sheengo.onlinemedclinic.dao.UserDAO;
-import jakarta.servlet.*;
-import jakarta.servlet.http.*;
-import jakarta.servlet.annotation.*;
+import dev.sheengo.onlinemedclinic.services.DoctorService;
+import jakarta.servlet.RequestDispatcher;
+import jakarta.servlet.ServletException;
+import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 
 import java.io.IOException;
 
-@WebServlet(name = "DoctorMainServlet", value = "/doc/main")
+@WebServlet(name = "DoctorMainServlet", value = "/dr/main")
 public class DoctorMainServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
-        DoctorDAO doctorDAO = DoctorDAO.getInstance();
-        request.setAttribute("user", UserDAO.getInstance().get(1)); // 1 ni orniga sessiondagi user id bervoriladi
-        request.setAttribute("doctor", doctorDAO.get(1)); // 1 ni orniga sessiondagi doctor id bervoriladi
-
-        RequestDispatcher dispatcher = request.getRequestDispatcher("/views/doctorPages/main.jsp");
-        dispatcher.forward(request, response);
+        HttpServletRequest getRequest = DoctorService.getInstance().get(request).getRequest();
+        RequestDispatcher dispatcher = getRequest.getRequestDispatcher("/views/dr/main.jsp");
+        dispatcher.forward(getRequest, response);
     }
 
     @Override

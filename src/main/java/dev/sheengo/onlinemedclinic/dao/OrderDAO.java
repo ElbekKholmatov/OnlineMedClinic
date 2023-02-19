@@ -4,9 +4,12 @@ import dev.sheengo.onlinemedclinic.domains.Doctor;
 import dev.sheengo.onlinemedclinic.domains.Order;
 import dev.sheengo.onlinemedclinic.domains.User;
 import jakarta.persistence.EntityManager;
+import jakarta.persistence.Query;
 import lombok.AccessLevel;
 import lombok.NoArgsConstructor;
+import org.eclipse.tags.shaded.org.apache.xpath.operations.Or;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @NoArgsConstructor(access = AccessLevel.PRIVATE)
@@ -15,7 +18,6 @@ public class OrderDAO extends DAO<Order, Integer> {
     private static OrderDAO instance = new OrderDAO();
 
     public List<Order> findAllOrders() {
-
         EntityManager entityManager = getEntityManager();
         return entityManager.createQuery("select o from Order o", Order.class).getResultList();
     }
@@ -26,20 +28,12 @@ public class OrderDAO extends DAO<Order, Integer> {
         return entityManager.createQuery("select o from Order o where o.user.id = :id", Order.class).setParameter("id", id).getResultList();
     }
 
-    public List<Order> findOrderByDoctorId(Integer id) {
-
-        EntityManager entityManager = getEntityManager();
-        return entityManager.createQuery("select o from Order o where o.doctor.id = :id", Order.class).setParameter("id", id).getResultList();
-    }
-
-    public List<Doctor> findDoctorByUserId(Integer id) {
-
-        EntityManager entityManager = getEntityManager();
-        return entityManager.createQuery("select o from Order o where o.user.id = :id", Doctor.class).setParameter("id", id).getResultList();
+    public List<Order> findOrderByDoctorUserId(Integer id) {
+            EntityManager entityManager = getEntityManager();
+            return entityManager.createQuery("select o from Order o where o.doctor.user.id = :id", Order.class).setParameter("id", id).getResultList();
     }
 
     public List<User> findUserByDoctorId(Integer id) {
-
         EntityManager entityManager = getEntityManager();
         return entityManager.createQuery("select o from Order o where o.doctor.id = :id", User.class).setParameter("id", id).getResultList();
     }
@@ -62,8 +56,9 @@ public class OrderDAO extends DAO<Order, Integer> {
 
         return orders;
     }
+
     public List<Order> findAllOrdersByDoctorId(Integer id) {
-        List<Order> orders = findOrderByDoctorId(id);
+        List<Order> orders = findOrderByDoctorUserId(id);
 
         EntityManager entityManager = getEntityManager();
         for (Order order : orders) {

@@ -41,7 +41,7 @@ public class UserService implements Service<User> {
 
         String page = user.getRole().equals(User.UserRole.SUPER_ADMIN) ? "/superAdmin/main" :
                 user.getRole().equals(User.UserRole.ADMIN) ? "/admin/main"
-                : (user.getRole().equals(User.UserRole.DOCTOR)) ? "/doctor/main"
+                : (user.getRole().equals(User.UserRole.DOCTOR)) ? "/doc/profile"
                 : "/user/main";
 
         return Response.<User>builder()
