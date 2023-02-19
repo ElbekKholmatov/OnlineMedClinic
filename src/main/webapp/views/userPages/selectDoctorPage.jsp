@@ -24,7 +24,12 @@
         <label for="floatingTextarea2">Info</label>
     </div>
 
-    <button type="submit" class="btn btn-primary m-5">Next</button>
+    <a class="btn btn-primary" href="/views/userPages/appointment.jsp">
+        Back
+    </a>
+    <a class="btn btn-primary" href="/views/userPages/selectDate.jsp">
+        Next
+    </a>
 </form>
 </body>
 </html>

@@ -146,15 +146,30 @@
             <div class="col-lg-6">
                 <div class="appointment-form h-100 d-flex flex-column justify-content-center text-center p-5 wow zoomIn"
                      data-wow-delay="0.6s">
-                    <form method="post">
-                        <select class="form-select" aria-label="select example" name="category">
-                            <option selected disabled>Choose a category</option>
-                            <c:forEach items="${categories}" var="category">
-                                <option value="${category.getId()}">${category.getName()}</option>
+
+                    <form method="post" action="/user/order/selectDoctor">
+                        <select class="form-select" aria-label="Default select example" name="doctor">
+                            <option selected disabled>Select doctor</option>
+                            <c:forEach items="${doctors}" var="doctor">
+                                <option value="${doctor.getUser().getId()}">
+                                        ${doctor.getUser().getId()}
+                                        ${doctor.getUser().getFirstName()}
+                                        ${doctor.getUser().getLastName()}
+                                </option>
                             </c:forEach>
                         </select>
-                        <a class="btn btn-primary" href="/views/userPages/appointment2.jsp">
-                         Next
+
+<%--                        <div class="form-floating">--%>
+<%--        <textarea class="form-control" name="info" placeholder="Kasallik haqida ma'lumot..."--%>
+<%--                  id="floatingTextarea2" style="height: 110px"></textarea>--%>
+<%--                            <label for="floatingTextarea2">Info</label>--%>
+<%--                        </div>--%>
+
+                        <a class="btn btn-primary" href="/views/userPages/appointment.jsp">
+                            Back
+                        </a>
+                        <a class="btn btn-primary" href="/views/userPages/appointment3.jsp">
+                            Next
                         </a>
                     </form>
 

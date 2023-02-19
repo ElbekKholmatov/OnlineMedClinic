@@ -146,15 +146,36 @@
             <div class="col-lg-6">
                 <div class="appointment-form h-100 d-flex flex-column justify-content-center text-center p-5 wow zoomIn"
                      data-wow-delay="0.6s">
-                    <form method="post">
-                        <select class="form-select" aria-label="select example" name="category">
-                            <option selected disabled>Choose a category</option>
-                            <c:forEach items="${categories}" var="category">
-                                <option value="${category.getId()}">${category.getName()}</option>
-                            </c:forEach>
-                        </select>
+
+
+                    <form method="post" action="/user/order/submit">
+
+                        <h1>${now.getDayOfWeek()}</h1>
+
+                        <c:forEach begin="9" end="17" var="i">
+                            <c:if test="${!hours.contains(i)}">
+                                <hr>
+                                <input type="radio" name="day" value="${now.getDayOfMonth()}">
+                                <input type="hidden" id="time" name="hour" value="${i}">
+                                <label>${i} : 00 : 00</label>
+                                <br>
+                            </c:if>
+                        </c:forEach>
+
+                        <button class="btn btn-primary mt-5" type="submit">Submit</button>
+                    </form>
+
+<%--                        <div class="form-floating">--%>
+<%--        <textarea class="form-control" name="info" placeholder="Kasallik haqida ma'lumot..."--%>
+<%--                  id="floatingTextarea2" style="height: 110px"></textarea>--%>
+<%--                            <label for="floatingTextarea2">Info</label>--%>
+<%--                        </div>--%>
+
                         <a class="btn btn-primary" href="/views/userPages/appointment2.jsp">
-                         Next
+                            Back
+                        </a>
+                        <a class="btn btn-primary" href="/views/Home.jsp">
+                            Next
                         </a>
                     </form>
 
