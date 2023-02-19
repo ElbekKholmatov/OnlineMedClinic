@@ -12,18 +12,14 @@
     <title>Delete Admin</title>
 </head>
 <body>
-<form action="/admin/dr/deleteDr" method="post">
+<form action="/admin/dr/delete/*" method="post">
     <h3>Remove Admin</h3>
     <div class="form-group">
-        <select class="form-select" id="delete_username"
-                name="delete_username">
-            <option selected>select admin</option>
-            <c:forEach items="${doctors}" var="doctor">
-                <option value="${doctor.getUsername()}">${doctor.getUsername()}</option>
-            </c:forEach>
-        </select>
+        <input type="hidden" class="form-control" id="id" name="id" value="${doctor.getId()}">
+        <label for="username">Username</label>
+        <input type="text" class="form-control" id="username" name="username" value="${doctor.getUsername()}">
     </div>
-    <button type="submit" class="btn btn-primary">remove admin</button>
+    <button type="submit" class="btn btn-primary">Delete Doctor</button>
 </form>
 </body>
 </html>

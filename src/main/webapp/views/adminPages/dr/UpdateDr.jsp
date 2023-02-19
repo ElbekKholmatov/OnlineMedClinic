@@ -13,11 +13,12 @@
 </head>
 <body>
 <div>
-    <form action="/admin/dr/updateDr" method="post">
+    <form action="/admin/dr/update/*" method="post">
         <h3>Set Admin</h3>
         <div class="form-group">
+            <input type="hidden" class="form-control" id="id" name="id" value="${doctor.getId()}">
             <label for="set_username">Username</label>
-            <input type="text" class="form-control" id="set_username" name="set_username">
+            <input type="text" class="form-control" id="set_username" name="set_username" value="${doctor.getUsername()}">
             <select class="form-select"   aria-label="select example" style="margin-top: 30px" id="specialization_id"
                     name="specialization_id">
                 <option value="${doctor.getSpecializationID().getId()}">${doctor.getSpecializationID().getName()}</option>

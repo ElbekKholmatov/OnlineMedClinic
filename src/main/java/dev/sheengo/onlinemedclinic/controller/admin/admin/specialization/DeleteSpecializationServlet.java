@@ -10,7 +10,7 @@ import jakarta.servlet.http.HttpServletResponse;
 
 import java.io.IOException;
 
-@WebServlet(name = "DeleteSpecializationServlet", value = "/admin/specialization/delete")
+@WebServlet(name = "DeleteSpecializationServlet", value = "/admin/specialization/delete/*")
 public class DeleteSpecializationServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

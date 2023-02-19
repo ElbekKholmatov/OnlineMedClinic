@@ -16,11 +16,15 @@
 </head>
 <body>
 <div>
-    <form action="/admin/dr/getListDr" method="post">
+    <form action="/admin/dr/getList" method="post">
         <c:forEach items="${doctors}" var="doctor">
             <div>
                 <input type="text" name="doctorId" value="${doctor.getId()}"/>
                 <label>${doctor.getUsername()}</label>
+            </div>
+            <div>
+                <a href="/admin/dr/update/${doctor.getId()}">Edit</a>
+                <a href="/admin/dr/delete/${doctor.getId()}">Delete</a>
             </div>
         </c:forEach>
     </form>

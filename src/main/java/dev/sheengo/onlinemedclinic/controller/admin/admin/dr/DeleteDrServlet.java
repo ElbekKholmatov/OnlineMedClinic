@@ -9,7 +9,7 @@ import jakarta.servlet.annotation.*;
 import java.io.IOException;
 import java.util.List;
 
-@WebServlet(name = "DeleteDrServlet", value = "/admin/dr/deleteDr")
+@WebServlet(name = "DeleteDrServlet", value = "/admin/dr/delete/*")
 public class DeleteDrServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

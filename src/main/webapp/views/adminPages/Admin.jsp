@@ -26,7 +26,7 @@ SPECIALIZATIONS
 </div>
 diseaseS
 <div>
-    <button onclick="location.href='/admin/disease/update'">Update disease</button>
+<%--    <button onclick="location.href='/admin/disease/update'">Update disease</button>--%>
     <button onclick="location.href='/admin/disease/getList'">Get disease List</button>
     <button onclick="location.href='/admin/disease/delete'">Delete disease</button>
     <button onclick="location.href='/admin/disease/create'">Set disease</button>

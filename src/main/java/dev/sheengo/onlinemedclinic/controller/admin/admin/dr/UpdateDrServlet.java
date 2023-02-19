@@ -1,5 +1,6 @@
 package dev.sheengo.onlinemedclinic.controller.admin.admin.dr;
 
+import dev.sheengo.onlinemedclinic.services.SpecializationService;
 import dev.sheengo.onlinemedclinic.services.UserService;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
@@ -9,12 +10,14 @@ import jakarta.servlet.http.HttpServletResponse;
 
 import java.io.IOException;
 
-@WebServlet(name = "UpdateDrServlet", value = "/admin/dr/updateDr")
+@WebServlet(name = "UpdateDrServlet", value = "/admin/dr/update/*")
 public class UpdateDrServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        request.setAttribute("specializations", UserService.getInstance().getAll());
-        request.getRequestDispatcher("/views/adminPages/dr/SetDr.jsp").forward(request, response);
+
+        request.setAttribute("doctor", UserService.getInstance().get(request).getDomain());
+        request.setAttribute("specializations", SpecializationService.getInstance().getAll());
+        request.getRequestDispatcher("/views/adminPages/dr/UpdateDr.jsp").forward(request, response);
     }
 
     @Override

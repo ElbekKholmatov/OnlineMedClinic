@@ -11,7 +11,7 @@
     <title>Title</title>
 </head>
 <body>
-<form action="/admin/disease/delete" method="post">
+<form action="/admin/disease/delete/*" method="post">
 
 </form>
 </body>

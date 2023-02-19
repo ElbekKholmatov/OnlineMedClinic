@@ -13,7 +13,7 @@
     <title>Title</title>
 </head>
 <body>
-<form action="/admin/disease/update" method="post">
+<form action="/admin/disease/update/*" method="post">
 <input type="hidden" name="id" value="${disease.id}"/>
     <input type="text" name="name" value="${disease.getName()}"/>
     <input type="text" name="description" value="${disease.getDescription()}"/>

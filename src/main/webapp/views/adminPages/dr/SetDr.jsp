@@ -13,7 +13,7 @@
 </head>
 <body>
 <div>
-    <form action="/admin/dr/setDr" method="post">
+    <form action="/admin/dr/create" method="post">
         <h3>Set Admin</h3>
         <div class="form-group">
             <label for="set_username">Username</label>
