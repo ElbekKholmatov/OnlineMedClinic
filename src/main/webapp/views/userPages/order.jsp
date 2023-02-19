@@ -12,28 +12,28 @@
 <h1 class="text-center" style="margin-top: 30px; margin-bottom: 30px">Ro'yxatga yozilib qo'yish!</h1>
 
 <form class="row g-3" method="post" enctype="multipart/form-data">
-    <div class="col-md-5 offset-1">
-        <label for="validationServer01" class="form-label">Ismingiz</label>
-        <input type="text" class="form-control is-valid" id="validationServer01" name="firstname"
-               placeholder="Ismingizni kiriting">
-        <div class="valid-feedback">
-            ✔
-        </div>
-        <div class="invalid-feedback">
-            ❌
-        </div>
-    </div>
-    <div class="col-md-4 offset-1">
-        <label for="validationServer02" class="form-label">Familiyangiz</label>
-        <input type="text" class="form-control is-valid" id="validationServer02" name="lastname"
-               placeholder="Familiyangizni kiriting">
-        <div class="valid-feedback">
-            ✔
-        </div>
-        <div class="invalid-feedback">
-            ❌
-        </div>
-    </div>
+<%--    <div class="col-md-5 offset-1">--%>
+<%--        <label for="validationServer01" class="form-label">Ismingiz</label>--%>
+<%--        <input type="text" class="form-control is-valid" id="validationServer01" name="firstname"--%>
+<%--               placeholder="Ismingizni kiriting">--%>
+<%--        <div class="valid-feedback">--%>
+<%--            ✔--%>
+<%--        </div>--%>
+<%--        <div class="invalid-feedback">--%>
+<%--            ❌--%>
+<%--        </div>--%>
+<%--    </div>--%>
+<%--    <div class="col-md-4 offset-1">--%>
+<%--        <label for="validationServer02" class="form-label">Familiyangiz</label>--%>
+<%--        <input type="text" class="form-control is-valid" id="validationServer02" name="lastname"--%>
+<%--               placeholder="Familiyangizni kiriting">--%>
+<%--        <div class="valid-feedback">--%>
+<%--            ✔--%>
+<%--        </div>--%>
+<%--        <div class="invalid-feedback">--%>
+<%--            ❌--%>
+<%--        </div>--%>
+<%--    </div>--%>
 
     <div class="col-md-5 offset-1">
         <label for="validationServer03" class="form-label">Telefon raqamingiz</label>

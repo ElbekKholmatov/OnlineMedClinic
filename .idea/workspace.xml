@@ -10,28 +10,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ba06edfa-851e-4a64-82b3-9a3571fd825e" name="Changes" comment="Asrorxo'ja merged first time">
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/DoctorPages/doctor-dashboard.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/DoctorPages/doctor-profile.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/DoctorPages/doctor-setting.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/DoctorPages/doctors.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/DoctorPages/edit-doctor.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/DoctorPages/forgot-password.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/DoctorPages/settings.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/userPages/forgot-password.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/userPages/order.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/views/userPages/settings.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/webContexts.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/webContexts.xml" afterDir="false" />
+    <list default="true" id="ba06edfa-851e-4a64-82b3-9a3571fd825e" name="Changes" comment="103">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/DoctorPages/doctor-dashboard.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/DoctorPages/doctor-profile.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/DoctorPages/doctor-setting.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/DoctorPages/doctors.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/DoctorPages/edit-doctor.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/DoctorPages/forgot-password.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/DoctorPages/settings.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/userPages/forgot-password.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/userPages/settings.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/userPages/order.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/userPages/order.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -193,8 +174,16 @@
       <option name="presentableId" value="Default" />
       <updated>1676553538842</updated>
       <workItem from="1676553539893" duration="339000" />
-      <workItem from="1676775504861" duration="2670000" />
+      <workItem from="1676775504861" duration="3911000" />
     </task>
+    <task id="LOCAL-00001" summary="103">
+      <created>1676778320999</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1676778320999</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -214,6 +203,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="kamcilikla" />
     <MESSAGE value="najim togo" />
-    <option name="LAST_COMMIT_MESSAGE" value="najim togo" />
+    <MESSAGE value="103" />
+    <option name="LAST_COMMIT_MESSAGE" value="103" />
   </component>
 </project>
