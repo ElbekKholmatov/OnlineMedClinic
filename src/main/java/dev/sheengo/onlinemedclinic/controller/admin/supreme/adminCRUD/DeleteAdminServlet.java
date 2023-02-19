@@ -13,7 +13,7 @@ import java.util.List;
 public class DeleteAdminServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        List<User> admins = UserService.getInstance().getAdmins();
+        List<User> admins = UserService.getInstance().getAllAdmins();
         request.setAttribute("admins", admins);
         request.getRequestDispatcher("/views/adminPages/admin/DeleteAdmin.jsp").forward(request, response);
 

@@ -11,7 +11,7 @@ import java.io.IOException;
 public class GetListAdminServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        request.setAttribute("admins", UserService.getInstance().getAdmins());
+        request.setAttribute("admins", UserService.getInstance().getAllAdmins());
         request.getRequestDispatcher("/views/adminPages/admin/ListAdmin.jsp").forward(request, response);
     }
 

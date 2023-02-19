@@ -73,4 +73,18 @@ public class UserDAO extends DAO<User, Integer> {
         entityManager.getTransaction().commit();
         return true;
     }
+
+    public List<User> getAllAdmins() {
+        EntityManager entityManager = getEntityManager();
+        return entityManager.createQuery("select u from User u where u.role = :role", User.class)
+                .setParameter("role", User.UserRole.ADMIN)
+                .getResultList();
+    }
+
+    public List<User> getAllDoctors() {
+        EntityManager entityManager = getEntityManager();
+        return entityManager.createQuery("select u from User u where u.role = :role", User.class)
+                .setParameter("role", User.UserRole.DOCTOR)
+                .getResultList();
+    }
 }

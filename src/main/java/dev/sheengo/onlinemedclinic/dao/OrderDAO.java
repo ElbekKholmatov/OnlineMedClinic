@@ -82,4 +82,9 @@ public class OrderDAO extends DAO<Order, Integer> {
 
         return orders;
     }
+
+    public Order findOrderByDoctorUserId(Integer id) {
+        EntityManager entityManager = getEntityManager();
+        return entityManager.createQuery("select o from Order o where o.doctor.user.id = :id", Order.class).setParameter("id", id).getSingleResult();
+    }
 }

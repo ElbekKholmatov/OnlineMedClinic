@@ -137,4 +137,26 @@ public class UserService implements Service<User> {
     public List<Specialization> getAll() {
         return SpecializationDAO.getInstance().getAll();
     }
+
+    public List<User> getAllAdmins() {
+        return UserDAO.getInstance().getAllAdmins();
+    }
+
+    public Response<User> updateDeleteAdmin(HttpServletRequest request) {
+        String username = request.getParameter("delete_username");
+        boolean user = UserDAO.getInstance().updateDeleteAdmin(
+                User.builder()
+                        .username(username)
+                        .role(User.UserRole.USER)
+                        .build()
+        );
+        return Response.<User>builder()
+                .request(request)
+                .returnPage("/superAdmin/main")
+                .build();
+    }
+
+    public List<User> getAllDoctors() {
+        return UserDAO.getInstance().getAllDoctors();
+    }
 }

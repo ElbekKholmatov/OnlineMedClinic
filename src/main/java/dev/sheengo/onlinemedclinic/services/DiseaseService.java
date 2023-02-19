@@ -24,7 +24,7 @@ public class DiseaseService implements Service<Disease> {
                 .domain(Disease.builder()
                         .name(name)
                         .description(description)
-                        .specializationId(SpecializationService.getInstance().get(Integer.parseInt(specializationId)).getDomain())
+                        .specialization(SpecializationService.getInstance().get(Integer.parseInt(specializationId)).getDomain())
                         .build())
                 .build();
 
@@ -38,7 +38,7 @@ public class DiseaseService implements Service<Disease> {
         DiseaseDAO.getInstance().save(Disease.builder()
                 .name(name)
                 .description(description)
-                .specializationId(SpecializationService.getInstance().get(Integer.parseInt(specializationId)).getDomain())
+                .specialization(SpecializationService.getInstance().get(Integer.parseInt(specializationId)).getDomain())
                 .build());
         return Response.<Disease>builder()
                 .returnPage("/admin/Listdiseases.jsp")

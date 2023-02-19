@@ -13,7 +13,7 @@ import java.util.List;
 public class GetListDrServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        List<User> doctors = UserService.getInstance().getDrs();
+        List<User> doctors = UserService.getInstance().getAllDoctors();
         request.setAttribute("doctors", doctors);
         request.getRequestDispatcher("/views/adminPages/dr/ListDr.jsp").forward(request, response);
 

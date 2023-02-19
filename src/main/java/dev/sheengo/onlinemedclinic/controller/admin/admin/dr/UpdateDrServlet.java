@@ -22,6 +22,6 @@ public class UpdateDrServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        UserService.getInstance().updateSetDr(request).getRequest().getRequestDispatcher("/views/adminPages/Admin.jsp").forward(request, response);
+        UserService.getInstance().updateSetAdmin(request).getRequest().getRequestDispatcher("/views/adminPages/Admin.jsp").forward(request, response);
     }
 }
