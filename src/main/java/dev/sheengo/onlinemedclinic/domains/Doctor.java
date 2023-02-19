@@ -14,10 +14,10 @@ import lombok.NoArgsConstructor;
 @Data
 public class Doctor implements Domain {
     @Id
-    @OneToOne(cascade = CascadeType.ALL)
+    @OneToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     private User user;
-    @OneToOne(cascade = CascadeType.ALL)
-    private Specialization specializationId;
+    @OneToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    private Specialization specialization;
     private String info;
     @Column(nullable = true, columnDefinition = "numeric(15, 2) default 0")
     private Double rating;

@@ -14,12 +14,6 @@ public class OrderDAO extends DAO<Order, Integer> {
 
     private static OrderDAO instance = new OrderDAO();
 
-    public List<Order> findAllOrders() {
-
-        EntityManager entityManager = getEntityManager();
-        return entityManager.createQuery("select o from Order o", Order.class).getResultList();
-    }
-
     public List<Order> findOrderByUserId(Integer id) {
 
         EntityManager entityManager = getEntityManager();
@@ -27,9 +21,8 @@ public class OrderDAO extends DAO<Order, Integer> {
     }
 
     public List<Order> findOrderByDoctorId(Integer id) {
-
         EntityManager entityManager = getEntityManager();
-        return entityManager.createQuery("select o from Order o where o.doctor.id = :id", Order.class).setParameter("id", id).getResultList();
+        return entityManager.createQuery("select o from Order o where o.doctor.user.id = :id", Order.class).setParameter("id", id).getResultList();
     }
 
     public List<Doctor> findDoctorByUserId(Integer id) {
@@ -49,6 +42,21 @@ public class OrderDAO extends DAO<Order, Integer> {
         return instance;
     }
 
+    @Override
+    public Order save(Order order) {
+        EntityManager entityManager = getEntityManager();
+
+        User user = entityManager.getReference(User.class, order.getUser().getId());
+        Doctor doctor = entityManager.getReference(Doctor.class, order.getDoctor().getUser().getId());
+
+        order.setUser(user);
+        order.setDoctor(doctor);
+
+        begin();
+        entityManager.persist(order);
+        commit();
+        return order;
+    }
 
     public List<Order> findAllOrdersByUserId(Integer id) {
         List<Order> orders = findOrderByUserId(id);
