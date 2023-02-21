@@ -10,7 +10,7 @@
 
 <html>
 <head>
-    <title>Title</title>
+    <title>Create Disease</title>
 </head>
 <body>
 <form action="/admin/disease/create" class="form-control" method="post">

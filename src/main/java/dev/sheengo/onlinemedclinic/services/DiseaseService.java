@@ -36,12 +36,16 @@ public class DiseaseService implements Service<Disease> {
         String name = request.getParameter("name");
         String description = request.getParameter("description");
         String specializationId = request.getParameter("specialization_id");
+        Specialization specialization = SpecializationService.getInstance().get(Integer.parseInt(specializationId)).getDomain();
+        System.out.println(specialization);
+        Disease disease = Disease.builder()
+                .name(name)
+                .description(description)
+                .specialization(specialization)
+                .build();
         DiseaseDAO.getInstance().save(
-                Disease.builder()
-                        .name(name)
-                        .description(description)
-                        .specialization(SpecializationService.getInstance().get(Integer.parseInt(specializationId)).getDomain())
-                        .build());
+                disease
+        );
         return Response.<Disease>builder().request(request).build();
     }
 

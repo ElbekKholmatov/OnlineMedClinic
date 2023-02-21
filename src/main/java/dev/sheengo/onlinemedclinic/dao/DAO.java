@@ -29,10 +29,16 @@ public abstract class DAO<T extends Domain, ID extends Serializable> {
     }
 
     public T save(T t) {
-        begin();
-        em.persist(t);
-        commit();
-        return t;
+        try {
+            begin();
+            em.persist(t);
+            commit();
+            return t;
+        }catch (Exception e){
+            getEntityManager().getTransaction().rollback();
+            e.printStackTrace();
+            return null;
+        }
     }
 
     public T get(ID id) {

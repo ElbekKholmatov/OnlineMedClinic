@@ -162,6 +162,7 @@ public class UserService implements Service<User> {
 
     public Response<User> updateSetDr(HttpServletRequest request) {
         String username = request.getParameter("set_username");
+        String info = request.getParameter("info");
         boolean user = UserDAO.getInstance().updateSetAdmin(
                 User.builder()
                         .username(username)
@@ -172,7 +173,23 @@ public class UserService implements Service<User> {
         DoctorDAO.getInstance().save(
                 Doctor.builder()
                         .user(UserDAO.getInstance().get(username))
+                        .info(info)
                         .specialization(SpecializationDAO.getInstance().get(Short.parseShort(request.getParameter("specialization_id"))))
+                        .build()
+        );
+        return Response.<User>builder()
+                .request(request)
+                .returnPage("/admin/main")
+                .build();
+    }
+
+
+    public Response<User> deleteDr(HttpServletRequest request) {
+        String username = request.getParameter("username");
+        boolean user = UserDAO.getInstance().updateDeleteAdmin(
+                User.builder()
+                        .username(username)
+                        .role(User.UserRole.USER)
                         .build()
         );
         return Response.<User>builder()

@@ -35,8 +35,7 @@ EntityManager entityManager = getEntityManager();
         return entityManager.createQuery("select d from Disease d where d.name = :name and d.specialization.id = :speID", Disease.class)
                 .setParameter("name", name)
                 .setParameter("speID", speID)
-                .getResultStream()
-                .findFirst()
-                .orElse(null);
+                .getSingleResult();
+
     }
 }

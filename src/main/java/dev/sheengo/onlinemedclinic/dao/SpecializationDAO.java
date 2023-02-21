@@ -42,11 +42,11 @@ public class SpecializationDAO extends DAO<Specialization, Short> {
 
     public void deleteSpecialization(Specialization specialization) {
         EntityManager entityManager = getEntityManager();
-        entityManager.getTransaction().begin();
+        begin();
         entityManager.createQuery("delete from Specialization s where s.id = :id")
                 .setParameter("id", specialization.getId())
                 .executeUpdate();
-        entityManager.getTransaction().commit();
+        commit();
     }
 
     public void updateS(Specialization build) {

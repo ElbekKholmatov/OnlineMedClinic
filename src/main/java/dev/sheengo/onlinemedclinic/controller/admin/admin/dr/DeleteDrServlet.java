@@ -1,6 +1,7 @@
 package dev.sheengo.onlinemedclinic.controller.admin.admin.dr;
 
 import dev.sheengo.onlinemedclinic.domains.User;
+import dev.sheengo.onlinemedclinic.services.DoctorService;
 import dev.sheengo.onlinemedclinic.services.UserService;
 import jakarta.servlet.*;
 import jakarta.servlet.http.*;
@@ -13,14 +14,16 @@ import java.util.List;
 public class DeleteDrServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        List<User> doctors = UserService.getInstance().getAllDoctors();
-        request.setAttribute("doctors", doctors);
+        User doctor = UserService.getInstance().get(Integer.parseInt(request.getPathInfo().substring(1))).getDomain();
+        request.setAttribute("doctor", doctor);
         request.getRequestDispatcher("/views/adminPages/dr/DeleteDr.jsp").forward(request, response);
 
     }
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        UserService.getInstance().updateDeleteAdmin(request).getRequest().getRequestDispatcher("/views/adminPages/Admin.jsp").forward(request, response);
+        DoctorService.getInstance().delete(request);
+        UserService.getInstance().deleteDr(request).getRequest().getRequestDispatcher("/views/adminPages/Admin.jsp").forward(request, response);
+
     }
 }

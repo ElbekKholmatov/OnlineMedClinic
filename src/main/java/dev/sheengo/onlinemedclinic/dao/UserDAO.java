@@ -20,23 +20,28 @@ public class UserDAO extends DAO<User, Integer> {
 
     public User get(String username) {
         try {
+            begin();
             String query = "select u from User u where u.username = :username";
-            return getEntityManager().createQuery(query, User.class)
+            User username1 = getEntityManager().createQuery(query, User.class)
                     .setParameter("username", username).getSingleResult();
+            commit();
+            return username1;
         } catch (NoResultException e) {
-            return null;
+            getEntityManager().getTransaction().rollback();
+            e.printStackTrace();
         }
+        return null;
     }
 
 
     public boolean updateSetAdmin(User user) {
         EntityManager entityManager = getEntityManager();
-        entityManager.getTransaction().begin();
+        begin();
         entityManager.createQuery("update User u set u.role = :role where u.username = :username")
                 .setParameter("role", user.getRole())
                 .setParameter("username", user.getUsername())
                 .executeUpdate();
-        entityManager.getTransaction().commit();
+        commit();
         return true;
     }
 
@@ -46,12 +51,12 @@ public class UserDAO extends DAO<User, Integer> {
 
     public boolean updateDeleteAdmin(User user) {
         EntityManager entityManager = getEntityManager();
-        entityManager.getTransaction().begin();
+        begin();
         entityManager.createQuery("update User u set u.role = :role where u.username = :username")
                 .setParameter("role", user.getRole())
                 .setParameter("username", user.getUsername())
                 .executeUpdate();
-        entityManager.getTransaction().commit();
+        commit();
         return true;
     }
 
@@ -65,12 +70,12 @@ public class UserDAO extends DAO<User, Integer> {
 
     public boolean updateSetDr(User user) {
         EntityManager entityManager = getEntityManager();
-        entityManager.getTransaction().begin();
+        begin();
         entityManager.createQuery("update User u set u.role = :role where u.username = :username")
                 .setParameter("role", user.getRole())
                 .setParameter("username", user.getUsername())
                 .executeUpdate();
-        entityManager.getTransaction().commit();
+        commit();
         return true;
     }
 

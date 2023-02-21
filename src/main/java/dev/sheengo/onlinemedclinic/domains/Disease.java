@@ -14,11 +14,13 @@ import lombok.NoArgsConstructor;
 @Data
 public class Disease implements Domain{
     @Id
-    @Column(columnDefinition = "smallserial")
+    @Column(columnDefinition = "smallint")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Short id;
     @Column(nullable = false)
     private String name;
     @ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    @JoinColumn(name = "specialization_id", nullable = false)
     private Specialization specialization;
     private String description;
 }

@@ -12,14 +12,13 @@
 
 <html>
 <head>
-    <title>Admin Set</title>
+    <title>Admin List</title>
 </head>
 <body>
 <div>
     <form action="/admin/dr/getList" method="post">
         <c:forEach items="${doctors}" var="doctor">
             <div>
-                <input type="text" name="doctorId" value="${doctor.getId()}"/>
                 <label>${doctor.getUsername()}</label>
             </div>
             <div>

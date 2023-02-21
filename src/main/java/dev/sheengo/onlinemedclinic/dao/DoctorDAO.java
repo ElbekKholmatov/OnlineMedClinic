@@ -2,6 +2,7 @@ package dev.sheengo.onlinemedclinic.dao;
 
 import dev.sheengo.onlinemedclinic.domains.Doctor;
 import dev.sheengo.onlinemedclinic.domains.Specialization;
+import dev.sheengo.onlinemedclinic.domains.User;
 import jakarta.persistence.EntityManager;
 import lombok.AccessLevel;
 import lombok.NoArgsConstructor;
@@ -30,16 +31,24 @@ public class DoctorDAO extends DAO<Doctor, Integer> {
         return specialization;
     }
 
-//    public Specialization findSpecializationByUserId(Integer id) {
-//
-//        Doctor doctor = findDoctorByUserId(id);
-//
-//        if (doctor == null) {
-//            return null;
-//        }
-//
-//        return doctor.getSpecialization();
-//    }
+    @Override
+    public Doctor save(Doctor doctor) {
+        EntityManager entityManager = getEntityManager();
+        try {
+            begin();
+            User user = entityManager.getReference(User.class, doctor.getUser().getId());
+            Specialization specialization = entityManager.getReference(Specialization.class, doctor.getSpecialization().getId());
+            doctor.setUser(user);
+            doctor.setSpecialization(specialization);
+            entityManager.persist(doctor);
+            commit();
+            return doctor;
+        }catch (Exception e){
+            getEntityManager().getTransaction().rollback();
+        }
+        return null;
+    }
+
     public List<Doctor> getDoctorsByCategory(Short categoryId){
 
         String query = "select d from Doctor d where d.specialization.id = :categoryId";
@@ -55,5 +64,20 @@ public class DoctorDAO extends DAO<Doctor, Integer> {
 
     public static DoctorDAO getInstance() {
         return instance;
+    }
+
+    public Doctor getDoctorsByUserID(int userId) {
+
+        try {
+            begin();
+            String query = "select d from Doctor d where d.user.id = :userId";
+            Doctor doctor = getEntityManager().createQuery(query, Doctor.class)
+                    .setParameter("userId", userId).getSingleResult();
+            commit();
+            return doctor;
+        }catch (Exception e){
+            getEntityManager().getTransaction().rollback();
+        }
+        return null;
     }
 }
