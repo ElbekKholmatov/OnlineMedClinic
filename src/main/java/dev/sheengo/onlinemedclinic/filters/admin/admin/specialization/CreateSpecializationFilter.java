@@ -11,7 +11,7 @@ import jakarta.servlet.http.HttpServletResponse;
 
 import java.io.IOException;
 
-@WebFilter(filterName = "CreateSpecializationServlet", urlPatterns = "/admin/specialization/create")
+@WebFilter(filterName = "CreateSpecializationFilter", urlPatterns = "/admin/specialization/create")
 public class CreateSpecializationFilter implements Filter {
 
     @Override
@@ -24,7 +24,7 @@ public class CreateSpecializationFilter implements Filter {
                 chain.doFilter(req, res);
             } catch (Exception e) {
                 req.setAttribute("error", e.getMessage());
-                req.getRequestDispatcher("/views/adminPages/admin/DeleteIssues.jsp").forward(req, res);
+                req.getRequestDispatcher("/views/adminPages/specialization/SpecializationCreate.jsp").forward(req, res);
             }
         }else{
             chain.doFilter(req, res);

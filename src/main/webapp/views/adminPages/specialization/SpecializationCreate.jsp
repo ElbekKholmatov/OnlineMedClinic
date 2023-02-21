@@ -13,7 +13,7 @@
     <title>Title</title>
 </head>
 <body>
-<form class="form-control" method="post">
+<form action="/admin/specialization/create" class="form-control" method="post">
     name: <input type="text" name="name" placeholder="name"/>
     description: <input type="text" name="description" placeholder="description"/>
     <button type="submit">submit</button>

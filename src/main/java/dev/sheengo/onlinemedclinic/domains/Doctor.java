@@ -16,7 +16,7 @@ public class Doctor implements Domain {
     @Id
     @OneToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     private User user;
-    @OneToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     private Specialization specialization;
     private String info;
     @Column(nullable = true, columnDefinition = "numeric(15, 2) default 0")

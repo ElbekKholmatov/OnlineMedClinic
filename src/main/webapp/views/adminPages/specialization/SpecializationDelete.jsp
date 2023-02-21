@@ -14,9 +14,13 @@
 </head>
 <body>
 <form action="/admin/specialization/delete/${specialization.getId()}" method="post">
-    <input type="hidden" id="id" name="id" value="${specialization.getId()}"/>
-    <input type="text" id="name" name="name" value="${specialization.getName()}"/>
-    <input type="submit" value="Delete"/>
+    <div>
+        <input type="hidden" id="id" name="id" value="${specialization.getId()}"/>
+        <H1>Do You really want to delete</H1>
+        <H2>${specialization.getName()}</H2>
+
+        <input type="submit" value="Delete"/>
+    </div>
 </form>
 </body>
 </html>

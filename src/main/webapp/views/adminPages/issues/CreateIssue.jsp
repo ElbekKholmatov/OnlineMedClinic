@@ -13,17 +13,25 @@
     <title>Title</title>
 </head>
 <body>
-<form class="form-control" method="post">
-    name: <input type="text" name="name" placeholder="name"/>
-    description: <input type="text" name="description" placeholder="description"/>
-    <select class="form-select"   aria-label="select example" style="margin-top: 30px" id="specialization_id"
+<form action="/admin/disease/create" class="form-control" method="post">
+    <div>
+        name: <input type="text" name="name" placeholder="name"/>
+    </div>
+    <div>
+        description: <input type="text" name="description" placeholder="description"/>
+    </div>
+    <div>
+        <select class="form-select"   aria-label="select example" style="margin-top: 30px" id="specialization_id"
             name="specialization_id">
         <option value="0">Choose a category</option>
         <c:forEach items="${specializations}" var="specialization">
             <option value="${specialization.getId()}">${specialization.getName()}</option>
         </c:forEach>
     </select>
-    <button type="submit">submit</button>
+    </div>
+    <div>
+        <button type="submit">submit</button>
+    </div>
 </form>
 </body>
 </html>

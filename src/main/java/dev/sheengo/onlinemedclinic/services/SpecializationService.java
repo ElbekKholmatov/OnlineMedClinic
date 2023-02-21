@@ -31,12 +31,28 @@ public class SpecializationService implements Service<Specialization> {
 
     @Override
     public Response<Specialization> update(HttpServletRequest request) {
-        return null;
+        String id = request.getParameter("id");
+        String name = request.getParameter("name");
+        String description = request.getParameter("description");
+        SpecializationDAO.getInstance().updateS(
+                Specialization.builder()
+                        .id(Short.parseShort(id))
+                        .name(name)
+                        .description(description)
+                        .build());
+        return Response.<Specialization>builder().request(request).build();
     }
 
     @Override
     public Response<Specialization> delete(HttpServletRequest request) {
-        return null;
+        String id = request.getParameter("id");
+
+
+        Specialization specialization = Specialization.builder()
+                .id(Short.parseShort(id))
+                .build();
+        SpecializationDAO.getInstance().deleteSpecialization(specialization);
+        return Response.<Specialization>builder().request(request).build();
     }
 
     @Override
@@ -46,7 +62,7 @@ public class SpecializationService implements Service<Specialization> {
 
     @Override
     public Response<Specialization> get(Integer id) {
-        return null;
+        return SpecializationDAO.getInstance().get(id);
     }
 
     public List<Specialization> getAll() {
@@ -56,4 +72,6 @@ public class SpecializationService implements Service<Specialization> {
     public Response<Specialization> get(String name) {
         return SpecializationDAO.getInstance().get(name);
     }
+
+
 }

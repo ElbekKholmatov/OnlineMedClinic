@@ -14,8 +14,8 @@
 <h1>Admin Page</h1>
 DOCTORS
 <div>
-    <button onclick="location.href='/admin/dr/getListDr'">Get List Dr</button>
-    <button onclick="location.href='/admin/dr/setDr'">Set Dr</button>
+    <button onclick="location.href='/admin/dr/getList'">Get List Dr</button>
+    <button onclick="location.href='/admin/dr/create'">Set Dr</button>
 </div>
 SPECIALIZATIONS
 <div>

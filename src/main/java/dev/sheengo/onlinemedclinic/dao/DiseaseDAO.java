@@ -30,12 +30,13 @@ public class DiseaseDAO extends DAO<Disease, Short> {
                 .findFirst();
     }
 
-    public Optional<Disease> get(String name, Integer speID) {
-        EntityManager entityManager = getEntityManager();
-        return entityManager.createQuery("select d from Disease d where d.name = :name and d.specializationId.id = :speID", Disease.class)
+    public Disease get(String name, Short speID) {
+EntityManager entityManager = getEntityManager();
+        return entityManager.createQuery("select d from Disease d where d.name = :name and d.specialization.id = :speID", Disease.class)
                 .setParameter("name", name)
                 .setParameter("speID", speID)
                 .getResultStream()
-                .findFirst();
+                .findFirst()
+                .orElse(null);
     }
 }

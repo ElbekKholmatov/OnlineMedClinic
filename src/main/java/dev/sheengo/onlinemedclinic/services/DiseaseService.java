@@ -36,11 +36,12 @@ public class DiseaseService implements Service<Disease> {
         String name = request.getParameter("name");
         String description = request.getParameter("description");
         String specializationId = request.getParameter("specialization_id");
-        DiseaseDAO.getInstance().save(Disease.builder()
-                .name(name)
-                .description(description)
-                .specialization(SpecializationService.getInstance().get(Integer.parseInt(specializationId)).getDomain())
-                .build());
+        DiseaseDAO.getInstance().save(
+                Disease.builder()
+                        .name(name)
+                        .description(description)
+                        .specialization(SpecializationService.getInstance().get(Integer.parseInt(specializationId)).getDomain())
+                        .build());
         return Response.<Disease>builder().request(request).build();
     }
 
@@ -71,8 +72,8 @@ public class DiseaseService implements Service<Disease> {
     public Response<Disease> get(String name) {
         Optional<Disease> disease = DiseaseDAO.getInstance().get(name);
         return disease.map(disease1 -> Response.<Disease>builder()
-                .domain(disease1)
-                .build())
+                        .domain(disease1)
+                        .build())
                 .orElseGet(() -> Response.<Disease>builder()
                         .domain(Disease.builder()
                                 .name("No disease found")
@@ -80,15 +81,10 @@ public class DiseaseService implements Service<Disease> {
                         .build());
     }
 
-    public Response<Disease> get(String name, Integer speID) {
-        Optional<Disease> disease = DiseaseDAO.getInstance().get(name, speID);
-        return disease.map(disease1 -> Response.<Disease>builder()
-                .domain(disease1)
-                .build())
-                .orElseGet(() -> Response.<Disease>builder()
-                        .domain(Disease.builder()
-                                .name("No disease found")
-                                .build())
-                        .build());
+    public Response<Disease> get(String name, Short speID) {
+        Disease disease = DiseaseDAO.getInstance().get(name, speID);
+        return Response.<Disease>builder()
+                .domain(disease)
+                .build();
     }
 }
