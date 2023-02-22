@@ -6,14 +6,16 @@ import dev.sheengo.onlinemedclinic.domains.Specialization;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityManagerFactory;
 import jakarta.persistence.Persistence;
+import jakarta.persistence.RollbackException;
 
 import java.io.Serializable;
 import java.lang.reflect.ParameterizedType;
 import java.util.List;
 
 public abstract class DAO<T extends Domain, ID extends Serializable> {
-    private final EntityManagerFactory emf = Persistence.createEntityManagerFactory("persistence_unit");;
-    private final EntityManager em =  emf.createEntityManager();
+    private final EntityManagerFactory emf = Persistence.createEntityManagerFactory("persistence_unit");
+    ;
+    private final EntityManager em = emf.createEntityManager();
     private final Class<T> persistenceClass;
 
     protected EntityManager getEntityManager() {
@@ -54,15 +56,15 @@ public abstract class DAO<T extends Domain, ID extends Serializable> {
         commit();
         return true;
     }
+
     @SuppressWarnings("unchecked")
-    public List<T> getAll(){
+    public List<T> getAll() {
         begin();
         List<T> resultList = em.createQuery("from " + persistenceClass.getSimpleName())
                 .getResultList();
         commit();
         return resultList;
     }
-
 
 
     public boolean deleteById(ID id) {

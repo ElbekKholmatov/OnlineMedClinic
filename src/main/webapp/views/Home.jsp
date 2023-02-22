@@ -118,7 +118,7 @@
         <c:choose>
             <c:when test="${filePath != null}">
                            <img alt="Image placeholder"
-                                src="/download?fileName=${filePath}">
+                               src="/resources/images/2.png" <%--src="/download?fileName=${filePath}"--%>>
             </c:when>
             <c:otherwise>
                 <i style="font-size: 35px; color: #0a58ca; background-color: white;" class="bi bi-person-circle"></i>

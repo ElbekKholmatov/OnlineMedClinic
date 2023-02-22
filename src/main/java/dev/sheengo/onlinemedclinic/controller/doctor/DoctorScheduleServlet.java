@@ -2,6 +2,7 @@ package dev.sheengo.onlinemedclinic.controller.doctor;
 
 import dev.sheengo.onlinemedclinic.domains.Doctor;
 import dev.sheengo.onlinemedclinic.services.DoctorService;
+import dev.sheengo.onlinemedclinic.services.OrderService;
 import dev.sheengo.onlinemedclinic.services.Response;
 import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
@@ -17,7 +18,7 @@ public class DoctorScheduleServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-        HttpServletRequest getRequest = DoctorService.getInstance().getOrders(request).getRequest();
+        HttpServletRequest getRequest = OrderService.getInstance().getOrders(request).getRequest();
 
         RequestDispatcher dispatcher = getRequest.getRequestDispatcher("/views/dr/schedule.jsp");
         dispatcher.forward(getRequest, response);

@@ -1,11 +1,11 @@
 package dev.sheengo.onlinemedclinic.services;
 
 import dev.sheengo.onlinemedclinic.dao.DoctorDAO;
-import dev.sheengo.onlinemedclinic.dao.OrderDAO;
 import dev.sheengo.onlinemedclinic.domains.Doctor;
 import dev.sheengo.onlinemedclinic.domains.Specialization;
 import dev.sheengo.onlinemedclinic.domains.User;
 import jakarta.servlet.http.HttpServletRequest;
+import lombok.NonNull;
 
 public class DoctorService implements Service<Doctor> {
     @Override
@@ -43,9 +43,7 @@ public class DoctorService implements Service<Doctor> {
 
         DoctorDAO doctorDAO = DoctorDAO.getInstance();
         Doctor doctorObj = doctorDAO.findDoctorByUserId(userObj.getId());
-
         Specialization specializationObj = doctorObj.getSpecialization();
-
         String info = doctorObj.getInfo();
 
         Double rating = doctorObj.getRating();
@@ -60,20 +58,9 @@ public class DoctorService implements Service<Doctor> {
                 .rating(rating)
                 .build();
 
-//        DoctorDAO.getInstance().save(doctor);
-
         request.setAttribute("user", userObj);
         request.setAttribute("doctor", doctor);
         request.setAttribute("specialization", specializationObj);
-        return Response.<Doctor>builder().request(request).build();
-    }
-
-    public Response<Doctor> getOrders(HttpServletRequest request) {
-        Integer id = Integer.parseInt(request.getSession().getAttribute("id").toString());
-
-        OrderDAO orderDAO = OrderDAO.getInstance();
-        request.setAttribute("orders", orderDAO.findOrderByDoctorUserId(id));
-
         return Response.<Doctor>builder().request(request).build();
     }
 

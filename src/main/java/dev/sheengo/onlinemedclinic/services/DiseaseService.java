@@ -2,7 +2,6 @@ package dev.sheengo.onlinemedclinic.services;
 
 import dev.sheengo.onlinemedclinic.dao.DiseaseDAO;
 import dev.sheengo.onlinemedclinic.domains.Disease;
-import jakarta.servlet.SessionCookieConfig;
 import jakarta.servlet.http.HttpServletRequest;
 
 import java.util.List;

@@ -7,6 +7,7 @@ import jakarta.persistence.EntityManager;
 import lombok.AccessLevel;
 import lombok.NoArgsConstructor;
 
+import java.time.LocalDateTime;
 import java.util.List;
 
 @NoArgsConstructor(access = AccessLevel.PRIVATE)
@@ -23,6 +24,20 @@ public class OrderDAO extends DAO<Order, Integer> {
     public List<Order> findOrderByDoctorId(Integer id) {
         EntityManager entityManager = getEntityManager();
         return entityManager.createQuery("select o from Order o where o.doctor.user.id = :id", Order.class).setParameter("id", id).getResultList();
+    }
+
+    public List<Order> findOrderByDateAndDoctorId(String date, Integer id) {
+        EntityManager entityManager = getEntityManager();
+
+//        SELECT * FROM orders WHERE DATE(visittime) = '2023-02-18';  CURRENT_DATE
+        String s = "select o from Order o where o.doctor.user.id = %s and DATE(o.visitTime) = '%s'".formatted(id, date);
+
+        List<Order> resultList = entityManager.createQuery(s, Order.class)
+//                .setParameter("id", id)
+//                .setParameter("date", date)
+                .getResultList();
+
+        return resultList;
     }
 
     public List<Doctor> findDoctorByUserId(Integer id) {
@@ -66,10 +81,16 @@ public class OrderDAO extends DAO<Order, Integer> {
             order.setDoctor(entityManager.find(Doctor.class, order.getDoctor().getUser()));
             order.setUser(entityManager.find(User.class, order.getUser().getId()));
         }
-
-
         return orders;
     }
+
+    public List<Order> findAllOrdersForDoctorByUserId(Integer id) {
+        List<Order> orders = findOrderByUserId(id);
+
+
+        return null;
+    }
+
     public List<Order> findAllOrdersByDoctorId(Integer id) {
         List<Order> orders = findOrderByDoctorId(id);
 

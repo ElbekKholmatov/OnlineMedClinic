@@ -29,17 +29,6 @@ public class DoctorDAO extends DAO<Doctor, Integer> {
         commit();
         return specialization;
     }
-
-//    public Specialization findSpecializationByUserId(Integer id) {
-//
-//        Doctor doctor = findDoctorByUserId(id);
-//
-//        if (doctor == null) {
-//            return null;
-//        }
-//
-//        return doctor.getSpecialization();
-//    }
     public List<Doctor> getDoctorsByCategory(Short categoryId){
 
         String query = "select d from Doctor d where d.specialization.id = :categoryId";
