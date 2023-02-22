@@ -5,13 +5,10 @@ target/
 
 ### IntelliJ IDEA ###
 .idea
-.idea/modules.xml
-.idea/jarRepositories.xml
-.idea/compiler.xml
-.idea/libraries/
 *.iws
 *.iml
 *.ipr
+src/main/resources/META-INF/persistence.xml
 ### Eclipse ###
 .apt_generated
 .classpath
