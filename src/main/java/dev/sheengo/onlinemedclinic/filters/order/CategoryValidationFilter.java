@@ -17,7 +17,6 @@ public class CategoryValidationFilter implements Filter {
         HttpServletRequest req = (HttpServletRequest) request;
         HttpServletResponse res = (HttpServletResponse) response;
 
-        System.out.println(req.getMethod());
         if ( req.getMethod().equalsIgnoreCase("post") ) {
 
             String category = req.getParameter("category");

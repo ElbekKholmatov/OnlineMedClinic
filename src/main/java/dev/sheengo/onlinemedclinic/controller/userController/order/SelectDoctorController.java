@@ -12,6 +12,6 @@ public class SelectDoctorController extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         OrderService.getInstance().service(request).getRequest()
-                .getRequestDispatcher("/views/userPages/appointment3.jsp").forward(request, response);
+                .getRequestDispatcher("/views/selectDate.jsp").forward(request, response);
     }
 }

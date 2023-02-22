@@ -90,7 +90,6 @@ public class SecurityFilter implements Filter {
                                 else
                                     request.getRequestDispatcher("/views/errorPages/error.jsp").forward(request, response);
                             } else {
-                                System.out.println(request.getSession().getAttribute("id"));
                                 chain.doFilter(request, response);
                             }
                         } catch (IOException | ServletException e) {
