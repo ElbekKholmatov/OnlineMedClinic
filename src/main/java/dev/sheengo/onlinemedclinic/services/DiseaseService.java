@@ -63,12 +63,18 @@ public class DiseaseService implements Service<Disease> {
 
     @Override
     public Response<Disease> delete(HttpServletRequest request) {
-        return null;
+        Disease disease = DiseaseDAO.getInstance().get(Integer.parseInt(request.getParameter("id")));
+        disease.setSpecialization(null);
+        DiseaseDAO.getInstance().delete(disease);
+
+        return Response.<Disease>builder().request(request).build();
     }
 
     @Override
     public Response<Disease> get(HttpServletRequest request) {
-        return null;
+        String id = request.getParameter("id");
+        Disease disease = DiseaseDAO.getInstance().get(Integer.parseInt(id));
+        return Response.<Disease>builder().domain(disease).build();
     }
 
     @Override

@@ -15,7 +15,8 @@ import java.io.IOException;
 public class DeleteDiseaseServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        request.setAttribute("disease", DiseaseService.getInstance().get(request).getDomain());
+        String id = request.getPathInfo().substring(1);
+        request.setAttribute("disease", DiseaseService.getInstance().get(Integer.parseInt(id)).getDomain());
         RequestDispatcher dispatcher = request.getRequestDispatcher("/views/adminPages/issues/DeleteIssues.jsp");
         dispatcher.forward(request, response);
     }
