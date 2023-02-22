@@ -32,7 +32,7 @@ public class DiseaseValidator {
 
     }
 
-    private void checkIsAvailableName(String name, Short speID) {
+    private void checkIsAvailableName(String name, Long speID) {
         if (DiseaseService.getInstance().get(name,speID).getDomain() != null) {
             throw new IllegalArgumentException("Name is already taken");
         }
@@ -79,7 +79,7 @@ public class DiseaseValidator {
         checkIsNullOrEmpty(description);
         checkIsNullOrEmpty(speID);
         checkIsAvailableId(Integer.valueOf(id));
-        checkIsAvailableName(name,Short.parseShort(speID));
+        checkIsAvailableName(name,Long.parseLong(speID));
         checkIsAvailableSpecialization(Integer.valueOf(speID));
     }
 

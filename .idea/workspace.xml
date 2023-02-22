@@ -10,23 +10,24 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ba06edfa-851e-4a64-82b3-9a3571fd825e" name="Changes" comment="Asrorxo'ja merged first time">
+    <list default="true" id="ba06edfa-851e-4a64-82b3-9a3571fd825e" name="Changes" comment="Elbek Back To Game 2">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dev/sheengo/onlinemedclinic/controller/admin/admin/disease/CreateDiseaseServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/sheengo/onlinemedclinic/controller/admin/admin/disease/CreateDiseaseServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dev/sheengo/onlinemedclinic/controller/admin/admin/disease/DeleteDiseaseServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/sheengo/onlinemedclinic/controller/admin/admin/disease/DeleteDiseaseServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dev/sheengo/onlinemedclinic/controller/admin/admin/disease/GetListDiseaseServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/sheengo/onlinemedclinic/controller/admin/admin/disease/GetListDiseaseServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/dev/sheengo/onlinemedclinic/controller/admin/admin/disease/UpdateDiseaseServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/sheengo/onlinemedclinic/controller/admin/admin/disease/UpdateDiseaseServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dev/sheengo/onlinemedclinic/controller/admin/admin/specialization/DeleteSpecializationServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/sheengo/onlinemedclinic/controller/admin/admin/specialization/DeleteSpecializationServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dev/sheengo/onlinemedclinic/controller/adminPages/issues/GetListDissesServlet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/sheengo/onlinemedclinic/dao/DAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/sheengo/onlinemedclinic/dao/DAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/sheengo/onlinemedclinic/dao/DiseaseDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/sheengo/onlinemedclinic/dao/DiseaseDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/sheengo/onlinemedclinic/dao/SpecializationDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/sheengo/onlinemedclinic/dao/SpecializationDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/sheengo/onlinemedclinic/dao/UserDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/sheengo/onlinemedclinic/dao/UserDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/sheengo/onlinemedclinic/domains/Disease.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/sheengo/onlinemedclinic/domains/Disease.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/sheengo/onlinemedclinic/domains/Specialization.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/sheengo/onlinemedclinic/domains/Specialization.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/sheengo/onlinemedclinic/filters/admin/admin/disease/UpdateDiseaseFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/sheengo/onlinemedclinic/filters/admin/admin/disease/UpdateDiseaseFilter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/dev/sheengo/onlinemedclinic/services/DiseaseService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/sheengo/onlinemedclinic/services/DiseaseService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/sheengo/onlinemedclinic/services/SpecializationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/sheengo/onlinemedclinic/services/SpecializationService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dev/sheengo/onlinemedclinic/validators/DiseaseValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/sheengo/onlinemedclinic/validators/DiseaseValidator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/adminPages/Admin.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/Admin.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/adminPages/issues/CreateIssue.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/issues/CreateIssue.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/adminPages/issues/DeleteIssues.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/issues/DeleteIssues.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/adminPages/SuperAdminPage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/SuperAdminPage.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/adminPages/admin/DeleteAdmin.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/admin/DeleteAdmin.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/views/adminPages/issues/ListIssues.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/issues/ListIssues.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/adminPages/specialization/SpecializationCreate.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/specialization/SpecializationCreate.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/adminPages/specialization/SpecializationDelete.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/specialization/SpecializationDelete.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/adminPages/specialization/SpecializationUpdate.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/specialization/SpecializationUpdate.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/views/adminPages/issues/UpdateIssues.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/views/adminPages/issues/UpdateIssues.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,6 +46,7 @@
     <setting file="file://$PROJECT_DIR$/src/main/java/dev/sheengo/onlinemedclinic/configs/ThreadSafeCollections.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/main/java/dev/sheengo/onlinemedclinic/dao/UserDAO.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/main/java/dev/sheengo/onlinemedclinic/domains/User.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/dev/sheengo/onlinemedclinic/services/UserService.java" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="LogFilters">
     <option name="FILTER_ERRORS" value="false" />
@@ -64,18 +66,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "full.screen.before.presentation.mode": "false",
-    "node.js.detected.package.eslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;full.screen.before.presentation.mode&quot;: &quot;false&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;postgresql&quot;
+    ]
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="Tomcat 10.0.27" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 10.0.27" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
       <option name="OPEN_IN_BROWSER" value="false" />
@@ -176,23 +183,151 @@
       <option name="presentableId" value="Default" />
       <updated>1676791742005</updated>
       <workItem from="1676791743472" duration="3134000" />
+      <workItem from="1676821186098" duration="668000" />
+      <workItem from="1676867567909" duration="971000" />
+      <workItem from="1676879048058" duration="1688000" />
+      <workItem from="1676884521567" duration="1724000" />
+      <workItem from="1676908469735" duration="6271000" />
+      <workItem from="1676921029769" duration="3683000" />
+      <workItem from="1676924730540" duration="4195000" />
+      <workItem from="1676965244292" duration="1096000" />
+      <workItem from="1676969203130" duration="1346000" />
+      <workItem from="1676970636610" duration="4278000" />
+      <workItem from="1676982471214" duration="10239000" />
+      <workItem from="1676994805245" duration="5355000" />
+      <workItem from="1677000571257" duration="846000" />
+      <workItem from="1677038696451" duration="8520000" />
+      <workItem from="1677047491646" duration="4131000" />
     </task>
+    <task id="LOCAL-00001" summary="Elbek Back To Game">
+      <created>1676970102438</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1676970102438</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Elbek Back To Game 2">
+      <created>1676997830297</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1676997830297</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="chcek" />
+    <MESSAGE value="Asrorxo'ja merged first time" />
+    <MESSAGE value="Elbek Back To Game" />
+    <MESSAGE value="Elbek Back To Game 2" />
+    <option name="LAST_COMMIT_MESSAGE" value="Elbek Back To Game 2" />
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/main/java/dev/sheengo/onlinemedclinic/controller/admin/admin/disease/CreateDiseaseServlet.java</url>
-          <line>20</line>
-          <properties class="dev.sheengo.onlinemedclinic.controller.admin.admin.disease.CreateDiseaseServlet" method="doPost">
+          <url>file://$PROJECT_DIR$/src/main/java/dev/sheengo/onlinemedclinic/controller/admin/supreme/adminCRUD/SetAdminServlet.java</url>
+          <line>18</line>
+          <properties class="dev.sheengo.onlinemedclinic.controller.admin.supreme.adminCRUD.SetAdminServlet" method="doPost">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />
           </properties>
-          <option name="timeStamp" value="1" />
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/main/java/dev/sheengo/onlinemedclinic/controller/admin/admin/specialization/CreateSpecializationServlet.java</url>
+          <line>19</line>
+          <properties class="dev.sheengo.onlinemedclinic.controller.admin.admin.specialization.CreateSpecializationServlet" method="doPost">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/main/java/dev/sheengo/onlinemedclinic/validators/SpecializationValidator.java</url>
+          <line>21</line>
+          <properties class="dev.sheengo.onlinemedclinic.validators.SpecializationValidator" method="checkParamsUpdateSer">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="18" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/main/java/dev/sheengo/onlinemedclinic/services/DiseaseService.java</url>
+          <line>92</line>
+          <properties class="dev.sheengo.onlinemedclinic.services.DiseaseService" method="get">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="22" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/main/java/dev/sheengo/onlinemedclinic/dao/DiseaseDAO.java</url>
+          <line>39</line>
+          <properties class="dev.sheengo.onlinemedclinic.dao.DiseaseDAO" method="get">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="23" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/main/java/dev/sheengo/onlinemedclinic/dao/SpecializationDAO.java</url>
+          <line>29</line>
+          <properties class="dev.sheengo.onlinemedclinic.dao.SpecializationDAO" method="get">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="32" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/main/java/dev/sheengo/onlinemedclinic/dao/DAO.java</url>
+          <line>46</line>
+          <properties class="dev.sheengo.onlinemedclinic.dao.DAO" method="get">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="40" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/main/java/dev/sheengo/onlinemedclinic/services/UserService.java</url>
+          <line>110</line>
+          <properties class="dev.sheengo.onlinemedclinic.services.UserService" method="get">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="41" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/main/java/dev/sheengo/onlinemedclinic/services/UserService.java</url>
+          <line>116</line>
+          <properties class="dev.sheengo.onlinemedclinic.services.UserService" method="get">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="42" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/main/java/dev/sheengo/onlinemedclinic/dao/UserDAO.java</url>
+          <line>20</line>
+          <properties class="dev.sheengo.onlinemedclinic.dao.UserDAO" method="get">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="43" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/dev/sheengo/onlinemedclinic/services/SpecializationService.java</url>
+          <line>54</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/dev/sheengo/onlinemedclinic/validators/DiseaseValidator.java</url>
+          <line>22</line>
+          <option name="timeStamp" value="31" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

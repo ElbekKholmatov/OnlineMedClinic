@@ -27,7 +27,7 @@ public class UserDAO extends DAO<User, Integer> {
             commit();
             return username1;
         } catch (NoResultException e) {
-            getEntityManager().getTransaction().rollback();
+            commit();
             e.printStackTrace();
         }
         return null;

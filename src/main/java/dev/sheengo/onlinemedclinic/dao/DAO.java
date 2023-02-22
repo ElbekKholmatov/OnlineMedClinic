@@ -13,8 +13,11 @@ import java.lang.reflect.ParameterizedType;
 import java.util.List;
 
 public abstract class DAO<T extends Domain, ID extends Serializable> {
-    private final EntityManagerFactory emf = Persistence.createEntityManagerFactory("persistence_unit");;
+
+    private final EntityManagerFactory emf = Persistence.createEntityManagerFactory("persistence_unit");
+
     private final EntityManager em =  emf.createEntityManager();
+
     private final Class<T> persistenceClass;
 
     protected EntityManager getEntityManager() {
@@ -42,10 +45,16 @@ public abstract class DAO<T extends Domain, ID extends Serializable> {
     }
 
     public T get(ID id) {
-        begin();
-        T t = em.find(persistenceClass, id);
-        commit();
-        return t;
+        try {
+            begin();
+            T t = em.find(persistenceClass, id);
+            commit();
+            return t;
+        }catch (Exception e){
+            commit();
+            e.printStackTrace();
+            return null;
+        }
     }
 
     public boolean update(T t) {

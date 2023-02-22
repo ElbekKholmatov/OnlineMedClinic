@@ -20,7 +20,7 @@ public class UpdateDiseaseFilter implements Filter {
                 chain.doFilter(req, res);
             } catch (Exception e) {
                 req.setAttribute("error", e.getMessage());
-                req.getRequestDispatcher("/views/adminPages/admin/UpdateIssues.jsp").forward(req, res);
+                req.getRequestDispatcher("/views/adminPages/issues/UpdateIssues.jsp").forward(req, res);
             }
         }else{
             chain.doFilter(req, res);

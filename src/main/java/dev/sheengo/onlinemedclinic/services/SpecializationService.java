@@ -2,6 +2,7 @@ package dev.sheengo.onlinemedclinic.services;
 
 import dev.sheengo.onlinemedclinic.dao.SpecializationDAO;
 import dev.sheengo.onlinemedclinic.domains.Specialization;
+import jakarta.persistence.EntityManager;
 import jakarta.servlet.SessionCookieConfig;
 import jakarta.servlet.http.HttpServletRequest;
 
@@ -63,6 +64,7 @@ public class SpecializationService implements Service<Specialization> {
     @Override
     public Response<Specialization> get(Integer id) {
         return SpecializationDAO.getInstance().get(id);
+
     }
 
     public List<Specialization> getAll() {

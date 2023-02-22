@@ -30,12 +30,17 @@ public class SpecializationDAO extends DAO<Specialization, Short> {
     public Response<Specialization> get(Integer id) {
         EntityManager entityManager = getEntityManager();
         try {
-            return Response.<Specialization>builder()
+            begin();
+            Response<Specialization> id1 = Response.<Specialization>builder()
                     .domain(entityManager.createQuery("select s from Specialization s where s.id = :id", Specialization.class)
                             .setParameter("id", id)
                             .getSingleResult())
                     .build();
+            commit();
+            return id1;
         } catch (Exception e) {
+            entityManager.getTransaction().rollback();
+            e.printStackTrace();
             return null;
         }
     }

@@ -14,14 +14,16 @@
 </head>
 <body>
 <form action="/admin/disease/update/*" method="post">
-<input type="hidden" name="id" value="${disease.id}"/>
+<input type="hidden" name="id" value="${disease.getId()}"/>
     <input type="text" name="name" value="${disease.getName()}"/>
     <input type="text" name="description" value="${disease.getDescription()}"/>
     <select class="form-select"   aria-label="select example" style="margin-top: 30px" id="specialization_id"
             name="specialization_id">
-        <option value="${disease.getSpecializationId()}">${disease.getSpecializationName()}</option>
+        <option value="${disease.getSpecialization().getId()}">${disease.getSpecialization().getName()}</option>
         <c:forEach items="${specializations}" var="specialization">
-            <option value="${specialization.getId()}">${specialization.getName()}</option>
+            <c:if test="${specialization.getId() != disease.getSpecialization().getId()}">
+                <option value="${specialization.getId()}">${specialization.getName()}</option>
+            </c:if>
         </c:forEach>
     </select>
     <input type="submit" value="submit"/>

@@ -12,7 +12,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
-public class Disease implements Domain{
+public class Disease implements Domain {
     @Id
     @Column(columnDefinition = "smallint")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -20,7 +20,7 @@ public class Disease implements Domain{
     @Column(nullable = false)
     private String name;
     @ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
-    @JoinColumn(name = "specialization_id", nullable = false)
     private Specialization specialization;
     private String description;
+
 }
