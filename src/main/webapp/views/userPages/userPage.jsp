@@ -61,6 +61,8 @@
     </div>
 </header>
 
-<h1 class="w-75 mx-auto">User Page</h1>
+<div class="w-75 mx-auto">
+<a href="/user/order" class="btn btn-primary">Appointment</a>
+</div>
 </body>
 </html>
