@@ -82,9 +82,12 @@ public abstract class DAO<T extends Domain, ID extends Serializable> {
 
 
     public boolean deleteById(ID id) {
-        return em.createQuery("delete from " + persistenceClass.getSimpleName() + " t where t.id = :id")
+        begin();
+        boolean id1 = em.createQuery("delete from " + persistenceClass.getSimpleName() + " t where t.id = :id")
                 .setParameter("id", id)
                 .executeUpdate() == 0;
+        commit();
+        return id1;
     }
 
     protected void begin() {

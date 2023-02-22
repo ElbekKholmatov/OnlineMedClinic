@@ -49,10 +49,10 @@ public class DoctorService implements Service<Doctor> {
         UserService userService = UserService.getInstance();
         User userObj = userService.get(Integer.parseInt(request.getSession().getAttribute("id").toString())).getDomain();
 
-        Specialization specializationObj = DoctorDAO.getInstance().findDoctorByUserId(userObj.getId()).getSpecialization();
-
         DoctorDAO doctorDAO = DoctorDAO.getInstance();
         Doctor doctorObj = doctorDAO.findDoctorByUserId(userObj.getId());
+
+        Specialization specializationObj = doctorObj.getSpecialization();
 
         String info = doctorObj.getInfo();
 
@@ -68,7 +68,7 @@ public class DoctorService implements Service<Doctor> {
                 .rating(rating)
                 .build();
 
-        DoctorDAO.getInstance().save(doctor);
+//        DoctorDAO.getInstance().save(doctor);
 
         request.setAttribute("user", userObj);
         request.setAttribute("doctor", doctor);
