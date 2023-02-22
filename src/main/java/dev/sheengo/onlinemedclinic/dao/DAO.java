@@ -45,16 +45,10 @@ public abstract class DAO<T extends Domain, ID extends Serializable> {
     }
 
     public T get(ID id) {
-        try {
-            begin();
-            T t = em.find(persistenceClass, id);
-            commit();
-            return t;
-        }catch (Exception e){
-            commit();
-            e.printStackTrace();
-            return null;
-        }
+        begin();
+        T t = em.find(persistenceClass, id);
+        commit();
+        return t;
     }
 
     public boolean update(T t) {

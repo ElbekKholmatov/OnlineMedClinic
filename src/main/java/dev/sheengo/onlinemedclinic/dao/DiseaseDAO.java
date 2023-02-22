@@ -1,6 +1,7 @@
 package dev.sheengo.onlinemedclinic.dao;
 
 import dev.sheengo.onlinemedclinic.domains.Disease;
+import dev.sheengo.onlinemedclinic.domains.Specialization;
 import dev.sheengo.onlinemedclinic.domains.User;
 import dev.sheengo.onlinemedclinic.services.Response;
 import jakarta.persistence.EntityManager;
@@ -23,15 +24,12 @@ public class DiseaseDAO extends DAO<Disease, Short> {
         return entityManager.createQuery("select d from Disease d", Disease.class).getResultList();
     }
 
-    public Response<Disease> get(String name) {
+    public Disease get(String name) {
         EntityManager entityManager = getEntityManager();
         try {
-            Disease disease = entityManager.createQuery("select d from Disease d where d.name = :name", Disease.class)
+            return entityManager.createQuery("select d from Disease d where d.name = :name", Disease.class)
                     .setParameter("name", name)
                     .getSingleResult();
-            return Response.<Disease>builder()
-                    .domain(disease)
-                    .build();
         } catch (Exception e) {
             return null;
         }
@@ -46,17 +44,28 @@ EntityManager entityManager = getEntityManager();
 
     }
 
-    public Response<Disease> get(Integer id) {
+    public Disease get(Integer id) {
         EntityManager entityManager = getEntityManager();
         try {
-            Disease disease = entityManager.createQuery("select d from Disease d where d.id = :id", Disease.class)
+            return entityManager.createQuery("select d from Disease d where d.id = :id", Disease.class)
                     .setParameter("id", id)
                     .getSingleResult();
-            return Response.<Disease>builder()
-                    .domain(disease)
-                    .build();
         } catch (Exception e) {
             return null;
         }
+    }
+
+    @Override
+    public Disease save(Disease disease) {
+        begin();
+        EntityManager entityManager = getEntityManager();
+        Specialization sp = entityManager.getReference(Specialization.class, disease.getSpecialization().getId());
+
+        disease.setSpecialization(sp);
+
+        entityManager.persist(disease);
+        commit();
+
+        return disease;
     }
 }

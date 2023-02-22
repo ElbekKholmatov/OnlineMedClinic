@@ -21,7 +21,7 @@ public class SelectCategoryController extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         List<Specialization> all = SpecializationService.getInstance().getAll();
-        System.out.println(all.get(0).getName());
+//        System.out.println(all.get(0).getName());
         req.setAttribute("categories", all);
         req.getRequestDispatcher("/views/selectCategory.jsp").forward(req, resp);
     }

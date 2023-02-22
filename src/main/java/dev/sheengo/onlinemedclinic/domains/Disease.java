@@ -14,9 +14,8 @@ import lombok.NoArgsConstructor;
 @Data
 public class Disease implements Domain {
     @Id
-    @Column(columnDefinition = "smallint")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Short id;
+    private Integer id;
     @Column(nullable = false)
     private String name;
     @ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)

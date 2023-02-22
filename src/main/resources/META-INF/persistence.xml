@@ -14,7 +14,7 @@
         <class>dev.sheengo.onlinemedclinic.domains.Specialization</class>
         <class>dev.sheengo.onlinemedclinic.domains.User</class>
         <properties>
-            <property name="jakarta.persistence.jdbc.url" value="jdbc:postgresql://localhost:5433/med_service" />
+            <property name="jakarta.persistence.jdbc.url" value="jdbc:postgresql://localhost:5432/med_service" />
             <property name="jakarta.persistence.jdbc.user" value="postgres"/>
             <property name="jakarta.persistence.jdbc.password" value="123"/>
             <property name="jakarta.persistence.jdbc.driver" value="org.postgresql.Driver"/>

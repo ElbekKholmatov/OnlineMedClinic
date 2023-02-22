@@ -22,11 +22,13 @@ public class SpecializationService implements Service<Specialization> {
     public Response<Specialization> save(HttpServletRequest request) {
         String name = request.getParameter("name");
         String description = request.getParameter("description");
+
         SpecializationDAO.getInstance().save(
                 Specialization.builder()
                         .name(name)
                         .description(description)
                         .build());
+
         return Response.<Specialization>builder().request(request).build();
     }
 
@@ -37,7 +39,7 @@ public class SpecializationService implements Service<Specialization> {
         String description = request.getParameter("description");
         SpecializationDAO.getInstance().updateS(
                 Specialization.builder()
-                        .id(Short.parseShort(id))
+                        .id(Integer.parseInt(id))
                         .name(name)
                         .description(description)
                         .build());
@@ -50,7 +52,7 @@ public class SpecializationService implements Service<Specialization> {
 
 
         Specialization specialization = Specialization.builder()
-                .id(Short.parseShort(id))
+                .id(Integer.parseInt(id))
                 .build();
         SpecializationDAO.getInstance().deleteSpecialization(specialization);
         return Response.<Specialization>builder().request(request).build();

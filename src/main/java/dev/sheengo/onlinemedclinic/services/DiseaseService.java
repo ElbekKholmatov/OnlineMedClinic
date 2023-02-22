@@ -37,25 +37,22 @@ public class DiseaseService implements Service<Disease> {
         String description = request.getParameter("description");
         String specializationId = request.getParameter("specialization_id");
         Specialization specialization = SpecializationService.getInstance().get(Integer.parseInt(specializationId)).getDomain();
-        System.out.println(specialization);
+
+
         Disease disease = Disease.builder()
                 .name(name)
                 .description(description)
+                .specialization(specialization)
                 .build();
-        DiseaseDAO.getInstance().save(
-                disease
-        );
-        Disease domain = DiseaseDAO.getInstance().get(name).getDomain();
-        System.out.println(domain);
-        domain.setSpecialization(specialization);
-        DiseaseDAO.getInstance().update(domain);
+
+        DiseaseDAO.getInstance().save(disease);
 
         return Response.<Disease>builder().request(request).build();
     }
 
     @Override
     public Response<Disease> update(HttpServletRequest request) {
-        Disease disease = DiseaseDAO.getInstance().get(Integer.parseInt(request.getParameter("id"))).getDomain();
+        Disease disease = DiseaseDAO.getInstance().get(Integer.parseInt(request.getParameter("id")));
         disease.setName(request.getParameter("name"));
         disease.setDescription(request.getParameter("description"));
         Specialization specialization = SpecializationService.getInstance().get(Integer.parseInt(request.getParameter("specialization_id"))).getDomain();
@@ -76,7 +73,7 @@ public class DiseaseService implements Service<Disease> {
 
     @Override
     public Response<Disease> get(Integer id) {
-        return DiseaseDAO.getInstance().get(id);
+        return Response.<Disease>builder().domain(DiseaseDAO.getInstance().get(id)).build();
     }
 
     public List<Disease> getAll() {
@@ -84,7 +81,7 @@ public class DiseaseService implements Service<Disease> {
     }
 
     public Response<Disease> get(String name) {
-        Disease disease = DiseaseDAO.getInstance().get(name).getDomain();
+        Disease disease = DiseaseDAO.getInstance().get(name);
         return Response.<Disease>builder()
                 .domain(disease)
                 .build();
