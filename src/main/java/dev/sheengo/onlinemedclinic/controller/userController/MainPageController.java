@@ -22,7 +22,7 @@ public class MainPageController extends HttpServlet {
         HttpServletRequest getRequest = UserService.getInstance().get(request).getRequest();
         getRequest.setAttribute("id", session.getAttribute("id"));
         getRequest.setAttribute("firstname", session.getAttribute("firstname"));
-        getRequest.getRequestDispatcher("/views/Home.jsp").forward(getRequest, response);
+        getRequest.getRequestDispatcher("/views/userPages/userPage.jsp").forward(getRequest, response);
     }
 
     @Override

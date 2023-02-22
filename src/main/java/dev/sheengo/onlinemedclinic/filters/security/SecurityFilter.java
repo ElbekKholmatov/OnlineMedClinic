@@ -22,7 +22,6 @@ public class SecurityFilter implements Filter {
 
     private static final List<String> WHITE_LIST = List.of(
             "/",
-            "/home",
             "/signUp",
             "/logIn",
             "/resources/.+",

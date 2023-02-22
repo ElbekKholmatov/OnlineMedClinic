@@ -1,8 +1,10 @@
 package dev.sheengo.onlinemedclinic.services;
 
 import dev.sheengo.onlinemedclinic.configs.ThreadSafeCollections;
+import dev.sheengo.onlinemedclinic.dao.DoctorDAO;
 import dev.sheengo.onlinemedclinic.dao.SpecializationDAO;
 import dev.sheengo.onlinemedclinic.dao.UserDAO;
+import dev.sheengo.onlinemedclinic.domains.Doctor;
 import dev.sheengo.onlinemedclinic.domains.Specialization;
 import dev.sheengo.onlinemedclinic.domains.User;
 import jakarta.servlet.http.Cookie;
@@ -41,15 +43,19 @@ public class UserService implements Service<User> {
             ThreadSafeCollections.id.add(user.getId());
         }
 
-        String page = user.getRole().equals(User.UserRole.SUPER_ADMIN) ? "/superAdmin/main" :
-                user.getRole().equals(User.UserRole.ADMIN) ? "/admin/main"
-                : (user.getRole().equals(User.UserRole.DOCTOR)) ? "/dr/main"
-                : "/user/main";
+        String page = getPage(user);
 
         return Response.<User>builder()
                 .cookie(cookie)
                 .returnPage(page)
                 .build();
+    }
+
+    public String getPage(User user) {
+        return user.getRole().equals(User.UserRole.SUPER_ADMIN) ? "/superAdmin/main" :
+                user.getRole().equals(User.UserRole.ADMIN) ? "/admin/main"
+                : (user.getRole().equals(User.UserRole.DOCTOR)) ? "/dr/main"
+                : "/user/main";
     }
 
     @Override

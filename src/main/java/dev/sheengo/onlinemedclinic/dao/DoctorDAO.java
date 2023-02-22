@@ -2,6 +2,7 @@ package dev.sheengo.onlinemedclinic.dao;
 
 import dev.sheengo.onlinemedclinic.domains.Doctor;
 import dev.sheengo.onlinemedclinic.domains.Specialization;
+import dev.sheengo.onlinemedclinic.domains.User;
 import jakarta.persistence.EntityManager;
 import lombok.AccessLevel;
 import lombok.NoArgsConstructor;
