@@ -1,7 +1,6 @@
 package dev.sheengo.onlinemedclinic.filters.security;
 
 
-import dev.sheengo.onlinemedclinic.configs.ThreadSafeCollections;
 import dev.sheengo.onlinemedclinic.domains.User;
 import dev.sheengo.onlinemedclinic.services.UserService;
 import jakarta.servlet.*;

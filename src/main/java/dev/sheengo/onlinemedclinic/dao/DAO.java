@@ -3,7 +3,6 @@ package dev.sheengo.onlinemedclinic.dao;
 import dev.sheengo.onlinemedclinic.domains.Disease;
 import dev.sheengo.onlinemedclinic.domains.Domain;
 import dev.sheengo.onlinemedclinic.domains.Specialization;
-import dev.sheengo.onlinemedclinic.services.Response;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityManagerFactory;
 import jakarta.persistence.Persistence;
@@ -91,6 +90,4 @@ public abstract class DAO<T extends Domain, ID extends Serializable> {
     protected void commit() {
         em.getTransaction().commit();
     }
-
-
 }

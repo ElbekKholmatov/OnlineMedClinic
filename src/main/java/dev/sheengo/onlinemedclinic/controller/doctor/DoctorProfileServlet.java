@@ -1,7 +1,5 @@
 package dev.sheengo.onlinemedclinic.controller.doctor;
 
-import dev.sheengo.onlinemedclinic.dao.DoctorDAO;
-import dev.sheengo.onlinemedclinic.dao.UserDAO;
 import dev.sheengo.onlinemedclinic.domains.Doctor;
 import dev.sheengo.onlinemedclinic.services.DoctorService;
 import dev.sheengo.onlinemedclinic.services.Response;
@@ -11,10 +9,6 @@ import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-import dev.sheengo.onlinemedclinic.services.SpecializationService;
-import jakarta.servlet.*;
-import jakarta.servlet.http.*;
-import jakarta.servlet.annotation.*;
 
 import java.io.IOException;
 

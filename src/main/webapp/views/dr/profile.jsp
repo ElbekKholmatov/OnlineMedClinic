@@ -1,30 +1,42 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: User
-  Date: 16.02.2023
-  Time: 19:19
-  To change this template use File | Settings | File Templates.
---%>
+<%@ page import="dev.sheengo.onlinemedclinic.domains.Doctor" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
 <head>
     <title>Doctor Profile</title>
+    <link rel="stylesheet" href="/resources/css/bootstrap.min.css">
 </head>
 <body>
-Doctor Profile
-<%--<c:if test="${doctor != null}">--%>
-    <div>
-        <h1>Welcome dear : ${doctor.getName()}</h1>
-        <div><h2>${doctor.getInfo()}</h2></div>
-        <div><h2>${doctor.getSpecialization()}</h2></div>
-    </div>
-<%--</c:if>--%>
+
+<div style="text-align: center"> Doctor Profile Page</div>
+
+<div>
+    <button class="btn btn-danger"><a href="/dr/main">Back</a></button>
+</div>
 
 <c:if test="${doctor == null}">
     <h1>Doctor not found</h1>
 </c:if>
 
+<c:if test="${user != null}">
+    <div>
+            <%--        D:\PDP\B22\Projects\5Jakarta\filesForBooklib\upload\1676280413576.png--%>
+            <%--                            /resources/images/2.png--%>
+        <img src="/resources/images/2.png" alt="user image" width="200" height="200" style="border-radius: 50%">
+        <h1>Doctor Profile</h1>
+        <h2>Doctor Name: ${user.getFirstName()} &nbsp ${user.getLastName()}</h2>
+        <h2>Doctor Speciality: ${doctor.getSpecialization().getName()}</h2>
+        <h2>Doctor info: ${doctor.getInfo()}</h2>
+        <h2>Doctor Phone: ${user.getPhone()}</h2>
+        <h2>Doctor Address: ${user.getAddress()}</h2>
+
+            ${user.getPictureId().getFilePath()}
+    </div>
+
+    <div>
+        <button class="btn btn-warning"><a href="/dr/edit">Edit</a></button>
+    </div>
+</c:if>
 
 </body>
 </html>

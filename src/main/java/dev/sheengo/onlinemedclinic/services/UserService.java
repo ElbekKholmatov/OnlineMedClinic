@@ -1,16 +1,10 @@
 package dev.sheengo.onlinemedclinic.services;
 
 import dev.sheengo.onlinemedclinic.configs.ThreadSafeCollections;
-import dev.sheengo.onlinemedclinic.dao.DoctorDAO;
-import dev.sheengo.onlinemedclinic.dao.SpecializationDAO;
 import dev.sheengo.onlinemedclinic.dao.SpecializationDAO;
 import dev.sheengo.onlinemedclinic.dao.UserDAO;
-import dev.sheengo.onlinemedclinic.domains.Doctor;
-import dev.sheengo.onlinemedclinic.domains.Specialization;
 import dev.sheengo.onlinemedclinic.domains.Specialization;
 import dev.sheengo.onlinemedclinic.domains.User;
-import jakarta.servlet.AsyncContext;
-import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.http.Cookie;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpSession;
@@ -49,7 +43,7 @@ public class UserService implements Service<User> {
 
         String page = user.getRole().equals(User.UserRole.SUPER_ADMIN) ? "/superAdmin/main" :
                 user.getRole().equals(User.UserRole.ADMIN) ? "/admin/main"
-                : (user.getRole().equals(User.UserRole.DOCTOR)) ? "/doc/profile"
+                : (user.getRole().equals(User.UserRole.DOCTOR)) ? "/dr/main"
                 : "/user/main";
 
         return Response.<User>builder()

@@ -76,6 +76,4 @@ public class SpecializationService implements Service<Specialization> {
     public Response<Specialization> get(String name) {
         return SpecializationDAO.getInstance().get(name);
     }
-
-
 }

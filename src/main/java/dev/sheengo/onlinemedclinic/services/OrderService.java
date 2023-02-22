@@ -6,13 +6,14 @@ import dev.sheengo.onlinemedclinic.dao.OrderDAO;
 import dev.sheengo.onlinemedclinic.dao.UserDAO;
 import dev.sheengo.onlinemedclinic.domains.Doctor;
 import dev.sheengo.onlinemedclinic.domains.Order;
+import dev.sheengo.onlinemedclinic.domains.User;
 import jakarta.servlet.http.HttpServletRequest;
 import lombok.AccessLevel;
 import lombok.NoArgsConstructor;
 
-import java.time.DayOfWeek;
+import java.time.LocalDate;
 import java.time.LocalDateTime;
-import java.time.LocalTime;
+import java.util.ArrayList;
 import java.util.List;
 
 @NoArgsConstructor(access = AccessLevel.PRIVATE)
@@ -36,7 +37,7 @@ public class OrderService implements Service<Order> {
         order.setDescription(description);
 
         LocalDateTime now = LocalDateTime.now();
-        if ( now.getDayOfWeek().getValue() == 6 ) {
+        if (now.getDayOfWeek().getValue() == 6) {
             now = now.plusDays(1);
         }
         now = now.plusDays(1);
@@ -119,5 +120,50 @@ public class OrderService implements Service<Order> {
         ThreadSafeCollections.orderMap.put(order.getUser().getId(), order);
 
         req.setAttribute("doctors", DoctorDAO.getInstance().getDoctorsByCategory(category));
+    }
+
+    public Response<Order> getOrders(HttpServletRequest request) {
+        Integer id = Integer.parseInt(request.getSession().getAttribute("id").toString());// id of user who is logged in
+
+        OrderDAO orderDAO = OrderDAO.getInstance();
+        List<Order> orders = orderDAO.findOrderByDoctorId(id);
+        List<User> users = getUsers(orders);
+
+        request.setAttribute("orders", orders);
+        request.setAttribute("users", users);
+
+        return Response.<Order>builder().request(request).build();
+    }
+
+    public Response<Order> getDailyOrders(HttpServletRequest request) {
+        Integer id = Integer.parseInt(request.getSession().getAttribute("id").toString());
+
+        String date = request.getParameter("day");
+        System.out.println("day => " + date);
+
+        if (date == null || date.isBlank()) {
+            date = LocalDate.now().toString();
+            System.out.println("day was null or blank but now it is => " + date);
+        }
+
+        OrderDAO orderDAO = OrderDAO.getInstance();
+
+        List<Order> orders = orderDAO.findOrderByDateAndDoctorId(date, id);
+        List<User> users = getUsers(orders);
+
+        request.setAttribute("day", date);
+        request.setAttribute("orders", orders);
+        request.setAttribute("users", users);
+
+        return Response.<Order>builder().request(request).build();
+    }
+
+    private static List<User> getUsers(List<Order> orders) {
+        List<User> users = new ArrayList<>();
+
+        for (Order order : orders) {
+            users.add(order.getUser());
+        }
+        return users;
     }
 }

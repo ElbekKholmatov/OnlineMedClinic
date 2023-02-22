@@ -11,6 +11,7 @@ import jakarta.persistence.EntityManager;
 import jakarta.servlet.AsyncContext;
 import jakarta.servlet.SessionCookieConfig;
 import jakarta.servlet.http.HttpServletRequest;
+import lombok.NonNull;
 
 public class DoctorService implements Service<Doctor> {
     @Override

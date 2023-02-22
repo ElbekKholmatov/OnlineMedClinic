@@ -44,10 +44,8 @@ public class User implements Domain {
     private String address;
     @Column(nullable = false)
     private String passport;
-
     @Column(nullable = true, columnDefinition = "bool default false")
     private Boolean isDeleted;
-
     @CreationTimestamp
     @Column(nullable = true, columnDefinition = "timestamp default current_timestamp")
     private LocalDateTime createdAt;
