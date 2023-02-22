@@ -43,23 +43,29 @@ public class OrderService implements Service<Order> {
 
         final int day = now.getDayOfWeek().getValue();
 
+        List<Integer> hours = getHours(doctorId, day);
+
+        request.setAttribute("hours", hours);
+        request.setAttribute("now", now);
+        request.setAttribute("hasNext", true);
+
+        return Response.<Order>builder().request(request).build();
+    }
+
+    public List<Integer> getHours(Integer doctorId, int day) {
+
         List<LocalDateTime> orderTimes = OrderDAO.getInstance().findOrderByDoctorId(doctorId).stream()
                 .filter(o -> o.getStatus().equals(Order.Status.ORDERED))
                 .map(Order::getVisitTime).toList();
 
-        List<Integer> hours = orderTimes.stream()
+        return orderTimes.stream()
                 .map(time -> {
                     int value = time.getDayOfWeek().getValue();
-                    if (value == (day)) {
+                    if (value == day) {
                         return time.getHour();
                     }
                     return null;
                 }).toList();
-
-        request.setAttribute("hours", hours);
-        request.setAttribute("now", now);
-
-        return Response.<Order>builder().request(request).build();
     }
 
     @Override
