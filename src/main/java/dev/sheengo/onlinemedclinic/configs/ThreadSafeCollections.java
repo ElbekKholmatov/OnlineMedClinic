@@ -10,4 +10,5 @@ import java.util.concurrent.ConcurrentHashMap;
 public interface ThreadSafeCollections {
     List<Integer> id = Collections.synchronizedList(new ArrayList<>());
     ConcurrentHashMap<Integer, Order> orderMap = new ConcurrentHashMap<>();
+    ConcurrentHashMap<Integer, Integer> weekMap = new ConcurrentHashMap<>();
 }
