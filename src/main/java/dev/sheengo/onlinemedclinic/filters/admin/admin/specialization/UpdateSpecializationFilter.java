@@ -21,7 +21,7 @@ public class UpdateSpecializationFilter implements Filter {
                 chain.doFilter(req, res);
             } catch (Exception e) {
                 req.setAttribute("error", e.getMessage());
-                req.getRequestDispatcher("/views/adminPages/admin/DeleteIssues.jsp").forward(req, res);
+                req.getRequestDispatcher("/views/adminPages/specialization/SpecializationUpdate.jsp").forward(req, res);
             }
         }else{
             chain.doFilter(req, res);

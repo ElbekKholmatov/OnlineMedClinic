@@ -13,7 +13,8 @@ import java.io.IOException;
 public class UpdateSpecializationServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        request.setAttribute("specialization", SpecializationService.getInstance().get(Integer.parseInt(request.getParameter("id"))));
+        String id = request.getPathInfo().substring(1);
+        request.setAttribute("specialization", SpecializationService.getInstance().get(Integer.parseInt(id)).getDomain());
         request.getRequestDispatcher("/views/adminPages/specialization/SpecializationUpdate.jsp").forward(request, response);
 
     }

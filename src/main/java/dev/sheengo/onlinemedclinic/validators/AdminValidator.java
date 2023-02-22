@@ -37,9 +37,6 @@ public class AdminValidator {
         if (user.getRole().equals(User.UserRole.DOCTOR)) {
             throw new IllegalArgumentException("This is not admin");
         }
-        if (user.getRole().equals(User.UserRole.SUPER_ADMIN)) {
-            throw new IllegalArgumentException("You can't delete super admin");
-        }
     }
 
     private void checkIsNullOrEmpty(String id) {

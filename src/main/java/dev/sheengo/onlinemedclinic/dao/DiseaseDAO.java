@@ -2,6 +2,7 @@ package dev.sheengo.onlinemedclinic.dao;
 
 import dev.sheengo.onlinemedclinic.domains.Disease;
 import dev.sheengo.onlinemedclinic.domains.User;
+import dev.sheengo.onlinemedclinic.services.Response;
 import jakarta.persistence.EntityManager;
 import lombok.AccessLevel;
 import lombok.NoArgsConstructor;
@@ -22,20 +23,40 @@ public class DiseaseDAO extends DAO<Disease, Short> {
         return entityManager.createQuery("select d from Disease d", Disease.class).getResultList();
     }
 
-    public Optional<Disease> get(String name) {
+    public Response<Disease> get(String name) {
         EntityManager entityManager = getEntityManager();
-        return entityManager.createQuery("select d from Disease d where d.name = :name", Disease.class)
-                .setParameter("name", name)
-                .getResultStream()
-                .findFirst();
+        try {
+            Disease disease = entityManager.createQuery("select d from Disease d where d.name = :name", Disease.class)
+                    .setParameter("name", name)
+                    .getSingleResult();
+            return Response.<Disease>builder()
+                    .domain(disease)
+                    .build();
+        } catch (Exception e) {
+            return null;
+        }
     }
 
-    public Optional<Disease> get(String name, Integer speID) {
-        EntityManager entityManager = getEntityManager();
-        return entityManager.createQuery("select d from Disease d where d.name = :name and d.specializationId.id = :speID", Disease.class)
+    public Disease get(String name, Long speID) {
+EntityManager entityManager = getEntityManager();
+        return entityManager.createQuery("select d from Disease d where d.name = :name and d.specialization.id = :speID", Disease.class)
                 .setParameter("name", name)
                 .setParameter("speID", speID)
-                .getResultStream()
-                .findFirst();
+                .getSingleResult();
+
+    }
+
+    public Response<Disease> get(Integer id) {
+        EntityManager entityManager = getEntityManager();
+        try {
+            Disease disease = entityManager.createQuery("select d from Disease d where d.id = :id", Disease.class)
+                    .setParameter("id", id)
+                    .getSingleResult();
+            return Response.<Disease>builder()
+                    .domain(disease)
+                    .build();
+        } catch (Exception e) {
+            return null;
+        }
     }
 }

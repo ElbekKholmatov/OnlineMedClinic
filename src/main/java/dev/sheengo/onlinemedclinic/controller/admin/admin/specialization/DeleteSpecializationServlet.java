@@ -14,7 +14,8 @@ import java.io.IOException;
 public class DeleteSpecializationServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        request.setAttribute("specializations", SpecializationService.getInstance().getAll());
+        Integer id = Integer.parseInt(request.getPathInfo().substring(1));
+        request.setAttribute("specialization", SpecializationService.getInstance().get(id).getDomain());
         RequestDispatcher dispatcher = request.getRequestDispatcher("/views/adminPages/specialization/SpecializationDelete.jsp");
         dispatcher.forward(request, response);
     }

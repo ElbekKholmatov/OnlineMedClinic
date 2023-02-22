@@ -1,9 +1,15 @@
 package dev.sheengo.onlinemedclinic.services;
 
 import dev.sheengo.onlinemedclinic.dao.DoctorDAO;
+import dev.sheengo.onlinemedclinic.dao.OrderDAO;
+import dev.sheengo.onlinemedclinic.dao.SpecializationDAO;
+import dev.sheengo.onlinemedclinic.dao.UserDAO;
 import dev.sheengo.onlinemedclinic.domains.Doctor;
 import dev.sheengo.onlinemedclinic.domains.Specialization;
 import dev.sheengo.onlinemedclinic.domains.User;
+import jakarta.persistence.EntityManager;
+import jakarta.servlet.AsyncContext;
+import jakarta.servlet.SessionCookieConfig;
 import jakarta.servlet.http.HttpServletRequest;
 import lombok.NonNull;
 
@@ -32,7 +38,10 @@ public class DoctorService implements Service<Doctor> {
 
     @Override
     public Response<Doctor> delete(HttpServletRequest request) {
-        return null;
+        String id1 = request.getParameter("id");
+        int id = Integer.parseInt(id1);
+        DoctorDAO.getInstance().delete(get(id).getDomain());
+        return Response.<Doctor>builder().build();
     }
 
     @Override
@@ -43,7 +52,9 @@ public class DoctorService implements Service<Doctor> {
 
         DoctorDAO doctorDAO = DoctorDAO.getInstance();
         Doctor doctorObj = doctorDAO.findDoctorByUserId(userObj.getId());
+
         Specialization specializationObj = doctorObj.getSpecialization();
+
         String info = doctorObj.getInfo();
 
         Double rating = doctorObj.getRating();
@@ -58,9 +69,20 @@ public class DoctorService implements Service<Doctor> {
                 .rating(rating)
                 .build();
 
+//        DoctorDAO.getInstance().save(doctor);
+
         request.setAttribute("user", userObj);
         request.setAttribute("doctor", doctor);
         request.setAttribute("specialization", specializationObj);
+        return Response.<Doctor>builder().request(request).build();
+    }
+
+    public Response<Doctor> getOrders(HttpServletRequest request) {
+        Integer id = Integer.parseInt(request.getSession().getAttribute("id").toString());
+
+        OrderDAO orderDAO = OrderDAO.getInstance();
+        request.setAttribute("orders", orderDAO.findOrderByDoctorUserId(id));
+
         return Response.<Doctor>builder().request(request).build();
     }
 
@@ -70,4 +92,23 @@ public class DoctorService implements Service<Doctor> {
                 .domain(DoctorDAO.getInstance().get(id))
                 .build();
     }
+
+    public Response<User> changeSpecialization(HttpServletRequest request) {
+        int specializationId = Integer.parseInt(request.getParameter("specialization_id"));
+        int userId = Integer.parseInt(request.getParameter("id"));
+        String info = request.getParameter("info");
+        Doctor doctor = DoctorDAO.getInstance().getDoctorsByUserID(userId);
+        doctor.setSpecialization(SpecializationDAO.getInstance().get(specializationId).getDomain());
+        doctor.setInfo(info);
+        DoctorDAO.getInstance().update(doctor);
+        return Response.<User>builder().request(request).build();
+    }
+
+    public Response<Doctor> getDoctorsByUserID(int userId) {
+        Doctor doctor = DoctorDAO.getInstance().getDoctorsByUserID(userId);
+        return Response.<Doctor>builder().domain(doctor).build();
+
+    }
+
+
 }

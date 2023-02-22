@@ -19,20 +19,20 @@ public class DiseaseValidator {
     }
 
 
-    public void checkParamsCreatedisease(HttpServletRequest req) {
+    public void checkParamsCreateDisease(HttpServletRequest req) {
         var name = req.getParameter("name");
         var description = req.getParameter("description");
         var id = req.getParameter("specialization_id");
         checkIsNullOrEmpty(name);
         checkIsNullOrEmpty(description);
         checkIsNullOrEmpty(id);
-        checkIsAvailableName(name,Integer.valueOf(id));
-        checkIsAvailableSpecialization(Integer.valueOf(id));
+//        checkIsAvailableName(name,Short.parseShort(id));
+//        checkIsAvailableSpecialization(Integer.valueOf(id));
 
 
     }
 
-    private void checkIsAvailableName(String name, Integer speID) {
+    private void checkIsAvailableName(String name, Long speID) {
         if (DiseaseService.getInstance().get(name,speID).getDomain() != null) {
             throw new IllegalArgumentException("Name is already taken");
         }
@@ -69,7 +69,7 @@ public class DiseaseValidator {
         }
     }
 
-    public void checkParamsUpdatedisease(HttpServletRequest req) {
+    public void checkParamsUpdateDisease(HttpServletRequest req) {
         var id = req.getParameter("id");
         var name = req.getParameter("name");
         var description = req.getParameter("description");
@@ -79,7 +79,7 @@ public class DiseaseValidator {
         checkIsNullOrEmpty(description);
         checkIsNullOrEmpty(speID);
         checkIsAvailableId(Integer.valueOf(id));
-        checkIsAvailableName(name,Integer.valueOf(speID));
+        checkIsAvailableName(name,Long.parseLong(speID));
         checkIsAvailableSpecialization(Integer.valueOf(speID));
     }
 

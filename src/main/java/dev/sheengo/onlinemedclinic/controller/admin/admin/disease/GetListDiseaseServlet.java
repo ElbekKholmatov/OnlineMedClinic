@@ -13,12 +13,11 @@ import java.io.IOException;
 public class GetListDiseaseServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        request.setAttribute("disease", DiseaseService.getInstance().getAll());
-        request.getRequestDispatcher("/views/adminPages/dr/ListDr.jsp").forward(request, response);
+        request.setAttribute("diseases", DiseaseService.getInstance().getAll());
+        request.getRequestDispatcher("/views/adminPages/issues/ListIssues.jsp").forward(request, response);
     }
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
     }
 }

@@ -2,6 +2,8 @@ package dev.sheengo.onlinemedclinic.services;
 
 import dev.sheengo.onlinemedclinic.dao.DiseaseDAO;
 import dev.sheengo.onlinemedclinic.domains.Disease;
+import dev.sheengo.onlinemedclinic.domains.Specialization;
+import jakarta.servlet.SessionCookieConfig;
 import jakarta.servlet.http.HttpServletRequest;
 
 import java.util.List;
@@ -33,20 +35,33 @@ public class DiseaseService implements Service<Disease> {
     public Response<Disease> save(HttpServletRequest request) {
         String name = request.getParameter("name");
         String description = request.getParameter("description");
-        String specializationId = request.getParameter("specializationId");
-        DiseaseDAO.getInstance().save(Disease.builder()
+        String specializationId = request.getParameter("specialization_id");
+        Specialization specialization = SpecializationService.getInstance().get(Integer.parseInt(specializationId)).getDomain();
+        System.out.println(specialization);
+        Disease disease = Disease.builder()
                 .name(name)
                 .description(description)
-                .specialization(SpecializationService.getInstance().get(Integer.parseInt(specializationId)).getDomain())
-                .build());
-        return Response.<Disease>builder()
-                .returnPage("/admin/Listdiseases.jsp")
                 .build();
+        DiseaseDAO.getInstance().save(
+                disease
+        );
+        Disease domain = DiseaseDAO.getInstance().get(name).getDomain();
+        System.out.println(domain);
+        domain.setSpecialization(specialization);
+        DiseaseDAO.getInstance().update(domain);
+
+        return Response.<Disease>builder().request(request).build();
     }
 
     @Override
     public Response<Disease> update(HttpServletRequest request) {
-        return null;
+        Disease disease = DiseaseDAO.getInstance().get(Integer.parseInt(request.getParameter("id"))).getDomain();
+        disease.setName(request.getParameter("name"));
+        disease.setDescription(request.getParameter("description"));
+        Specialization specialization = SpecializationService.getInstance().get(Integer.parseInt(request.getParameter("specialization_id"))).getDomain();
+        disease.setSpecialization(specialization);
+        DiseaseDAO.getInstance().update(disease);
+        return Response.<Disease>builder().request(request).build();
     }
 
     @Override
@@ -61,7 +76,7 @@ public class DiseaseService implements Service<Disease> {
 
     @Override
     public Response<Disease> get(Integer id) {
-        return null;
+        return DiseaseDAO.getInstance().get(id);
     }
 
     public List<Disease> getAll() {
@@ -69,26 +84,16 @@ public class DiseaseService implements Service<Disease> {
     }
 
     public Response<Disease> get(String name) {
-        Optional<Disease> disease = DiseaseDAO.getInstance().get(name);
-        return disease.map(disease1 -> Response.<Disease>builder()
-                .domain(disease1)
-                .build())
-                .orElseGet(() -> Response.<Disease>builder()
-                        .domain(Disease.builder()
-                                .name("No disease found")
-                                .build())
-                        .build());
+        Disease disease = DiseaseDAO.getInstance().get(name).getDomain();
+        return Response.<Disease>builder()
+                .domain(disease)
+                .build();
     }
 
-    public Response<Disease> get(String name, Integer speID) {
-        Optional<Disease> disease = DiseaseDAO.getInstance().get(name, speID);
-        return disease.map(disease1 -> Response.<Disease>builder()
-                .domain(disease1)
-                .build())
-                .orElseGet(() -> Response.<Disease>builder()
-                        .domain(Disease.builder()
-                                .name("No disease found")
-                                .build())
-                        .build());
+    public Response<Disease> get(String name, Long speID) {
+        Disease disease = DiseaseDAO.getInstance().get(name, speID);
+        return Response.<Disease>builder()
+                .domain(disease)
+                .build();
     }
 }

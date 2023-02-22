@@ -16,11 +16,11 @@ public class UpdateDiseaseFilter implements Filter {
         var res = (HttpServletResponse) response;
         if (req.getMethod().equalsIgnoreCase("post")) {
             try {
-                DiseaseValidator.getInstance().checkParamsUpdatedisease(req);
+                DiseaseValidator.getInstance().checkParamsUpdateDisease(req);
                 chain.doFilter(req, res);
             } catch (Exception e) {
                 req.setAttribute("error", e.getMessage());
-                req.getRequestDispatcher("/views/adminPages/admin/UpdateIssues.jsp").forward(req, res);
+                req.getRequestDispatcher("/views/adminPages/issues/UpdateIssues.jsp").forward(req, res);
             }
         }else{
             chain.doFilter(req, res);

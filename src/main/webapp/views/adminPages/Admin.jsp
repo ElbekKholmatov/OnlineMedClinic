@@ -12,23 +12,19 @@
 </head>
 <body>
 <h1>Admin Page</h1>
-DR
+DOCTORS
 <div>
-    <button onclick="location.href='/admin/dr/getListDr'">Get List Dr</button>
-    <button onclick="location.href='/admin/dr/deleteDr'">Delete Dr</button>
-    <button onclick="location.href='/admin/dr/setDr'">Set Dr</button>
+    <button onclick="location.href='/admin/dr/getList'">Get List Dr</button>
+    <button onclick="location.href='/admin/dr/create'">Set Dr</button>
 </div>
 SPECIALIZATIONS
 <div>
     <button onclick="location.href='/admin/specialization/getList'">Get List S</button>
-    <button onclick="location.href='/admin/specialization/deleteSpecialization'">Delete S</button>
     <button onclick="location.href='/admin/specialization/create'">Create S</button>
 </div>
-diseaseS
+DISEASES
 <div>
-<%--    <button onclick="location.href='/admin/disease/update'">Update disease</button>--%>
     <button onclick="location.href='/admin/disease/getList'">Get disease List</button>
-    <button onclick="location.href='/admin/disease/delete'">Delete disease</button>
     <button onclick="location.href='/admin/disease/create'">Set disease</button>
 </div>
 

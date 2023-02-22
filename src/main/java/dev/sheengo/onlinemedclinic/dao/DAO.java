@@ -6,16 +6,17 @@ import dev.sheengo.onlinemedclinic.domains.Specialization;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityManagerFactory;
 import jakarta.persistence.Persistence;
-import jakarta.persistence.RollbackException;
 
 import java.io.Serializable;
 import java.lang.reflect.ParameterizedType;
 import java.util.List;
 
 public abstract class DAO<T extends Domain, ID extends Serializable> {
+
     private final EntityManagerFactory emf = Persistence.createEntityManagerFactory("persistence_unit");
-    ;
-    private final EntityManager em = emf.createEntityManager();
+
+    private final EntityManager em =  emf.createEntityManager();
+
     private final Class<T> persistenceClass;
 
     protected EntityManager getEntityManager() {
@@ -30,17 +31,29 @@ public abstract class DAO<T extends Domain, ID extends Serializable> {
     }
 
     public T save(T t) {
-        begin();
-        em.persist(t);
-        commit();
-        return t;
+        try {
+            begin();
+            em.persist(t);
+            commit();
+            return t;
+        }catch (Exception e){
+            getEntityManager().getTransaction().rollback();
+            e.printStackTrace();
+            return null;
+        }
     }
 
     public T get(ID id) {
-        begin();
-        T t = em.find(persistenceClass, id);
-        commit();
-        return t;
+        try {
+            begin();
+            T t = em.find(persistenceClass, id);
+            commit();
+            return t;
+        }catch (Exception e){
+            commit();
+            e.printStackTrace();
+            return null;
+        }
     }
 
     public boolean update(T t) {
@@ -56,15 +69,15 @@ public abstract class DAO<T extends Domain, ID extends Serializable> {
         commit();
         return true;
     }
-
     @SuppressWarnings("unchecked")
-    public List<T> getAll() {
+    public List<T> getAll(){
         begin();
         List<T> resultList = em.createQuery("from " + persistenceClass.getSimpleName())
                 .getResultList();
         commit();
         return resultList;
     }
+
 
 
     public boolean deleteById(ID id) {

@@ -15,7 +15,7 @@
 <h1>Specialization List</h1>
 <c:forEach var="specialization" items="${specializations}">
 <input type="hidden" name="id" id="id" value="${specialization.getId()}">
-<input type="text" name="name" id="name" value="${specialization.getName()}">
+    <h2>${specialization.getName()}</h2>
     <div>
         <a href="/admin/specialization/update/${specialization.getId()}">Edit</a>
         <a href="/admin/specialization/delete/${specialization.getId()}">Delete</a>

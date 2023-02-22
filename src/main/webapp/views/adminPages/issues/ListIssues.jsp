@@ -9,14 +9,15 @@
 <%@ taglib prefix="c" uri="jakarta.tags.core" %>
 <html>
 <head>
-    <title>Admin Set</title>
+    <title>Diseases List</title>
 </head>
 <body>
 <div>
     <c:forEach items="${diseases}" var="disease">
         <div>
-            <input type="text" id="disease_id" name="disease_id" value="${disease.getId()}">${disease.getName()}
-            <button type="button" onclick="location.href='/admin/diseases/update/${disease.getId()}'">Update</button>
+            <h3>${disease.getName()}</h3>
+            <button type="button" onclick="location.href='/admin/disease/update/${disease.getId()}'">Update</button>
+            <button type="button" onclick="location.href='/admin/disease/delete/${disease.getId()}'">Delete</button>
         </div>
     </c:forEach>
 </div>

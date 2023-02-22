@@ -1,9 +1,13 @@
 package dev.sheengo.onlinemedclinic.validators;
 
+import dev.sheengo.onlinemedclinic.domains.Specialization;
+import dev.sheengo.onlinemedclinic.services.Response;
 import dev.sheengo.onlinemedclinic.services.SpecializationService;
 import jakarta.servlet.http.HttpServletRequest;
 import lombok.AccessLevel;
 import lombok.NoArgsConstructor;
+
+import java.util.Objects;
 
 @NoArgsConstructor(access = AccessLevel.PRIVATE)
 
@@ -22,8 +26,9 @@ public class SpecializationValidator {
         if (id == null || id.isEmpty()) {
             req.setAttribute("error", "Id is empty");
         }
+        int i = Integer.parseInt(id);
         checkIsNullOrEmpty(req, name, description);
-        if (SpecializationService.getInstance().get(id).getDomain() == null) {
+        if (SpecializationService.getInstance().get(i).getDomain() == null) {
             req.setAttribute("error", "Specialization doesn't exist");
         }
     }
@@ -54,7 +59,8 @@ public class SpecializationValidator {
         var name = req.getParameter("name");
         var description = req.getParameter("description");
         checkIsNullOrEmpty(req, name, description);
-        if (SpecializationService.getInstance().get(name).getDomain() != null) {
+        Response<Specialization> sp = SpecializationService.getInstance().get(name);
+        if (Objects.nonNull(sp) && sp.getDomain() != null) {
             req.setAttribute("error", "Specialization already exists");
         }
     }
