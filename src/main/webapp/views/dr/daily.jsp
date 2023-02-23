@@ -28,14 +28,12 @@
 <hr>
 <div>
     <form action="/dr/daily" method="get">
-        <div>
-            <div class="input-group date" id="datepicker">
-                <label for="date" class="form-label">Sanani tanlang: </label>
-                <input type="date" id="date" name="day" placeholder="02/22/2023"/>
-                <i class="fa fa-calendar"></i>
-            </div>
+        <div class="input-group date" id="datepicker">
+            <label for="date" class="form-label">Sanani tanlang: &nbsp&nbsp </label>
+            <input type="date" id="date" name="day" placeholder="02/22/2023"/>
+            <i class="fa fa-calendar"></i>
+            <button type="submit" href="/dr/daily">Submit</button>
         </div>
-        <button type="submit" href="/dr/daily">Submit</button>
     </form>
 </div>
 
@@ -50,67 +48,56 @@
             <th> №</th>
             <th>Patient first name</th>
             <th>Patient last name</th>
+            <th>Visit Time</th>
             <th>Order Status</th>
-            <th>Comment</th>
+            <th>Change Status</th>
+            <th>&nbspComment&nbsp</th>
         </tr>
-
-        <c:if test="${orders.size() == 0}">
-            <tr>
-                <td colspan="4">No orders found (orders size is 0)</td>
-            </tr>
-        </c:if>
 
 
         <c:if test="${orders.size() != 0}">
             <% int count = 0; %>
             <c:forEach var="order" items="${orders}">
+                <c:if test="${order.getStatus().toString() == 'ORDERED'}">
+                    <c:set var="message" value="Yangi"/>
+                </c:if>
+                <c:if test="${order.getStatus().toString() == 'IN_TREATMENT'}">
+                    <c:set var="message" value="Davolanmoqda"/>
+                </c:if>
+                <c:if test="${order.getStatus().toString() == 'NO_ACTION'}">
+                    <c:set var="message" value="Davolanib bolgan"/>
+                </c:if>
                 <tr>
                     <td><%=++count%>
                     </td>
                     <td>${order.getUser().getFirstName()}</td>
                     <td>${order.getUser().getLastName()}</td>
-                    <td>${order.getStatus().toString()}</td>
+                    <td>${String.format("%02d:%02d", order.getVisitTime().getHour(), order.getVisitTime().getMinute())}</td>
+                    <td>${message}
+                    </td>
                     <td>
-                            <%--                        <form action="/dr/daily" method="post">--%>
-                            <%--                            <input type="hidden" name="orderId" value="${order.getId()}">--%>
-                            <%--                            <input type="button" name="action" value="changeStatus">--%>
-                            <%--                            <input type="hidden" name="status" value="COMMENTED">--%>
-                            <%--                            <input type="submit" value="comment">--%>
-                            <%--                        </form>--%>
-                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
-                                data-bs-target="#exampleModal" data-bs-whatever="${order.getUser().getFirstName()}">
-                            Comment
-                        </button>
-
-                        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
-                             aria-hidden="true">
-                            <div class="modal-dialog">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h1 class="modal-title fs-5" id="exampleModalLabel">Comment on treatment</h1>
-                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                                aria-label="Close"></button>
-                                    </div>
-                                    <div class="modal-body">
-                                        <form>
-                                            <div class="mb-3">
-                                                <label for="recipient-name" class="col-form-label">Recipient:</label>
-                                                <input type="text" class="form-control" id="recipient-name">
-                                            </div>
-                                            <div class="mb-3">
-                                                <label for="message-text" class="col-form-label">Message:</label>
-                                                <textarea class="form-control" id="message-text"></textarea>
-                                            </div>
-                                        </form>
-                                    </div>
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close
-                                        </button>
-                                        <button type="button" class="btn btn-primary">Ok</button>
-                                    </div>
-                                </div>
+                        <form method="post" action="/dr/daily">
+                            <div class="group">
+                                <select class="form-select" style="width: 150px;"
+                                        name="change_status">
+                                    <option selected>Tanlang</option>
+                                    <option value="ORDERED">Yangi</option>
+                                    <option value="IN_TREATMENT">Davolanmoqda</option>
+                                    <option value="NO_ACTION">Davolanib bolgan</option>
+                                </select>
+                                <button type="submit" class="btn btn-primary">Change</button>
+                                <input type="hidden" name="changedOrderId" value="${order.getId()}">
                             </div>
-                        </div>
+                        </form>
+                    </td>
+                    <td>
+                        <form method="post" action="/dr/daily">
+                            <div class="group">
+                                <input type="text" name="comment" placeholder="Comment">
+                                <button type="submit" class="btn btn-primary">Comment</button>
+                                <input type="hidden" name="commentedOrderId" value="${order.getId()}">
+                            </div>
+                        </form>
                     </td>
                 </tr>
 
@@ -119,7 +106,14 @@
     </table>
 </div>
 
-OverAll Orders count is ${orders.size()}
+<c:if test="${orders.size() == 0}">
+
+    <div colspan="4" style="text-align: center; color: darkred; font-size: 25px"><strong>Bu sanada sizga yozilgan
+        bemorlar
+        hozircha mavjud
+        emas !!!</strong></div>
+
+</c:if>
 
 <script src="/views/dr/date.js"></script>
 <script src="/resources/js/jquery-3.3.1.min.js"></script>
