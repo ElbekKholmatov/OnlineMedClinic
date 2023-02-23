@@ -7,7 +7,6 @@ import jakarta.persistence.EntityManager;
 import lombok.AccessLevel;
 import lombok.NoArgsConstructor;
 
-import java.time.LocalDateTime;
 import java.util.List;
 
 @NoArgsConstructor(access = AccessLevel.PRIVATE)
@@ -31,7 +30,6 @@ public class OrderDAO extends DAO<Order, Integer> {
 
 //        SELECT * FROM orders WHERE DATE(visittime) = '2023-02-18';  CURRENT_DATE
         String s = "select o from Order o where o.doctor.user.id = %s and DATE(o.visitTime) = '%s'".formatted(id, date);
-
         List<Order> resultList = entityManager.createQuery(s, Order.class)
 //                .setParameter("id", id)
 //                .setParameter("date", date)
@@ -107,5 +105,18 @@ public class OrderDAO extends DAO<Order, Integer> {
     public Order findOrderByDoctorUserId(Integer id) {
         EntityManager entityManager = getEntityManager();
         return entityManager.createQuery("select o from Order o where o.doctor.user.id = :id", Order.class).setParameter("id", id).getSingleResult();
+    }
+
+    public void updateOrderStatus(String changeStatus, Integer id) {
+
+        OrderDAO orderDAO = OrderDAO.getInstance();
+        Order order = orderDAO.get(id);
+        switch (changeStatus) {
+            case "ORDERED" -> order.setStatus(Order.Status.ORDERED);
+            case "IN_TREATMENT" -> order.setStatus(Order.Status.IN_TREATMENT);
+            case "NO_ACTION" -> order.setStatus(Order.Status.NO_ACTION);
+
+        }
+        orderDAO.update(order);
     }
 }
