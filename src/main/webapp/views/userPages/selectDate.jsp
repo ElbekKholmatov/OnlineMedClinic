@@ -4,6 +4,12 @@
 <head>
     <title>Title</title>
     <jsp:include page="/fragments/css.jsp"/>
+    <style>
+        body{
+            background: linear-gradient(90deg, #49dfdd, #479fbe);
+            padding: 50px;
+        }
+    </style>
 </head>
 <body>
 <form method="post" action="/user/order/submit">
@@ -36,4 +42,3 @@
 </form>
 </body>
 </html>
-

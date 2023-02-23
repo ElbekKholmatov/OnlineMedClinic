@@ -11,14 +11,41 @@
 <html>
 <head>
     <title>Create Disease</title>
+    <jsp:include page="/fragments/css.jsp"/>
+    <style>
+        body{
+            background: linear-gradient(90deg, #49dfdd, #479fbe);
+            padding: 50px;
+        }
+        form{
+            left: 70px;
+        }
+        div{
+            margin: 25px;
+        }
+        input, select{
+            border-radius: 10px;
+            border: 1px solid #0a53be;
+            margin: 10px;
+            padding: 10px;
+        }
+        .bttn{
+            left: 10px;
+        }
+        label{
+            font-family: "DejaVu Sans Light";
+        }
+    </style>
 </head>
 <body>
 <form action="/admin/disease/create" class="form-control" method="post">
     <div>
-        name: <input type="text" name="name" placeholder="name"/>
+        <label for="name">Name: </label>
+        <input type="text" id="name" name="name" placeholder="name"/>
     </div>
     <div>
-        description: <input type="text" name="description" placeholder="description"/>
+        <label for="description">Description: </label>
+        <input type="text" id="description" name="description" placeholder="description"/>
     </div>
     <div>
         <select class="form-select"   aria-label="select example" style="margin-top: 30px" id="specialization_id"
@@ -29,8 +56,8 @@
         </c:forEach>
     </select>
     </div>
-    <div>
-        <button type="submit">submit</button>
+    <div class="bttn">
+        <button type="submit" class="btn btn-primary">submit</button>
     </div>
 </form>
 </body>

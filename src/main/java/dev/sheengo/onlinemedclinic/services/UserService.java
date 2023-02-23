@@ -87,7 +87,30 @@ public class UserService implements Service<User> {
 
     @Override
     public Response<User> update(HttpServletRequest request) {
-        return null;
+        String firstName = request.getParameter("firstName");
+        String lastName = request.getParameter("lastName");
+        String phone = request.getParameter("phone");
+        String username = request.getParameter("username");
+        String address = request.getParameter("address");
+        String passport = request.getParameter("passport");
+        Integer id = Integer.parseInt(request.getSession().getAttribute("id").toString());
+        User get = UserDAO.getInstance().get(id);
+        User user = User.builder()
+                .id(id)
+                .address(address)
+                .firstName(firstName)
+                .lastName(lastName)
+                .username(username)
+                .passport(passport)
+                .phone(phone)
+                .build();
+        UserDAO.getInstance().update(
+                user
+        );
+
+        request.setAttribute("username", username);
+        request.setAttribute("password", get.getPassword());
+        return Response.<User>builder().request(request).build();
     }
 
     @Override
@@ -197,4 +220,15 @@ public class UserService implements Service<User> {
                 .returnPage("/admin/main")
                 .build();
     }
+
+    public boolean isCorrectPass(String userId, String password) {
+        User user = null;
+        try {
+            user = UserDAO.getInstance().get(Integer.parseInt(userId));
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return user.getPassword().equals(password);
+    }
+
 }

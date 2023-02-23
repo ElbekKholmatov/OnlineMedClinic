@@ -15,7 +15,19 @@ public class UserDAO extends DAO<User, Integer> {
 
     @Override
     public boolean update(User user) {
-        return false;
+        EntityManager entityManager = getEntityManager();
+        begin();
+        entityManager.createQuery("update User u set u.firstName = :firstName, u.lastName = :lastName,u.phone =: phone, u.username =: username,u.address =: address, u.passport =: passport where u.id = :id")
+                .setParameter("firstName", user.getFirstName())
+                .setParameter("lastName", user.getLastName())
+                .setParameter("phone", user.getPhone())
+                .setParameter("username", user.getUsername())
+                .setParameter("address", user.getAddress())
+                .setParameter("passport", user.getPassword())
+                .setParameter("id", user.getId())
+                .executeUpdate();
+        commit();
+        return true;
     }
 
     public User get(String username) {

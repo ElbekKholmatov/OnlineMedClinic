@@ -14,7 +14,6 @@
     <jsp:include page="/fragments/js.jsp" />
 </head>
 <body>
-
 <header class="w-75 mx-auto mt-4 mb-0">
     <div class="logo">
         <a href="/home"><img src="" alt="None"></a>
@@ -36,7 +35,7 @@
                     <i class="bi bi-person" data-bs-toggle="dropdown"
                        aria-expanded="false"></i>
                     <div class="dropdown-menu">
-                        <span><a class="dropdown-item" href="#">${firstName}</a></span>
+                        <span><a class="dropdown-item" href="/user/profile">${firstName}</a></span>
                         <span><a class="dropdown-item" href="#">Something else here</a></span>
                         <span>
                     <hr class="dropdown-divider">
