@@ -11,6 +11,20 @@
     <title>Title</title>
     <jsp:include page="/fragments/css.jsp" />
     <jsp:include page="/fragments/js.jsp" />
+  <title>Title</title>
+  <jsp:include page="/fragments/css.jsp"/>
+  <style>
+    body{
+      background: linear-gradient(90deg, #49dfdd, #479fbe);
+      padding: 50px;
+    }
+    form{
+      padding: 20px;
+      border: 1px solid whitesmoke;
+      border-radius: 8px;
+      box-shadow: 7px 7px 7px 7px #9eeaf9;
+    }
+  </style>
 </head>
 <body>
 

@@ -58,7 +58,10 @@
         font-size: 18px;
         z-index: 9;
     }
-
+    a.active {
+        background-color: #e74c3c;
+        pointer-events: none;
+    }
     li.slider {
         width: 25%;
         height: 100%;
@@ -92,16 +95,16 @@
 </head>
 <body>
 <div>
-    <%--    <button onclick="location.href='#'">Logout</button>--%>
-    <%--    <button onclick="location.href='/superAdmin/setAdmin'">Set Admin</button>--%>
-    <%--    <button onclick="location.href='/superAdmin/deleteAdmin'">Delete Admin</button>--%>
-    <%--    <button onclick="location.href='/superAdmin/getListDR'">List of Admins</button>--%>
+<%--    <button onclick="location.href='#'">Logout</button>--%>
+<%--    <button onclick="location.href='/superAdmin/setAdmin'">Set Admin</button>--%>
+<%--    <button onclick="location.href='/superAdmin/deleteAdmin'">Delete Admin</button>--%>
+<%--    <button onclick="location.href='/superAdmin/getListDR'">List of Admins</button>--%>
     <h1>Responsive Menu Effect
         hover on menu items!
     </h1>
 
     <ul class="menu">
-        <li><a href="/superAdmin/setAdmin">Set Admin</a></li>
+        <li><a href="/superAdmin/setAdmin" class="active">Set Admin</a></li>
         <li><a href="/superAdmin/deleteAdmin">Delete Admin</a></li>
         <li><a href="/superAdmin/getListDR">List of Admins</a></li>
         <li><a href="#">Logout</a></li>

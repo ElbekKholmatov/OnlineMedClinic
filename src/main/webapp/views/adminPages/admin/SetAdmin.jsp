@@ -8,17 +8,82 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Admin Set</title>
+    <title>Admin Set</title> <style>
+    body{
+        background: linear-gradient(90deg, #49dfdd, #479fbe);
+        padding: 50px;
+    }
+
+    .login-page {
+        width: 360px;
+        padding: 15px;
+        margin: auto;
+        background-color: transparent;
+        border-radius: 10px;
+        box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .form {
+        position: relative;
+        z-index: 1;
+        max-width: 360px;
+        margin: 20px auto 70px;
+        padding: 50px;
+        text-align: center;
+        background-color: rgba(255, 255, 255, 0.7);
+        border-radius: 20px;
+    }
+
+    .form input[type="text"],
+    .form input[type="password"] {
+        font-family: 'Roboto', sans-serif;
+        outline: none;
+        width: 100%;
+        border: 0;
+        margin: 0 0 15px;
+        padding: 15px;
+        box-sizing: border-box;
+        font-size: 14px;
+        border-radius: 20px;
+        background-color: rgba(255, 255, 255, 0.7);
+    }
+
+    .form button {
+        font-family: 'Roboto', sans-serif;
+        text-transform: uppercase;
+        outline: none;
+        background-color: #2196F3;
+        width: 100%;
+        border: 0;
+        padding: 15px;
+        color: #FFFFFF;
+        font-size: 14px;
+        -webkit-transition: all 0.3s ease;
+        transition: all 0.3s ease;
+        cursor: pointer;
+        border-radius: 20px;
+    }
+
+    .form button:hover,
+    .form button:active,
+    .form button:focus {
+        background-color: #1976D2;
+    }
+
+    .form h2 {
+        color: #333333;
+        font-size: 28px;
+        margin: 0 0 30px;
+    }
+</style>
+
 </head>
 <body>
-<div>
-    <form action="/superAdmin/setAdmin" method="post">
-        <h3>Set Admin</h3>
-        <div class="form-group">
-            <label for="set_username">Username</label>
-            <input type="text" class="form-control" id="set_username" name="set_username" placeholder="Enter username">
-        </div>
-        <button type="submit" class="btn btn-primary">set admin</button>
+<div class="login-page">
+    <form action="/superAdmin/setAdmin" method="post" class="form">
+        <h2>Set Admin</h2>
+            <input type="text" id="set_username" name="set_username" placeholder="Enter username">
+        <button type="submit">set admin</button>
     </form>
 </div>
 </body>

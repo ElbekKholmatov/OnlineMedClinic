@@ -3,11 +3,9 @@ package dev.sheengo.onlinemedclinic.services;
 import dev.sheengo.onlinemedclinic.dao.DiseaseDAO;
 import dev.sheengo.onlinemedclinic.domains.Disease;
 import dev.sheengo.onlinemedclinic.domains.Specialization;
-import jakarta.servlet.SessionCookieConfig;
 import jakarta.servlet.http.HttpServletRequest;
 
 import java.util.List;
-import java.util.Optional;
 
 public class DiseaseService implements Service<Disease> {
     private static final ThreadLocal<DiseaseService> instance = ThreadLocal.withInitial(DiseaseService::new);

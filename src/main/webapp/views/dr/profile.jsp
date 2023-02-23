@@ -11,7 +11,7 @@
 <div style="text-align: center"> Doctor Profile Page</div>
 
 <div>
-    <button class="btn btn-danger"><a href="/dr/main">Back</a></button>
+    <button class="btn btn-danger"><a href="/dr/main" style="text-decoration: none; color: white;">Back</a></button>
 </div>
 
 <c:if test="${doctor == null}">
@@ -29,12 +29,15 @@
         <h2>Doctor info: ${doctor.getInfo()}</h2>
         <h2>Doctor Phone: ${user.getPhone()}</h2>
         <h2>Doctor Address: ${user.getAddress()}</h2>
-
-            ${user.getPictureId().getFilePath()}
     </div>
 
     <div>
-        <button class="dropdown-item bg-warning text-white""><a href="/dr/edit">Edit</a></button>
+<%--        <button class="btn btn-warning"><a href="/dr/edit">Edit</a></button>--%>
+        <button class="btn btn-warning"><a href="/dr/main" style="text-decoration: none; color: white;">Edit</a></button>
+    </div>
+
+    <div>
+        <button class="btn btn-warning"><a href="/dr/edit">Edit</a></button>
     </div>
 </c:if>
 

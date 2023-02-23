@@ -3,15 +3,10 @@ package dev.sheengo.onlinemedclinic.services;
 import dev.sheengo.onlinemedclinic.dao.DoctorDAO;
 import dev.sheengo.onlinemedclinic.dao.OrderDAO;
 import dev.sheengo.onlinemedclinic.dao.SpecializationDAO;
-import dev.sheengo.onlinemedclinic.dao.UserDAO;
 import dev.sheengo.onlinemedclinic.domains.Doctor;
 import dev.sheengo.onlinemedclinic.domains.Specialization;
 import dev.sheengo.onlinemedclinic.domains.User;
-import jakarta.persistence.EntityManager;
-import jakarta.servlet.AsyncContext;
-import jakarta.servlet.SessionCookieConfig;
 import jakarta.servlet.http.HttpServletRequest;
-import lombok.NonNull;
 
 public class DoctorService implements Service<Doctor> {
     @Override

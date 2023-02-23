@@ -147,19 +147,52 @@ public class OrderService implements Service<Order> {
     public Response<Order> getDailyOrders(HttpServletRequest request) {
         Integer id = Integer.parseInt(request.getSession().getAttribute("id").toString());
 
+        String change_status = request.getParameter("change_status");
         String date = request.getParameter("day");
-        System.out.println("day => " + date);
+        String changedOrderId = request.getParameter("changedOrderId");
+        String commentedOrderId = request.getParameter("commentedOrderId");
+        String comment = request.getParameter("comment");
 
-        if (date == null || date.isBlank()) {
-            date = LocalDate.now().toString();
-            System.out.println("day was null or blank but now it is => " + date);
+        System.out.println("commentedOrderId = " + commentedOrderId);
+        System.out.println("comment = " + comment);
+
+//        if (commentedOrderId != null && comment != null) {
+//            OrderDAO orderDAO = OrderDAO.getInstance();
+//            orderDAO.updateOrderComment(comment, Integer.parseInt(commentedOrderId));
+//        }
+
+
+        if (changedOrderId == null) {
+            changedOrderId = "Tanlang";
         }
 
+        Object attribute = request.getSession().getAttribute("day");
+
+
+        if (date == null || date.isBlank()) {
+            if (attribute != null) {
+                String day = attribute.toString();
+                date = day;
+            } else
+                date = LocalDate.now().toString();
+        }
+
+
+        if (change_status == null || change_status.isBlank()) {
+            change_status = "Tanlang";
+        }
+        if (!change_status.equals("Tanlang") && change_status != null && changedOrderId != "") {
+            OrderDAO orderDAO = OrderDAO.getInstance();
+            orderDAO.updateOrderStatus(change_status, Integer.parseInt(changedOrderId));
+        }
         OrderDAO orderDAO = OrderDAO.getInstance();
 
+
         List<Order> orders = orderDAO.findOrderByDateAndDoctorId(date, id);
+        orders.sort((o1, o2) -> o1.getVisitTime().compareTo(o2.getVisitTime()));
         List<User> users = getUsers(orders);
 
+        request.getSession().setAttribute("day", date);
         request.setAttribute("day", date);
         request.setAttribute("orders", orders);
         request.setAttribute("users", users);
