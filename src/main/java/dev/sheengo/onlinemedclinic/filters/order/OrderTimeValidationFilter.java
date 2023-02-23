@@ -29,7 +29,10 @@ public class OrderTimeValidationFilter implements Filter {
 
             String reqHour = request.getParameter("hour");
 
-            LocalDateTime now = LocalDateTime.now().plusDays(1);
+            int day = Integer.parseInt(req.getParameter("day"));
+            int month = Integer.parseInt(req.getParameter("month"));
+
+            LocalDateTime now = LocalDateTime.of(2023, month, day, 0, 0);
 
             Order order = ThreadSafeCollections.orderMap.get(Integer.parseInt(
                     req.getSession().getAttribute("id").toString()));
@@ -53,7 +56,9 @@ public class OrderTimeValidationFilter implements Filter {
                 req.setAttribute("exception", e.getMessage());
                 req.setAttribute("now", now);
                 req.setAttribute("hours", hours);
-                req.getRequestDispatcher("/views/selectDate.jsp").forward(req, res);
+                req.setAttribute("hasNext", req.getParameter("next"));
+                req.setAttribute("hasBack", req.getParameter("back"));
+                req.getRequestDispatcher("/views/userPages/selectDate.jsp").forward(req, res);
             }
         } else
             chain.doFilter(req, res);

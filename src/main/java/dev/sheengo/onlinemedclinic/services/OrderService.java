@@ -33,6 +33,7 @@ public class OrderService implements Service<Order> {
         Order order = ThreadSafeCollections.orderMap.get(
                 Integer.parseInt(request.getSession().getAttribute("id").toString())
         );
+
         order.setDoctor(doctor);
         order.setDescription(description);
 
@@ -49,6 +50,7 @@ public class OrderService implements Service<Order> {
         request.setAttribute("hours", hours);
         request.setAttribute("now", now);
         request.setAttribute("hasNext", true);
+        request.getSession().setAttribute("day", 1);
 
         return Response.<Order>builder().request(request).build();
     }
@@ -72,9 +74,10 @@ public class OrderService implements Service<Order> {
     @Override
     public Response<Order> save(HttpServletRequest request) {
         int day = Integer.parseInt(request.getParameter("day"));
+        int month = Integer.parseInt(request.getParameter("month"));
         int hour = Integer.parseInt(request.getParameter("hour"));
 
-        LocalDateTime time = LocalDateTime.of(2023, 2, day, hour, 0);
+        LocalDateTime time = LocalDateTime.of(2023, month, day, hour, 0);
 
         Order order = ThreadSafeCollections.orderMap.get(
                 Integer.parseInt(request.getSession().getAttribute("id").toString())
@@ -84,6 +87,12 @@ public class OrderService implements Service<Order> {
         order.setStatus(Order.Status.ORDERED);
 
         OrderDAO.getInstance().save(order);
+
+        request.setAttribute("specialization", order.getDoctor().getSpecialization().getName());
+        User doctor = order.getDoctor().getUser();
+        request.setAttribute("doctor", doctor.getFirstName()+" "+doctor.getLastName());
+        request.setAttribute("info", order.getDescription());
+        request.setAttribute("time", order.getVisitTime());
 
         return Response.<Order>builder().request(request).build();
     }
@@ -165,5 +174,13 @@ public class OrderService implements Service<Order> {
             users.add(order.getUser());
         }
         return users;
+    }
+
+    public void showOrdersByUser(HttpServletRequest request) {
+
+        int id = Integer.parseInt(request.getSession().getAttribute("id").toString());
+
+        List<Order> orders = OrderDAO.getInstance().findOrderByUserId(id);
+        request.setAttribute("orders", orders);
     }
 }

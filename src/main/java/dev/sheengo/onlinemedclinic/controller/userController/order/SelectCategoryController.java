@@ -21,14 +21,15 @@ public class SelectCategoryController extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         List<Specialization> all = SpecializationService.getInstance().getAll();
-//        System.out.println(all.get(0).getName());
         req.setAttribute("categories", all);
+        req.setAttribute("firstName", req.getSession().getAttribute("firstname"));
         req.getRequestDispatcher("/views/selectCategory.jsp").forward(req, resp);
     }
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         OrderService.getInstance().selectCategory(req);
+        req.setAttribute("firstName", req.getSession().getAttribute("firstname"));
         req.getRequestDispatcher("/views/selectDoctor.jsp").forward(req, resp);
     }
 }

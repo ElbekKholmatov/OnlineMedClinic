@@ -1,19 +1,19 @@
 <%--
   Created by IntelliJ IDEA.
   User: asror
-  Date: 21/02/23
-  Time: 18:38
+  Date: 23/02/23
+  Time: 11:24
   To change this template use File | Settings | File Templates.
 --%>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="jakarta.tags.core" %>
 <html>
 <head>
     <title>Title</title>
-    <jsp:include page="/fragments/css.jsp" />
-    <jsp:include page="/fragments/js.jsp" />
+    <jsp:include page="/fragments/css.jsp"/>
+    <jsp:include page="/fragments/js.jsp"/>
 </head>
 <body>
-
 <header class="w-75 mx-auto mt-4 mb-0">
     <div class="logo">
         <a href="/home"><img src="" alt="None"></a>
@@ -60,32 +60,26 @@
 </header>
 
 
-<form method="post" action="/user/order/selectDoctor">
-    <div class="w-75 mx-auto">
-        <select class="form-select" aria-label="Default select example" name="doctor">
-            <option selected disabled>Select doctor</option>
-            <c:forEach items="${doctors}" var="doctor">
-                <option value="${doctor.getUser().getId()}">
-                        ${doctor.getUser().getId()}
-                        ${doctor.getUser().getFirstName()}
-                        ${doctor.getUser().getLastName()}
-                </option>
-            </c:forEach>
-        </select>
+<table class="w-75 mt-3 mx-auto table table-dark table-striped">
+    <thead>
+    <tr>
+        <th scope="col-2">Specialization</th>
+        <th scope="col-2">Doctor fullname</th>
+        <th scope="col-3">Info</th>
+        <th scope="col-2">Visit time</th>
+    </tr>
+    </thead>
+    <tbody>
+    <c:forEach items="${orders}" var="order">
+        <tr>
+            <td class="col-2">${order.getDoctor().getSpecialization().getName()}</td>
+            <td class="col-2">${order.getDoctor().getUser().getFirstName()} ${order.getDoctor().getUser().getLastName()}</td>
+            <td class="col-4">${order.getDescription()}</td>
+            <td class="col-2">${order.getVisitTime().getHour()}:00 ${order.getVisitTime().getDayOfMonth()}.${order.getVisitTime().getMonth().getValue()}.${order.getVisitTime().getYear()}</td>
+        </tr>
+    </c:forEach>
+    </tbody>
+</table>
 
-        <div class="form-floating">
-        <textarea class="form-control" name="info" placeholder="Kasallik haqida ma'lumot..."
-                  id="floatingTextarea2" style="height: 110px"></textarea>
-            <label for="floatingTextarea2">Info</label>
-        </div>
-
-        <a class="mt-5 btn btn-primary" href="/user/order">
-            Back
-        </a>
-        <button class="mt-5 btn btn-primary" type="submit">
-            Next
-        </button>
-    </div>
-</form>
 </body>
 </html>

@@ -34,7 +34,7 @@
     </div>
 
     <div>
-        <button class="btn btn-warning"><a href="/dr/edit">Edit</a></button>
+        <button class="dropdown-item bg-warning text-white""><a href="/dr/edit">Edit</a></button>
     </div>
 </c:if>
 

@@ -18,12 +18,15 @@ public class OrderDAO extends DAO<Order, Integer> {
     public List<Order> findOrderByUserId(Integer id) {
 
         EntityManager entityManager = getEntityManager();
-        return entityManager.createQuery("select o from Order o where o.user.id = :id", Order.class).setParameter("id", id).getResultList();
+
+        String query = "select o from Order o where o.user.id = :id order by o.visitTime desc";
+
+        return entityManager.createQuery(query, Order.class).setParameter("id", id).getResultList();
     }
 
     public List<Order> findOrderByDoctorId(Integer id) {
         EntityManager entityManager = getEntityManager();
-        return entityManager.createQuery("select o from Order o where o.doctor.user.id = :id", Order.class).setParameter("id", id).getResultList();
+        return entityManager.createQuery("select o from Order o where o.doctor.user.id = :id order by o.visitTime desc", Order.class).setParameter("id", id).getResultList();
     }
 
     public List<Order> findOrderByDateAndDoctorId(String date, Integer id) {

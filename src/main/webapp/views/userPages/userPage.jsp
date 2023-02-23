@@ -37,12 +37,11 @@
                        aria-expanded="false"></i>
                     <div class="dropdown-menu">
                         <span><a class="dropdown-item" href="#">${firstName}</a></span>
-                        <span><a class="dropdown-item" href="#">Something else here</a></span>
+                        <span><a class="dropdown-item" href="/user/order/show">Appointments</a></span>
                         <span>
                     <hr class="dropdown-divider">
                 </span>
-                        <span><a data-bs-toggle="modal" data-bs-target="#staticBackdrop"
-                                 class="dropdown-item bg-warning text-white" href="#">
+                        <span><a href="/logOut" class="dropdown-item bg-warning text-white">
                             Log out
                         </a></span>
                     </div>

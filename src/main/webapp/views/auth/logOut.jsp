@@ -1,11 +1,13 @@
 <%--
   Created by IntelliJ IDEA.
   User: asror
-  Date: 21/02/23
-  Time: 18:38
+  Date: 23/02/23
+  Time: 11:05
   To change this template use File | Settings | File Templates.
 --%>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="jakarta.tags.core" %>
+
 <html>
 <head>
     <title>Title</title>
@@ -59,32 +61,14 @@
     </div>
 </header>
 
+<div class="w-75 mx-auto alert alert-danger" role="alert">
+    Are You Okay ${firstName}?
+</div>
 
-<form method="post" action="/user/order/selectDoctor">
-    <div class="w-75 mx-auto">
-        <select class="form-select" aria-label="Default select example" name="doctor">
-            <option selected disabled>Select doctor</option>
-            <c:forEach items="${doctors}" var="doctor">
-                <option value="${doctor.getUser().getId()}">
-                        ${doctor.getUser().getId()}
-                        ${doctor.getUser().getFirstName()}
-                        ${doctor.getUser().getLastName()}
-                </option>
-            </c:forEach>
-        </select>
-
-        <div class="form-floating">
-        <textarea class="form-control" name="info" placeholder="Kasallik haqida ma'lumot..."
-                  id="floatingTextarea2" style="height: 110px"></textarea>
-            <label for="floatingTextarea2">Info</label>
-        </div>
-
-        <a class="mt-5 btn btn-primary" href="/user/order">
-            Back
-        </a>
-        <button class="mt-5 btn btn-primary" type="submit">
-            Next
-        </button>
+<form method="post">
+    <div class="w-75 mx-auto mt-5">
+        <a href="/home" class="btn btn-primary">Back</a>
+        <button type="submit" class="btn btn-danger">LogOut</button>
     </div>
 </form>
 </body>
