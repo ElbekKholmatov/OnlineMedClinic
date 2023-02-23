@@ -23,6 +23,7 @@ public class CategoryValidationFilter implements Filter {
             if (Objects.isNull(category)) {
                 req.setAttribute("categories", SpecializationService.getInstance().getAll());
                 req.setAttribute("exception", "Category is invalid");
+                req.setAttribute("firstName", req.getSession().getAttribute("firstname"));
                 req.getRequestDispatcher("/views/selectCategory.jsp").forward(req, res);
             } else
                 chain.doFilter(req, res);

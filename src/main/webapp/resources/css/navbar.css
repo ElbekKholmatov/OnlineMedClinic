@@ -30,6 +30,9 @@ header nav ul{
 header nav ul li:hover{
     color: #1037d5;
 }
+header nav ul a:hover{
+    color: #1037d5;
+}
 header ul li{
     list-style: none;
     cursor: pointer;

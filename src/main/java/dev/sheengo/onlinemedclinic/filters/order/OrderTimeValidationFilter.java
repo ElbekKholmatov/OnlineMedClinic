@@ -54,6 +54,7 @@ public class OrderTimeValidationFilter implements Filter {
                 chain.doFilter(req, res);
             } catch (OrderException e) {
                 req.setAttribute("exception", e.getMessage());
+                req.setAttribute("firstName", req.getSession().getAttribute("firstname"));
                 req.setAttribute("now", now);
                 req.setAttribute("hours", hours);
                 req.setAttribute("hasNext", req.getParameter("next"));

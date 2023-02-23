@@ -10,7 +10,8 @@
 
 <header class="w-75 mx-auto mt-4 mb-0">
     <div class="logo">
-        <a href="/home"><img src="" alt="None"></a>
+        <a href="/home"><img src="/resources/images/images.png"
+                             style="height: 74px; width: 154px; border-radius: 15%; margin-top: 12px" alt="img"></a>
     </div>
 
     <nav>
