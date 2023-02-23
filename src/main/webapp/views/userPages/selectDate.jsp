@@ -5,7 +5,6 @@
     <title>Title</title>
     <jsp:include page="/fragments/css.jsp" />
     <jsp:include page="/fragments/js.jsp" />
-    <jsp:include page="/fragments/css.jsp"/>
     <style>
         body{
             background: linear-gradient(90deg, #49dfdd, #479fbe);

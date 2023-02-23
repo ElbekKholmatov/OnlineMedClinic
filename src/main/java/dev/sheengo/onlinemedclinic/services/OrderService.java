@@ -26,7 +26,10 @@ public class OrderService implements Service<Order> {
 
     @Override
     public Response<Order> service(HttpServletRequest request) {
-        Integer doctorId = Integer.parseInt(request.getParameter("doctor"));
+        String doctor1 = request.getParameter("doctor");
+        System.out.println(doctor1);
+
+        Integer doctorId = Integer.parseInt(doctor1);
         String description = request.getParameter("info");
 
         Doctor doctor = DoctorDAO.getInstance().findDoctorByUserId(doctorId);

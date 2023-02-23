@@ -37,8 +37,8 @@
                     <i class="bi bi-person" data-bs-toggle="dropdown"
                        aria-expanded="false"></i>
                     <div class="dropdown-menu">
-                        <span><a class="dropdown-item" href="#">${firstName}</a></span>
-                        <span><a class="dropdown-item" href="#">Something else here</a></span>
+                        <span><a class="dropdown-item" href="/user/profile">${firstName}</a></span>
+                        <span><a class="dropdown-item" href="/user/order/show">Appointments</a></span>
                         <span>
                     <hr class="dropdown-divider">
                 </span>

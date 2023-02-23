@@ -11,8 +11,6 @@
     <title>Title</title>
     <jsp:include page="/fragments/css.jsp" />
     <jsp:include page="/fragments/js.jsp" />
-  <title>Title</title>
-  <jsp:include page="/fragments/css.jsp"/>
   <style>
     body{
       background: linear-gradient(90deg, #49dfdd, #479fbe);
@@ -81,7 +79,6 @@
             <option selected disabled>Select doctor</option>
             <c:forEach items="${doctors}" var="doctor">
                 <option value="${doctor.getUser().getId()}">
-                        ${doctor.getUser().getId()}
                         ${doctor.getUser().getFirstName()}
                         ${doctor.getUser().getLastName()}
                 </option>
