@@ -47,13 +47,18 @@ public class UserDAO extends DAO<User, Integer> {
 
 
     public boolean updateSetAdmin(User user) {
-        EntityManager entityManager = getEntityManager();
-        begin();
-        entityManager.createQuery("update User u set u.role = :role where u.username = :username")
-                .setParameter("role", user.getRole())
-                .setParameter("username", user.getUsername())
-                .executeUpdate();
-        commit();
+        try {
+            EntityManager entityManager = getEntityManager();
+            begin();
+            entityManager.createQuery("update User u set u.role = :role where u.username = :username")
+                    .setParameter("role", user.getRole())
+                    .setParameter("username", user.getUsername())
+                    .executeUpdate();
+            commit();
+        }catch (Exception e){
+            commit();
+            e.printStackTrace();
+        }
         return true;
     }
 

@@ -1,42 +1,19 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: asror
-  Date: 22/02/23
-  Time: 15:41
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
+<style>
+    body {
+        background-image: url('/resources/images/blur-hospital.jpg');
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: 100% 100%;
+    }
+</style>
 <head>
     <title>Title</title>
     <jsp:include page="/fragments/css.jsp" />
     <jsp:include page="/fragments/js.jsp" />
-    <style>
-        body{
-            background: linear-gradient(90deg, #49dfdd, #479fbe);
-            padding: 50px;
-        }
-        a{
-            margin: 15px 78px;
-            padding: 14px 20px;
-            width: 410px;
-            background-color: rgb(104, 104, 255);
-            color: white;
-            border: 1px solid #3498db;
-            border-radius: 3px;
-            cursor: pointer;
-            text-decoration: none;
-        }
-    </style>
 </head>
 <body>
-<%--
-  Created by IntelliJ IDEA.
-  User: asror
-  Date: 22/02/23
-  Time: 16:30
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="jakarta.tags.core" %>
 <html>
@@ -49,13 +26,21 @@
 
 <header class="w-75 mx-auto mt-4 mb-0">
     <div class="logo">
-        <a href="/home"><img src="/resources/images/images.png"
-                             style="height: 74px; width: 154px; border-radius: 15%; margin-top: 12px" alt="img"></a>
+<%--        <a href="/home"><img src="/resources/images/ShengoLogo.jpg"--%>
+<%--                             style="height: 100px; width: 100px; border-radius: 15%; margin-top: 12px" alt="img"></a>--%>
+    <button onclick="location.href='/home'" data-text="SHEENGO" class="button">
+        <span class="actual-text">&nbsp;SHEENGO&nbsp;</span>
+        <span class="hover-text" aria-hidden="true">&nbsp;SHEENGO&nbsp;</span>
+    </button>
     </div>
 
     <nav>
         <ul>
-            <li><a href="/home" class="text-dark text-decoration-none">Home</a></li>
+            <button onclick="location.href='/home'" data-text="Awesome" class="button">
+                <span class="actual-text">&nbsp;Home&nbsp;</span>
+                <span class="hover-text" aria-hidden="true">&nbsp;Home&nbsp;</span>
+            </button>
+<%--            <li><a href="/home" class="text-dark text-decoration-none">Home</a></li>--%>
             <li data-bs-toggle="dropdown" aria-expanded="false">Actions
                 <i class="dropdown-toggle ms-1"></i></li>
             <li>Link</li>
@@ -81,7 +66,11 @@
                 </div>
             </c:when>
             <c:otherwise>
-                <a href="/home" class="btn btn-primary" style="margin-right: -25px">Sign In</a>
+                <button onclick="location.href='/home'" data-text="Awesome" class="button">
+                    <span class="actual-text">&nbsp;Sign In&nbsp;</span>
+                    <span class="hover-text" aria-hidden="true">&nbsp;SignIn&nbsp;</span>
+                </button>
+<%--                <a href="/home" class="btn btn-primary" style="margin-right: -25px">Sign In</a>--%>
             </c:otherwise>
         </c:choose>
     </nav>
@@ -94,7 +83,10 @@
 </header>
 
 <div class="w-75 mx-auto">
-    <a href="/user/order" class="btn btn-primary">Appointment</a>
+    <button onclick="location.href='/user/order'" data-text="Awesome" class="button">
+        <span class="actual-text">&nbsp;Appointment&nbsp;</span>
+        <span class="hover-text" aria-hidden="true">&nbsp;Appointment&nbsp;</span>
+    </button>
 </div>
 </body>
 </html>
