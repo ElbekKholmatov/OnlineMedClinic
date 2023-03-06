@@ -37,6 +37,7 @@ public class UserDAO extends DAO<User, Integer> {
             User username1 = getEntityManager().createQuery(query, User.class)
                     .setParameter("username", username).getSingleResult();
             commit();
+            System.out.println(username1);
             return username1;
         } catch (NoResultException e) {
             commit();

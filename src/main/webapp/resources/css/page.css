@@ -1,7 +1,7 @@
 .card {
     width: 190px;
     height: 254px;
-    position: relative;
+    position: center;
     outline: .5em solid #f5f5f5;
     background: #ff930f;
     background: -webkit-gradient(linear, left bottom, left top, from(#ff930f), to(#fffa5c));

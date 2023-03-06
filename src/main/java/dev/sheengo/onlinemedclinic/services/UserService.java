@@ -33,6 +33,8 @@ public class UserService implements Service<User> {
         session.setAttribute("firstname", user.getFirstName());
         session.setAttribute("id", user.getId());
         session.setAttribute("role", user.getRole());
+        //TODO: DON'T GIVE FULL USER AS ATTRIBUTE
+        session.setAttribute("user", user);
 
         Cookie cookie = new Cookie("id", String.valueOf(user.getId()));
 
@@ -53,8 +55,8 @@ public class UserService implements Service<User> {
 
     public String getPage(User user) {
         return user.getRole().equals(User.UserRole.SUPER_ADMIN) ? "/superAdmin/main" :
-                user.getRole().equals(User.UserRole.ADMIN) ? "/admin/main"
-                : (user.getRole().equals(User.UserRole.DOCTOR)) ? "/dr/main"
+                user.getRole().equals(User.UserRole.ADMIN) ? "/home"
+                : (user.getRole().equals(User.UserRole.DOCTOR)) ? "/home"
                 : "/user/main";
     }
 
