@@ -10,28 +10,19 @@
 </style>
 <head>
     <title>Title</title>
-    <jsp:include page="/fragments/css.jsp" />
-    <jsp:include page="/fragments/js.jsp" />
+    <jsp:include page="/fragments/css.jsp"/>
+    <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+    <%@ taglib prefix="c" uri="jakarta.tags.core" %>
 </head>
 <body>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@ taglib prefix="c" uri="jakarta.tags.core" %>
-<html>
-<head>
-    <title>Title</title>
-    <jsp:include page="/fragments/css.jsp" />
-    <jsp:include page="/fragments/js.jsp" />
-</head>
-<body>
-
 <header class="w-75 mx-auto mt-4 mb-0">
     <div class="logo">
-<%--        <a href="/home"><img src="/resources/images/ShengoLogo.jpg"--%>
-<%--                             style="height: 100px; width: 100px; border-radius: 15%; margin-top: 12px" alt="img"></a>--%>
-    <button onclick="location.href='/home'" data-text="SHEENGO" class="button">
-        <span class="actual-text">&nbsp;SHEENGO&nbsp;</span>
-        <span class="hover-text" aria-hidden="true">&nbsp;SHEENGO&nbsp;</span>
-    </button>
+        <%--        <a href="/home"><img src="/resources/images/ShengoLogo.jpg"--%>
+        <%--                             style="height: 100px; width: 100px; border-radius: 15%; margin-top: 12px" alt="img"></a>--%>
+        <button onclick="location.href='/home'" data-text="SHEENGO" class="button">
+            <span class="actual-text">&nbsp;SHEENGO&nbsp;</span>
+            <span class="hover-text" aria-hidden="true">&nbsp;SHEENGO&nbsp;</span>
+        </button>
     </div>
 
     <nav>
@@ -40,7 +31,7 @@
                 <span class="actual-text">&nbsp;Home&nbsp;</span>
                 <span class="hover-text" aria-hidden="true">&nbsp;Home&nbsp;</span>
             </button>
-<%--            <li><a href="/home" class="text-dark text-decoration-none">Home</a></li>--%>
+            <%--            <li><a href="/home" class="text-dark text-decoration-none">Home</a></li>--%>
             <li data-bs-toggle="dropdown" aria-expanded="false">Actions
                 <i class="dropdown-toggle ms-1"></i></li>
             <li>Link</li>
@@ -70,7 +61,7 @@
                     <span class="actual-text">&nbsp;Sign In&nbsp;</span>
                     <span class="hover-text" aria-hidden="true">&nbsp;SignIn&nbsp;</span>
                 </button>
-<%--                <a href="/home" class="btn btn-primary" style="margin-right: -25px">Sign In</a>--%>
+                <%--                <a href="/home" class="btn btn-primary" style="margin-right: -25px">Sign In</a>--%>
             </c:otherwise>
         </c:choose>
     </nav>
@@ -81,13 +72,28 @@
         <span></span>
     </div>
 </header>
+<main>
+    <div class="w-75 mx-auto">
+        <button onclick="location.href='/user/order'" data-text="Awesome" class="button">
+            <span class="actual-text">&nbsp;Appointment&nbsp;</span>
+            <span class="hover-text" aria-hidden="true">&nbsp;Appointment&nbsp;</span>
+        </button>
+    </div>
+    <div>
 
-<div class="w-75 mx-auto">
-    <button onclick="location.href='/user/order'" data-text="Awesome" class="button">
-        <span class="actual-text">&nbsp;Appointment&nbsp;</span>
-        <span class="hover-text" aria-hidden="true">&nbsp;Appointment&nbsp;</span>
-    </button>
-</div>
+    </div>
+    <div class="card">
+        <div class="card-info">
+            <p class="title">John Doe</p>
+            <p class="subtitle">Web Dev</p>
+        </div>
+        <div class="card-bio">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+    </div>
+
+</main>
+<jsp:include page="/fragments/js.jsp"/>
 </body>
 </html>
 

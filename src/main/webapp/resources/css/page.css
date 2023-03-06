@@ -1,0 +1,93 @@
+.card {
+    width: 190px;
+    height: 254px;
+    position: relative;
+    outline: .5em solid #f5f5f5;
+    background: #ff930f;
+    background: -webkit-gradient(linear, left bottom, left top, from(#ff930f), to(#fffa5c));
+    background: linear-gradient(to top, #ff930f 0%, #fffa5c 100%);
+}
+
+.card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 4;
+    background-color: rgba(80, 64, 44, 0);
+    -webkit-transition: background-color 1s;
+    transition: background-color 1s;
+}
+
+.card-info {
+    bottom: 0;
+    position: absolute;
+    width: 100%;
+    padding: 1.5em;
+    text-align: center;
+    -webkit-transition: -webkit-transform 1s cubic-bezier(0.785, 0.135, 0.150, 0.860);
+    transition: -webkit-transform 1s cubic-bezier(0.785, 0.135, 0.150, 0.860);
+    transition: transform 1s cubic-bezier(0.785, 0.135, 0.150, 0.860);
+    transition: transform 1s cubic-bezier(0.785, 0.135, 0.150, 0.860), -webkit-transform 1s cubic-bezier(0.785, 0.135, 0.150, 0.860);
+}
+
+.card-bio {
+    padding: 1.8em;
+    text-align: center;
+    -webkit-transform: translate(100%,40%);
+    -ms-transform: translate(100%,40%);
+    transform: translate(100%,40%);
+    -webkit-transition: -webkit-transform 1s cubic-bezier(0.785, 0.135, 0.150, 0.860);
+    transition: -webkit-transform 1s cubic-bezier(0.785, 0.135, 0.150, 0.860);
+    transition: transform 1s cubic-bezier(0.785, 0.135, 0.150, 0.860);
+    transition: transform 1s cubic-bezier(0.785, 0.135, 0.150, 0.860), -webkit-transform 1s cubic-bezier(0.785, 0.135, 0.150, 0.860);
+}
+
+.card-bio p {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.5em;
+}
+
+
+/*Text*/
+.title {
+    font-size: 1.3em;
+    font-weight: bold;
+}
+
+.title::after {
+    content: "";
+    display: block;
+    width: 50%;
+    height: 2px;
+    margin: 0 auto 4%;
+    background-color: #000;
+}
+
+.subtitle {
+    font-weight: 400;
+    line-height: 1em;
+}
+
+
+
+/*Hover*/
+.card:hover::before {
+    background-color: rgba(80, 64, 44, 0.25);
+}
+
+.card:hover .card-info {
+    -webkit-transform: translateX(-100%);
+    -ms-transform: translateX(-100%);
+    transform: translateX(-100%);
+}
+
+.card:hover .card-bio {
+    -webkit-transform: translate(0,40%);
+    -ms-transform: translate(0,40%);
+    transform: translate(0,40%);
+    opacity: 1;
+}
