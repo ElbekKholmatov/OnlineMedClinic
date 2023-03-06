@@ -1,5 +1,7 @@
 <%@ page import="dev.sheengo.onlinemedclinic.domains.User" %>
 <%@ taglib prefix="c" uri="jakarta.tags.core" %>
+<% User.UserRole role = (User.UserRole)  session.getAttribute("role"); %>
+
 
 <%--
   Created by IntelliJ IDEA.
@@ -78,18 +80,18 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarCollapse">
         <div class="navbar-nav ms-auto py-0">
-            <% if (session.getAttribute("role") == null) { %>
+            <% if (role == null) { %>
             <a href="/logIn" class="nav-item nav-link ">Admin Page</a>
             <a href="/logIn" class="nav-item nav-link ">Doctor Page</a>
             <a href="/logIn" class="nav-item nav-link ">Patient Page</a>
             <% } else { %>
-            <% if (session.getAttribute("role").equals(User.UserRole.ADMIN)) { %>
+            <% if (role.equals(User.UserRole.ADMIN)) { %>
             <a href="/admin/main" class="nav-item nav-link ">Admin Page</a>
             <% } %>
-            <% if (session.getAttribute("role").equals(User.UserRole.DOCTOR)) { %>
+            <% if (role.equals(User.UserRole.DOCTOR)) { %>
             <a href="/dr/main" class="nav-item nav-link ">Doctor Page</a>
             <% } %>
-            <% if (session.getAttribute("role").equals(User.UserRole.USER)) { %>
+            <% if (role.equals(User.UserRole.USER)) { %>
             <a href="/user/main" class="nav-item nav-link ">Patient Page</a>
             <% } %>
             <% } %>
